@@ -1,0 +1,160 @@
+---
+title: Séance 1 - Introduction aux statistiques descriptives
+author: Guillaume Gilles
+format:
+  revealjs:
+    theme: dark
+---
+
+# Introduction
+
+> Statistics is the science of making decisions under uncertainty --- 1954 - Leonard J. Savage, _The Foundation of Statistics_
+
+## Population et échantillon
+
+- **Population**, $N$ : un ensemble d’éléments partageant une ou plusieurs caractéristiques qui servent à les regrouper
+- Une population est dite **finie** si nous pouvons déterminer le nombre exact de ses individus, sinon elle est dite **infinie**.
+- Exemple d’utilisation: Si on a une population finie de taille $N = 50$, les individus peuvent être numérotés comme ${1,2,3,...,N}$.
+- **Individu**, $n$ : un élément de la population $N$.
+
+## Variables
+
+En statistiques, une **variable** est une caractéristique ou une propriété mesurable qui peut varier d'un individu à un autre au sein d'une population. Elle représente les données que l'on observe, mesure ou collecte pour effectuer des analyses.
+
+Les variables se classent en deux grandes catégories principale
+
+## Variables qualitatives
+
+Ces variables expriment une qualité, une catégorie ou une caractéristique non mesurable numériquement.
+
+- **Nominale** : Pas d'ordre logique entre les catégories. Exemple : Couleur des yeux (bleu, vert, marron).
+- **Ordinale** : Un ordre logique existe entre les catégories. Exemple : Niveau de satisfaction (faible, moyen, élevé).
+
+## Variables quantitatives
+
+Ces variables prennent des valeurs numériques qui peuvent être mesurées ou comptées.
+
+- **Discrète** : Prend un nombre fini ou dénombrable de valeurs. Exemple : Nombre d’enfants dans une famille (0, 1, 2, 3, ...).
+- **Continue** : Peut prendre une infinité de valeurs dans un intervalle donné. Exemple : Taille d'une personne (1,72 m, 1,723 m, etc.).
+
+## Variables
+
+```{mermaid}
+flowchart TD
+  A([Variables]) --> B([Quantitatives])
+  B --> D([Discrètes])
+  B --> E([Continues])
+  A --> C([Qualitatives])
+  C --> F([Nominales])
+  C --> G([Ordianles])
+```
+
+::: {.callout-important}
+Les variables sont au cœur de toute analyse statistique. Elles déterminent la nature des données et influencent le choix des méthodes d’analyse et de représentation graphique.
+:::
+
+# Données univariées et Série statistique
+
+## Caractéristiques des données univariées
+
+- Désignent un ensemble de valeurs collectées pour une **seule** variable.
+- Elles représentent les observations brutes, souvent sans organisation.
+- Exemple : Les tailles de 10 personnes mesurées : $160$, $165$, $170$, $160$, $175$, $…$.
+
+**Objectif** : L'analyse univariée vise à comprendre la distribution, la tendance centrale et la dispersion des données pour cette variable.
+
+## Série statistiques
+
+- Correspondent à une organisation structurée des données d’une variable.
+- Les valeurs sont souvent regroupées avec leurs effectifs ou fréquences.
+- Exemple : Taille des personnes organisées :
+  - $160$ cm : $2$ personnes,
+  - $165$ cm : $1$ personne,
+  - $170$ cm : $1$ personne.
+
+::: {.callout-caution}
+Les **séries statistiques** et les **données univariées** sont des concepts proches, mais ils diffèrent dans leur nature et leur objectif d’utilisation.
+:::
+
+## Synthèse par tableau
+
+Les données sont présentées dans un tableau avec les colonnes suivantes :
+
+- Modalité : Valeur ou catégorie rangées par ordre croissant, sauf pour les variables qualitatives nominales.
+- Effectif, $n_i$ : Nombre d’observations.
+- Fréquence relative, $f_i$ : Proportion ($f_i = \frac{n_i}{n}$).
+
+---
+
+### Variable qualitative nominale
+
+- **Données univariées** : Le genre de 24 candidats à un concours
+
+H, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.
+
+- **Séries statistiques** :
+  - Présentées dans un tableau ou regroupées en modalités.
+
+| Modalités | $n_i$ Effectif | $f_i$ Fréquence |
+|-----------|----------------|-----------------|
+| H         |                |                 |
+| F         |                |                 |
+| $n$ Total |                |                 |
+
+---
+
+### Variable qualitative nominale
+
+- **Données univariées** : Le genre de 24 candidats à un concours
+
+H, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.
+
+- **Séries statistiques** :
+  - Présentées dans un tableau ou regroupées en modalités.
+
+| Modalités | $n_i$ Effectif | $f_i$ Fréquence |
+|-----------|----------------|-----------------|
+| H         | 13             | $0,54$          |
+| F         | 11             | $0,46$          |
+| $n$ Total | 24             | $1$             |
+
+---
+
+### Variable qualitative ordianle
+
+---
+
+### Variables quantitative discrète
+
+- **Données univariées** :
+  - Listées sous forme brute.
+  - Exemple : $10, 15, 12, 10, 18, 14, 12, 10, 16, 14$
+
+- **Séries statistiques** :
+  - Présentées dans un tableau ou regroupées en modalités.
+
+| Modalités | Effectif | Fréquence |
+|--------|----------|-----------|
+| 10     | 3        | 0.3       |
+| 12     | 2        | 0.2       |
+| 14     | 2        | 0.2       |
+| 15     | 1        | 0.1       |
+| 16     | 1        | 0.1       |
+| 18     | 1        | 0.1       |
+
+---
+
+### Variables quantitative continue
+
+
+
+## Graphique - Répartition des modalités
+```{r}
+# Exemple d’un graphique de répartition des modalités
+barplot(c(10, 15, 8, 20),
+        names.arg = c("Mod1", "Mod2", "Mod3", "Mod4"),
+        col = c("blue", "red", "green", "orange"),
+        main = "Répartition des Modalités",
+        ylab = "Fréquence",
+        xlab = "Modalités")
+```

@@ -1,0 +1,88 @@
+---
+title: Syllabus
+---
+
+**Année académique :** 2025 - 2026
+
+## Identification
+
+- **Libellé :** MS02-001-G Description de données
+- **Campus :** Aix-en-Provence, Angers, Bordeaux, Boulogne-Billancourt, Lyon, Strasbourg
+- **Responsable :** Maher Kachour
+- **Pôle :** Operations Management and Decision Science
+- **Langues :** Français
+- **Code :** MS02-001-G
+- **Semestre :** 02
+- **Durée :** 30 heures
+- **Ouvert aux étudiants en échange :** Oui
+- **ECTS :** 4
+
+## Présentation générale
+
+Ce cours présente les outils statistiques de base correspondant à la première étape de l’analyse des données, incluant les résumés numériques et les représentations graphiques. À l'issue du cours, l'étudiant aura assimilé les concepts requis pour réussir les cours ultérieurs tels que la statistique inférentielle, l'analyse des données et l'économétrie.
+
+## Compétences visées
+
+- **Capacités intellectuelles**
+  - Choisir les méthodes de calcul et les outils de résolution de problèmes pertinents.
+- **Compétences technologiques**
+  - Mobiliser les méthodes quantitatives et qualitatives, ainsi que les techniques de traitement de l’information adaptées aux situations d’entreprise (notamment : résolution de problèmes, études statistiques, modélisation de problèmes).
+  - Utiliser les outils dédiés à la recherche et au traitement de l’information, ainsi qu’à la communication en entreprise (notamment : traitement de texte, tableaux de bord, outils de gestion de projet, outils en ligne).
+
+## Organisation
+
+### Prise en main du logiciel Excel
+
+- **Durée totale :** 6 heures
+- **Contenu :**
+  - Gestion d'une feuille Excel
+  - Fonctions Excel
+  - Tri et traitement des données
+
+### Traitement univarié
+
+- **Durée totale :** 18 heures
+- **Contenu :**
+  - **Indicateurs de position :**
+    - Calculer et interpréter des indicateurs de position en lien avec un pourcentage.
+    - Utiliser Excel pour calculer les indicateurs de position et représenter graphiquement la boîte à moustache.
+  - **Indicateurs de position centrale :**
+    - Calculer et interpréter la moyenne et le mode d’une série de données.
+  - **Indicateurs de dispersion :**
+    - Calculer et interpréter les indicateurs de dispersion d’une série de données.
+  - **Indicateurs d’asymétrie :**
+    - Calculer et interpréter les indicateurs d’asymétrie d’une série de données.
+  - **Travaux pratiques :**
+    - Utiliser Excel pour calculer les indicateurs de dispersion et de forme.
+
+### Traitement bivarié des données
+
+- **Durée totale :** 6 heures
+- **Contenu :**
+  - Représenter graphiquement et calculer les résumés numériques associés aux données bivariées.
+  - Utiliser Excel pour ces représentations et calculs.
+  - **Travaux pratiques de révision :**
+    - Utiliser Excel pour traiter une étude de cas intégrant l’ensemble des notions présentées dans le cours.
+
+## Évaluation
+
+- **Examen final (EF)**
+  - **Poids :** 65%
+  - **Type :** Écrit
+  - **Durée :** 1h30
+- **Examen intermédiaire (EI)**
+  - **Poids :** 35%
+  - **Type :** Écrit
+  - **Durée :** 1h30
+
+## Lectures recommandées
+
+- **Français :**
+  - PUPION P-C. (2004), *Statistiques pour la gestion*, Dunod
+  - AVENEL M., RIFFAULT J-F. (2005), *Mathématiques appliquées à la gestion*, Sup’Foucher
+  - POSIERE J-P. (2005), *Mathématiques appliquées à la gestion*, Gualino
+  - ROGER P. (2006), *Mathématiques pour l'économie et la gestion*, Pearson Education
+  - SAPORTA G. (2006), *Probabilités, Analyse des données et Statistique*, Technip
+  - PY B. (2007), *Statistique descriptive*, Economica
+- **Anglais :**
+  - SYDSAETER K., HAMMOND P. (2012), *Essential Mathematics for Economic Analysis*, Pearson
