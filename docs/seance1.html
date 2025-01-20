@@ -459,28 +459,106 @@ Guillaume Gilles
 </div>
 </div>
 </div>
+</section></section>
+<section>
+<section id="synthèse-par-tableau-statistique" class="title-slide slide level1 center">
+<h1>Synthèse par tableau statistique</h1>
+<p>Un <strong>tableau statistique</strong> est une manière structurée de présenter des données, permettant d’organiser les observations d’une variable avec leurs effectifs et fréquences associées. C’est un outil clé en analyse descriptive pour visualiser la répartition des données.</p>
 </section>
-<section id="synthèse-par-tableau" class="slide level2">
-<h2>Synthèse par tableau</h2>
-<p>Les données sont présentées dans un tableau avec les colonnes suivantes :</p>
+<section id="modalité" class="slide level2">
+<h2>Modalité</h2>
+<p><strong>Modalité / Classe (<span class="math inline">\(X\)</span>)</strong> : Valeur ou catégorie rangées par ordre croissant, sauf pour les variables qualitatives nominales.</p>
+</section>
+<section id="effectif" class="slide level2">
+<h2>Effectif</h2>
 <ul>
-<li>Modalité : Valeur ou catégorie rangées par ordre croissant, sauf pour les variables qualitatives nominales.</li>
-<li>Effectif, <span class="math inline">\(n_i\)</span> : Nombre d’observations.</li>
-<li>Fréquence relative, <span class="math inline">\(f_i\)</span> : Proportion (<span class="math inline">\(f_i = \frac{n_i}{n}\)</span>).</li>
+<li><p><strong>Effectif (<span class="math inline">\(n_i\)</span>)</strong> : Nombre d’observations pour chaque modalité.</p></li>
+<li><p><strong>Effectif cumulé croissant (<span class="math inline">\(n_i^+\)</span>)</strong> : la somme cumulée des effectifs de toutes les modalités dont la “valeur” est inférieure à celle de <span class="math inline">\(m_i\)</span>. <span class="math display">\[
+n_i^+ = n_1 + n_2 + n_3 + \dots + n_i
+\]</span></p></li>
+<li><p><strong>Effectif cumulé décroissant (<span class="math inline">\(n_i^-\)</span>)</strong> : la somme cumulée des effectifs de toutes les modalités dont la “valeur” est supérieure à celle de <span class="math inline">\(m_i\)</span>. <span class="math display">\[
+n_i^- = n_i + \dots + n_k
+\]</span></p></li>
 </ul>
 </section>
-<section class="slide level2">
+<section id="fréquence" class="slide level2">
+<h2>Fréquence</h2>
+<ul>
+<li><strong>Fréquence relative (<span class="math inline">\(f_i\)</span>)</strong> : Proportion des observations dans chaque modalité. <span class="math display">\[
+f_i = \frac{n_i}{n}
+\]</span></li>
+<li><strong>Fréquence cumulée croissante (<span class="math inline">\(f_i^+\)</span>)</strong> <span class="math display">\[
+f_i^+ = \frac{n_i^+}{n}
+\]</span></li>
+<li><strong>Fréquence cumulée décroissante (<span class="math inline">\(f_i^-\)</span>)</strong> <span class="math display">\[
+f_i^- = \frac{n_i^-}{n}
+\]</span></li>
+</ul>
+</section>
+<section id="structure-dun-tableau-statistique" class="slide level2">
+<h2>Structure d’un tableau statistique</h2>
+<table>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 20%">
+<col style="width: 22%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modalité/Classe <span class="math inline">\(X\)</span></th>
+<th>Effectif <span class="math inline">\(n_i\)</span></th>
+<th>Fréquence <span class="math inline">\(f_i\)</span></th>
+<th>Effectif cumulé <span class="math inline">\(n_i^+\)</span></th>
+<th>Fréquence cumulée <span class="math inline">\(f_i^+\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modalité 1</td>
+<td><span class="math inline">\(n_1\)</span></td>
+<td><span class="math inline">\(f_1 = \frac{n_1}{n}\)</span></td>
+<td><span class="math inline">\(n_1^+ = n_1\)</span></td>
+<td><span class="math inline">\(f_1^+ = f_1\)</span></td>
+</tr>
+<tr class="even">
+<td>Modalité 2</td>
+<td><span class="math inline">\(n_2\)</span></td>
+<td><span class="math inline">\(f_2 = \frac{n_2}{n}\)</span></td>
+<td><span class="math inline">\(n_2^+ = n_1 + n_2\)</span></td>
+<td><span class="math inline">\(f_2^+ = f_1 + f_2\)</span></td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td>Total</td>
+<td><span class="math inline">\(n = \sum n_i\)</span></td>
+<td><span class="math inline">\(\sum f_i = 1\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="exercices" class="title-slide slide level1 center">
+<h1>Exercices</h1>
 
-<h3 id="variable-qualitative-nominale">Variable qualitative nominale</h3>
+</section>
+<section id="variable-qualitative-nominale" class="slide level2">
+<h2>Variable qualitative nominale</h2>
 <ul>
 <li><strong>Données univariées</strong> : Le genre de 24 candidats à un concours</li>
 </ul>
 <p>H, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.</p>
 <ul>
-<li><strong>Séries statistiques</strong> :
-<ul>
-<li>Présentées dans un tableau ou regroupées en modalités.</li>
-</ul></li>
+<li><strong>Séries statistiques</strong> : présentées dans un tableau ou regroupées en modalités.</li>
 </ul>
 <table>
 <thead>
@@ -508,16 +586,15 @@ Guillaume Gilles
 </tr>
 </tbody>
 </table>
-<h3 id="variable-qualitative-nominale-2">Variable qualitative nominale 2</h3>
+</section>
+<section id="variable-qualitative-nominale-2" class="slide level2">
+<h2>Variable qualitative nominale 2</h2>
 <ul>
 <li><strong>Données univariées</strong> : Le genre de 24 candidats à un concours</li>
 </ul>
 <p>H, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.</p>
 <ul>
-<li><strong>Séries statistiques</strong> :
-<ul>
-<li>Présentées dans un tableau ou regroupées en modalités.</li>
-</ul></li>
+<li><strong>Séries statistiques</strong> : présentées dans un tableau ou regroupées en modalités.</li>
 </ul>
 <table>
 <thead>
@@ -545,73 +622,301 @@ Guillaume Gilles
 </tr>
 </tbody>
 </table>
-<h3 id="variable-qualitative-ordianle">Variable qualitative ordianle</h3>
 </section>
-<section class="slide level2">
-
-<h3 id="variables-quantitative-discrète">Variables quantitative discrète</h3>
+<section id="variable-qualitative-ordinale" class="slide level2">
+<h2>Variable qualitative ordinale</h2>
 <ul>
-<li><strong>Données univariées</strong> :
+<li><strong>Données univariées</strong> : Le niveau d’étude de 24 étudiants</li>
+</ul>
+<p>L, M, L, M, D, M, L, L, M, L, M, D, M, L, M, L, L, M, M, M, L, L, L, D.</p>
 <ul>
-<li>Listées sous forme brute.</li>
-<li>Exemple : <span class="math inline">\(10, 15, 12, 10, 18, 14, 12, 10, 16, 14\)</span></li>
-</ul></li>
-<li><strong>Séries statistiques</strong> :
-<ul>
-<li>Présentées dans un tableau ou regroupées en modalités.</li>
-</ul></li>
+<li><strong>Séries statistiques</strong> : présentées dans un tableau ou regroupées en modalités.</li>
 </ul>
 <table>
 <thead>
 <tr class="header">
 <th>Modalités</th>
-<th>Effectif</th>
-<th>Fréquence</th>
+<th><span class="math inline">\(n_i\)</span> Effectif</th>
+<th><span class="math inline">\(f_i\)</span>&nbsp;Fréquence</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>10</td>
-<td>3</td>
-<td>0.3</td>
+<td>L</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>12</td>
-<td>2</td>
-<td>0.2</td>
+<td>M</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>14</td>
-<td>2</td>
-<td>0.2</td>
+<td>D</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>15</td>
-<td>1</td>
-<td>0.1</td>
-</tr>
-<tr class="odd">
-<td>16</td>
-<td>1</td>
-<td>0.1</td>
-</tr>
-<tr class="even">
-<td>18</td>
-<td>1</td>
-<td>0.1</td>
+<td><span class="math inline">\(n\)</span>&nbsp;Total</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section class="slide level2">
-
-<h3 id="variables-quantitative-continue">Variables quantitative continue</h3>
+<section id="variable-qualitative-ordinale-2" class="slide level2">
+<h2>Variable qualitative ordinale 2</h2>
+<ul>
+<li><strong>Données univariées</strong> : Le niveau d’étude de 24 étudiants</li>
+</ul>
+<p>L, M, L, M, D, M, L, L, M, L, M, D, M, L, M, L, L, M, M, M, L, L, L, D.</p>
+<ul>
+<li><strong>Séries statistiques</strong> : présentées dans un tableau ou regroupées en modalités.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Modalités</th>
+<th><span class="math inline">\(n_i\)</span> Effectif</th>
+<th><span class="math inline">\(f_i\)</span>&nbsp;Fréquence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>L</td>
+<td>11</td>
+<td><span class="math inline">\(0,46\)</span></td>
+</tr>
+<tr class="even">
+<td>M</td>
+<td>10</td>
+<td><span class="math inline">\(0,42\)</span></td>
+</tr>
+<tr class="odd">
+<td>D</td>
+<td>3</td>
+<td>$0,12</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(n\)</span>&nbsp;Total</td>
+<td>24</td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="graphique---répartition-des-modalités" class="slide level2">
-<h2>Graphique - Répartition des modalités</h2>
+<section id="variable-quantitative-discrète" class="slide level2">
+<h2>Variable quantitative discrète</h2>
+<ul>
+<li><strong>Données univariées</strong> : Le notes de 24 étudiants</li>
+</ul>
+<p>11, 13, 8, 16.5, 11, 7, 13, 12, 11, 12, 12, 8, 11, 8, 12, 11, 7, 16.5, 8, 11, 8, 12, 8,16.5</p>
+<ul>
+<li><strong>Séries statistiques</strong> : présentées dans un tableau ou regroupées en modalités.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Modalités</th>
+<th><span class="math inline">\(n_i\)</span> Effectif</th>
+<th><span class="math inline">\(f_i\)</span>&nbsp;Fréquence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>16,5</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(n\)</span>&nbsp;Total</td>
+<td>24</td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="variable-quantitative-discrète-2" class="slide level2">
+<h2>Variable quantitative discrète 2</h2>
+<ul>
+<li><strong>Données univariées</strong> : Le notes de 24 étudiants</li>
+</ul>
+<p>11, 13, 8, 16.5, 11, 7, 13, 12, 11, 12, 12, 8, 11, 8, 12, 11, 7, 16.5, 8, 11, 8, 12, 8,16.5</p>
+<ul>
+<li><strong>Séries statistiques</strong> : présentées dans un tableau ou regroupées en modalités.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Modalités</th>
+<th><span class="math inline">\(n_i\)</span> Effectif</th>
+<th><span class="math inline">\(f_i\)</span>&nbsp;Fréquence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7</td>
+<td>2</td>
+<td><span class="math inline">\(0,08\)</span></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>6</td>
+<td><span class="math inline">\(0,25\)</span></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>6</td>
+<td><span class="math inline">\(0,25\)</span></td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>5</td>
+<td><span class="math inline">\(0,21\)</span></td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>2</td>
+<td><span class="math inline">\(0,08\)</span></td>
+</tr>
+<tr class="even">
+<td>16,5</td>
+<td>3</td>
+<td><span class="math inline">\(0,13\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(n\)</span>&nbsp;Total</td>
+<td>24</td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="variable-quantitative-continue" class="slide level2">
+<h2>Variable quantitative continue</h2>
+<p>La synthèse par tableau des données (observées à l’état brut) d’une variable continue révèle le nombre des modalités est presque égal à l’effectif total, i.e.&nbsp;<span class="math inline">\(k \approx n\)</span>, car les observations sont presque toutes distinctes.</p>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Solution</strong></p>
+</div>
+<div class="callout-content">
+<p>Regrouper les modalités en intervalles.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="variables-quantitative-continue-2" class="slide level2">
+<h2>Variables quantitative continue 2</h2>
+<ul>
+<li><strong>Données univariées</strong> : Le salaire mensuel de 24 candidats à un concours</li>
+</ul>
+<p>1958.49, 2055.75, 1812.48, 1955.69, 2024.48, 2055.61, 1988.52, 2123.32, 1958.81, 1948.22, 2039.01, 1882.25, 2148.81, 2043.28, 2120.25, 1938.33, 1907.65, 2092.08, 2026.33, 2016.89, 1922.31, 1970.89, 2015.67, 2049.11</p>
+<ul>
+<li><strong>Séries statistiques</strong> : présentées dans un tableau ou regroupées en modalités.</li>
+</ul>
+<p>On regroupe les observations selon les 7 intervalles de modalités suivantes:</p>
+<ul>
+<li><span class="math inline">\(m_1 = [1800; 1850[\)</span></li>
+<li><span class="math inline">\(m_2 = [1850; 1900[\)</span></li>
+<li><span class="math inline">\(m_3 = [1900; 1950[\)</span></li>
+<li><span class="math inline">\(m_4 = [1950; 2000[\)</span></li>
+<li><span class="math inline">\(m_5 = [2000; 2050[\)</span></li>
+<li><span class="math inline">\(m_6 = [2050; 2100[\)</span></li>
+<li><span class="math inline">\(m_7 = [2100; 2150[\)</span></li>
+</ul>
+</section>
+<section id="variables-quantitative-continue-3" class="slide level2">
+<h2>Variables quantitative continue 3</h2>
+<ul>
+<li><strong>Données univariées</strong> : Le salaire mensuel de 24 candidats à un concours</li>
+</ul>
+<p>1958.49, 2055.75, 1812.48, 1955.69, 2024.48, 2055.61, 1988.52, 2123.32, 1958.81, 1948.22, 2039.01, 1882.25, 2148.81, 2043.28, 2120.25, 1938.33, 1907.65, 2092.08, 2026.33, 2016.89, 1922.31, 1970.89, 2015.67, 2049.11</p>
+<ul>
+<li><strong>Séries statistiques</strong> : présentées dans un tableau ou regroupées en modalités.</li>
+</ul>
+<p>On regroupe les observations selon les intervalles de modalités suivantes:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Modalités</th>
+<th><span class="math inline">\(n_i\)</span> Effectif</th>
+<th><span class="math inline">\(f_i\)</span>&nbsp;Fréquence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\([1800; 1850[\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(0,042\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\([1850; 1900[\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(0,042\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\([1900; 1950[\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(0,167\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\([1950; 2000[\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(0,208\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\([2000; 2050[\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+<td><span class="math inline">\(0,292\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\([2050; 2100[\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(0,125\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\([2100; 2150[\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(0,125\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(n\)</span>&nbsp;Total</td>
+<td>24</td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
 
-
-<img data-src="seance1_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><div class="quarto-auto-generated-content">
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
@@ -827,44 +1132,6 @@ Guillaume Gilles
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
