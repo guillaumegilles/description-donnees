@@ -76,24 +76,40 @@ Les variables sont au cœur de toute analyse statistique. Elles déterminent la 
 Les **séries statistiques** et les **données univariées** sont des concepts proches, mais ils diffèrent dans leur nature et leur objectif d’utilisation.
 :::
 
-## Synthèse par tableau
+# Synthèse par tableau statistique
 
 Les données sont présentées dans un tableau avec les colonnes suivantes :
 
-- Modalité : Valeur ou catégorie rangées par ordre croissant, sauf pour les variables qualitatives nominales.
-- Effectif, $n_i$ : Nombre d’observations.
+## Modalité
+
+- **Modalité** : Valeur ou catégorie rangées par ordre croissant, sauf pour les variables qualitatives nominales.
+
+## Effectif
+
+- **Effectif**, $n_i$ : Nombre d’observations.
+- **Effectif cumulé croissant**, $n_i^+$ : la somme cumulée des effectifs de toutes les modalités dont la "valeur" est inférieure à celle de $m_i$
+
+$$
+n_i^+ = n_1 + n_2 + n_3 + \dot + n_i
+$$
+
+- **Effectif cumulé décroissant, $n_i^-$
+
+## Fréquence
+
 - Fréquence relative, $f_i$ : Proportion ($f_i = \frac{n_i}{n}$).
+- Fréquence cumulée croissante
+- Fréquence cumulée décroissante
 
----
+# Exercices
 
-### Variable qualitative nominale
+## Variable qualitative nominale 
 
 - **Données univariées** : Le genre de 24 candidats à un concours
 
 H, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.
 
-- **Séries statistiques** :
-  - Présentées dans un tableau ou regroupées en modalités.
+- **Séries statistiques** : présentées dans un tableau ou regroupées en modalités.
 
 | Modalités | $n_i$ Effectif | $f_i$ Fréquence |
 |-----------|----------------|-----------------|
@@ -101,16 +117,13 @@ H, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.
 | F         |                |                 |
 | $n$ Total |                |                 |
 
----
-
-### Variable qualitative nominale
+## Variable qualitative nominale 2
 
 - **Données univariées** : Le genre de 24 candidats à un concours
 
 H, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.
 
-- **Séries statistiques** :
-  - Présentées dans un tableau ou regroupées en modalités.
+- **Séries statistiques** : présentées dans un tableau ou regroupées en modalités.
 
 | Modalités | $n_i$ Effectif | $f_i$ Fréquence |
 |-----------|----------------|-----------------|
@@ -118,43 +131,116 @@ H, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.
 | F         | 11             | $0,46$          |
 | $n$ Total | 24             | $1$             |
 
----
+## Variable qualitative ordinale
 
-### Variable qualitative ordianle
+- **Données univariées** : Le niveau d'étude de 24 étudiants
 
----
+L, M, L, M, D, M, L, L, M, L, M, D, M, L, M, L, L, M, M, M, L, L, L, D.
 
-### Variables quantitative discrète
+- **Séries statistiques** : présentées dans un tableau ou regroupées en modalités.
 
-- **Données univariées** :
-  - Listées sous forme brute.
-  - Exemple : $10, 15, 12, 10, 18, 14, 12, 10, 16, 14$
+| Modalités | $n_i$ Effectif | $f_i$ Fréquence |
+|-----------|----------------|-----------------|
+| L         |                |                 |
+| M         |                |                 |
+| D         |                |                 |
+| $n$ Total |                |                 |
 
-- **Séries statistiques** :
-  - Présentées dans un tableau ou regroupées en modalités.
+## Variable qualitative ordinale 2
 
-| Modalités | Effectif | Fréquence |
-|--------|----------|-----------|
-| 10     | 3        | 0.3       |
-| 12     | 2        | 0.2       |
-| 14     | 2        | 0.2       |
-| 15     | 1        | 0.1       |
-| 16     | 1        | 0.1       |
-| 18     | 1        | 0.1       |
+- **Données univariées** : Le niveau d'étude de 24 étudiants
 
----
+L, M, L, M, D, M, L, L, M, L, M, D, M, L, M, L, L, M, M, M, L, L, L, D.
 
-### Variables quantitative continue
+- **Séries statistiques** : présentées dans un tableau ou regroupées en modalités.
 
+| Modalités | $n_i$ Effectif | $f_i$ Fréquence |
+|-----------|----------------|-----------------|
+| L         | 11             |  $0,46$         |
+| M         | 10             |  $0,42$         |
+| D         | 3              |  $0,12          |
+| $n$ Total | 24             |  $1$            |
 
+## Variable quantitative discrète
 
-## Graphique - Répartition des modalités
-```{r}
-# Exemple d’un graphique de répartition des modalités
-barplot(c(10, 15, 8, 20),
-        names.arg = c("Mod1", "Mod2", "Mod3", "Mod4"),
-        col = c("blue", "red", "green", "orange"),
-        main = "Répartition des Modalités",
-        ylab = "Fréquence",
-        xlab = "Modalités")
-```
+- **Données univariées** : Le notes de 24 étudiants
+
+11, 13, 8, 16.5, 11, 7, 13, 12, 11, 12, 12, 8, 11, 8, 12, 11, 7, 16.5, 8, 11, 8, 12, 8,16.5
+
+- **Séries statistiques** : présentées dans un tableau ou regroupées en modalités.
+
+| Modalités | $n_i$ Effectif | $f_i$ Fréquence |
+|-----------|----------------|-----------------|
+| 7         |                |                 |
+| 8         |                |                 |
+| 11        |                |                 |
+| 12        |                |                 |
+| 13        |                |                 |
+| 16,5      |                |                 |
+| $n$ Total | 24             | $1$             |
+
+## Variable quantitative discrète 2
+
+- **Données univariées** : Le notes de 24 étudiants
+
+11, 13, 8, 16.5, 11, 7, 13, 12, 11, 12, 12, 8, 11, 8, 12, 11, 7, 16.5, 8, 11, 8, 12, 8,16.5
+
+- **Séries statistiques** : présentées dans un tableau ou regroupées en modalités.
+
+| Modalités | $n_i$ Effectif | $f_i$ Fréquence |
+|-----------|----------------|-----------------|
+| 7         | 2              | $0,08$          |
+| 8         | 6              | $0,25$          |
+| 11        | 6              | $0,25$          |
+| 12        | 5              | $0,21$          |
+| 13        | 2              | $0,08$          |
+| 16,5      | 3              | $0,13$          |
+| $n$ Total | 24             | $1$             |
+
+## Variable quantitative continue 
+
+La synthèse par tableau des données (observées à l’état brut) d’une variable continue révèle le nombre des modalités est presque égal à l’effectif total, i.e. $k \approx n$, car les observations sont presque toutes distinctes.
+
+::: {.callout-caution}
+## Solution
+Regrouper les modalités en intervalles.
+:::
+
+### Variables quantitative continue 2
+ 
+- **Données univariées** : Le salaire mensuel de 24 candidats à un concours
+
+1958.49, 2055.75, 1812.48, 1955.69, 2024.48, 2055.61, 1988.52, 2123.32, 1958.81, 1948.22, 2039.01, 1882.25, 2148.81, 2043.28, 2120.25, 1938.33, 1907.65, 2092.08, 2026.33, 2016.89, 1922.31, 1970.89, 2015.67, 2049.11
+
+- **Séries statistiques** : présentées dans un tableau ou regroupées en modalités.
+
+On regroupe les observations selon les 7 intervalles de modalités suivantes:
+
+- $m_1 = [1800; 1850[$
+- $m_2 = [1850; 1900[$ 
+- $m_3 = [1900; 1950[$
+- $m_4 = [1950; 2000[$
+- $m_5 = [2000; 2050[$
+- $m_6 = [2050; 2100[$
+- $m_7 = [2100; 2150[$
+
+## Variables quantitative continue 3
+
+- **Données univariées** : Le salaire mensuel de 24 candidats à un concours
+
+1958.49, 2055.75, 1812.48, 1955.69, 2024.48, 2055.61, 1988.52, 2123.32, 1958.81, 1948.22, 2039.01, 1882.25, 2148.81, 2043.28, 2120.25, 1938.33, 1907.65, 2092.08, 2026.33, 2016.89, 1922.31, 1970.89, 2015.67, 2049.11
+
+- **Séries statistiques** : présentées dans un tableau ou regroupées en modalités.
+
+On regroupe les observations selon les intervalles de modalités suivantes:
+
+| Modalités      | $n_i$ Effectif | $f_i$ Fréquence |
+|----------------|----------------|-----------------|
+| $[1800; 1850[$ | $1$            | $0,042$         |
+| $[1850; 1900[$ | $1$            | $0,042$         |
+| $[1900; 1950[$ | $4$            | $0,167$         |
+| $[1950; 2000[$ | $5$            | $0,208$         |
+| $[2000; 2050[$ | $7$            | $0,292$         |
+| $[2050; 2100[$ | $3$            | $0,125$         |
+| $[2100; 2150[$ | $3$            | $0,125$         |
+| $n$ Total      | 24             | $1$             |
