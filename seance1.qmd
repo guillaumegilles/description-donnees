@@ -78,28 +78,48 @@ Les **séries statistiques** et les **données univariées** sont des concepts p
 
 # Synthèse par tableau statistique
 
-Les données sont présentées dans un tableau avec les colonnes suivantes :
+Un **tableau statistique** est une manière structurée de présenter des données, permettant d’organiser les observations d'une variable avec leurs effectifs et fréquences associées. C'est un outil clé en analyse descriptive pour visualiser la répartition des données.
 
 ## Modalité
 
-- **Modalité** : Valeur ou catégorie rangées par ordre croissant, sauf pour les variables qualitatives nominales.
+**Modalité / Classe ($X$)** : Valeur ou catégorie rangées par ordre croissant, sauf pour les variables qualitatives nominales.
 
 ## Effectif
 
-- **Effectif**, $n_i$ : Nombre d’observations.
-- **Effectif cumulé croissant**, $n_i^+$ : la somme cumulée des effectifs de toutes les modalités dont la "valeur" est inférieure à celle de $m_i$
-
+- **Effectif ($n_i$)** : Nombre d’observations pour chaque modalité.
+- **Effectif cumulé croissant ($n_i^+$)** : la somme cumulée des effectifs de toutes les modalités dont la "valeur" est inférieure à celle de $m_i$.
 $$
-n_i^+ = n_1 + n_2 + n_3 + \dot + n_i
+n_i^+ = n_1 + n_2 + n_3 + \dots + n_i
 $$
 
-- **Effectif cumulé décroissant, $n_i^-$
+- **Effectif cumulé décroissant ($n_i^-$)** : la somme cumulée des effectifs de toutes les modalités dont la "valeur" est supérieure à celle de $m_i$.
+$$
+n_i^- = n_i + \dots + n_k
+$$
 
 ## Fréquence
 
-- Fréquence relative, $f_i$ : Proportion ($f_i = \frac{n_i}{n}$).
-- Fréquence cumulée croissante
-- Fréquence cumulée décroissante
+- **Fréquence relative ($f_i$)** : Proportion des observations dans chaque modalité.
+$$
+f_i = \frac{n_i}{n}
+$$
+- **Fréquence cumulée croissante ($f_i^+$)**
+$$
+f_i^+ = \frac{n_i^+}{n}
+$$
+- **Fréquence cumulée décroissante ($f_i^-$)**
+$$
+f_i^- = \frac{n_i^-}{n}
+$$
+
+## Structure d'un tableau statistique
+
+| Modalité/Classe $X$  | Effectif $n_i$ | Fréquence $f_i$       | Effectif cumulé $n_i^+$ | Fréquence cumulée $f_i^+$ |
+|----------------------|----------------|-----------------------|-------------------------|---------------------------|
+| Modalité 1           | $n_1$          | $f_1 = \frac{n_1}{n}$ | $n_1^+ = n_1$           | $f_1^+ = f_1$             |
+| Modalité 2           | $n_2$          | $f_2 = \frac{n_2}{n}$ | $n_2^+ = n_1 + n_2$     | $f_2^+ = f_1 + f_2$       |
+| ...                  | ...            | ...                   | ...                     | ...                       |
+| Total                | $n = \sum n_i$ | $\sum f_i = 1$        |                         |                           |
 
 # Exercices
 
@@ -206,7 +226,7 @@ La synthèse par tableau des données (observées à l’état brut) d’une var
 Regrouper les modalités en intervalles.
 :::
 
-### Variables quantitative continue 2
+## Variables quantitative continue 2
  
 - **Données univariées** : Le salaire mensuel de 24 candidats à un concours
 
