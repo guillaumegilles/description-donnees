@@ -44,7 +44,14 @@ website:
         href: ../../blog.html
 
   sidebar:
-    search: true 
+    search: true
+    tools:
+      - icon: github
+        text: GitHub
+        href: https://github.com/guillaumegilles/description-donnees
+      - icon: code-square
+        text: Moodle
+        href: https://moodle.essca.fr/course/view.php?id=12466#module-241126
     contents:
       - index.qmd
       - section: Information
