@@ -1,5 +1,9 @@
 ---
-title: "Représentation graphique des données"
+title: "3. Représentation graphique des données"
+author: Guillaume Gilles
+format:
+  revealjs:
+    theme: dark
 ---
 
 #### **3.1 Graphiques pour les variables qualitatives**
