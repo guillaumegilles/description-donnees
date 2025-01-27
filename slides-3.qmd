@@ -1,0 +1,159 @@
+---
+title: "Représentation graphique des données"
+---
+
+#### **3.1 Graphiques pour les variables qualitatives**
+Les variables qualitatives (ou catégorielles) sont des variables dont les valeurs sont des catégories ou des groupes, comme les couleurs, les genres, ou les marques. Les graphiques les plus utilisés pour représenter ce type de données sont les diagrammes en barres et les diagrammes circulaires.
+
+1. **Diagrammes en barres** :
+   - **Définition** : Un diagramme en barres est constitué de barres de hauteurs proportionnelles aux fréquences des différentes catégories.
+   - **Avantages** :
+     - Simple à comprendre.
+     - Permet de comparer facilement les fréquences entre différentes catégories.
+   - **Exemple** :
+     - Si l'on a une variable « Couleur de voiture » avec les catégories "Rouge", "Bleu", "Noir", on peut représenter le nombre de voitures de chaque couleur sous forme de barres.
+   - **Réalisations** :
+     - **Excel/Google Sheets** : Sélectionner les données et choisir le graphique "Histogramme" ou "Barres".
+     - **Python** (matplotlib) :
+       ```python
+       import matplotlib.pyplot as plt
+       categories = ['Rouge', 'Bleu', 'Noir']
+       frequencies = [15, 25, 10]
+       plt.bar(categories, frequencies)
+       plt.title('Distribution des couleurs de voiture')
+       plt.xlabel('Couleur')
+       plt.ylabel('Nombre de voitures')
+       plt.show()
+       ```
+
+2. **Diagrammes circulaires (camemberts)** :
+   - **Définition** : Un graphique circulaire divise un cercle en secteurs, chaque secteur représentant une proportion de la catégorie.
+   - **Avantages** :
+     - Idéal pour montrer des parts de manière visuelle (p. ex., pourcentage de répartition).
+     - Facile à comprendre.
+   - **Inconvénients** :
+     - Moins précis pour comparer des valeurs proches.
+   - **Exemple** :
+     - Si l'on a les données : 60% "Rouge", 30% "Bleu", 10% "Noir", on peut représenter ces proportions sous forme de camembert.
+   - **Réalisations** :
+     - **Excel/Google Sheets** : Sélectionner les données et choisir le graphique "Camembert".
+     - **Python** (matplotlib) :
+       ```python
+       sizes = [60, 30, 10]
+       labels = ['Rouge', 'Bleu', 'Noir']
+       plt.pie(sizes, labels=labels, autopct='%1.1f%%')
+       plt.title('Répartition des couleurs de voiture')
+       plt.show()
+       ```
+
+---
+
+#### **3.2 Graphiques pour les variables quantitatives**
+Les variables quantitatives sont celles dont les valeurs sont numériques et mesurables. Pour ce type de données, on utilise des histogrammes, des polygones des fréquences, des boîtes à moustaches (boxplots), et des courbes cumulées.
+
+1. **Histogrammes** :
+   - **Définition** : Un histogramme est un graphique où les données sont divisées en intervalles (ou classes), et la hauteur de chaque barre représente la fréquence des valeurs dans cet intervalle.
+   - **Avantages** :
+     - Permet de visualiser la distribution des données.
+     - Utile pour les données continues.
+   - **Exemple** :
+     - Si l'on a une variable « Âge » avec des valeurs allant de 0 à 100, on peut créer un histogramme pour voir la distribution des âges.
+   - **Réalisations** :
+     - **Excel/Google Sheets** : Créer un histogramme en sélectionnant les données et choisissant l'option « Histogramme ».
+     - **Python** (matplotlib) :
+       ```python
+       import matplotlib.pyplot as plt
+       ages = [22, 25, 29, 29, 31, 35, 35, 40, 41, 45, 50, 55, 60]
+       plt.hist(ages, bins=5)
+       plt.title('Distribution des âges')
+       plt.xlabel('Âge')
+       plt.ylabel('Fréquence')
+       plt.show()
+       ```
+
+2. **Polygones des fréquences** :
+   - **Définition** : Un polygone des fréquences est une ligne qui relie les points représentés par les centres des barres d'un histogramme.
+   - **Avantages** :
+     - Utile pour comparer plusieurs distributions.
+     - Permet de mieux visualiser les tendances globales des données.
+   - **Exemple** :
+     - Si l'on veut superposer plusieurs distributions de données (par exemple, les résultats de deux classes à un examen), on peut utiliser un polygone des fréquences.
+   - **Réalisations** :
+     - **Python** (matplotlib) :
+       ```python
+       data = [22, 25, 29, 29, 31, 35, 35, 40, 41, 45, 50, 55, 60]
+       plt.hist(data, bins=5, alpha=0.5, edgecolor='black', histtype='step')
+       plt.title('Polygone des fréquences')
+       plt.xlabel('Âge')
+       plt.ylabel('Fréquence')
+       plt.show()
+       ```
+
+3. **Boîtes à moustaches (Boxplots)** :
+   - **Définition** : Un boxplot est un graphique qui permet de visualiser la médiane, les quartiles, ainsi que les valeurs extrêmes (outliers) d'une série de données.
+   - **Avantages** :
+     - Très utile pour repérer les outliers.
+     - Permet de comparer plusieurs jeux de données sur un même graphique.
+   - **Exemple** :
+     - Si l'on a les résultats d'examens de deux classes, on peut utiliser un boxplot pour comparer la répartition des notes.
+   - **Réalisations** :
+     - **Excel/Google Sheets** : Créer un boxplot en sélectionnant les données et en choisissant l'option « Boîte à moustaches ».
+     - **Python** (matplotlib/seaborn) :
+       ```python
+       import seaborn as sns
+       data = [22, 25, 29, 29, 31, 35, 35, 40, 41, 45, 50, 55, 60]
+       sns.boxplot(data)
+       plt.title('Boxplot des âges')
+       plt.show()
+       ```
+
+4. **Courbes cumulées** :
+   - **Définition** : Une courbe cumulative montre la somme cumulée des fréquences d’une variable.
+   - **Avantages** :
+     - Utile pour observer la progression cumulative d'une variable.
+     - Permet de visualiser rapidement la tendance de distribution.
+   - **Exemple** :
+     - Une courbe cumulative pour l'âge peut montrer combien de personnes sont en dessous d'une certaine tranche d'âge.
+   - **Réalisations** :
+     - **Python** (matplotlib) :
+       ```python
+       plt.hist(data, bins=5, cumulative=True, color='blue', edgecolor='black')
+       plt.title('Courbe cumulée des âges')
+       plt.xlabel('Âge')
+       plt.ylabel('Fréquence cumulée')
+       plt.show()
+       ```
+
+---
+
+#### **3.3 Choix du graphique : Quand et comment choisir le type de graphique ?**
+1. **Variables qualitatives** :
+   - **Diagramme en barres** : Idéal pour comparer les fréquences entre différentes catégories.
+   - **Diagramme circulaire (camembert)** : Idéal pour visualiser des proportions dans un ensemble.
+   
+2. **Variables quantitatives** :
+   - **Histogramme** : Idéal pour visualiser la distribution de données continues.
+   - **Polygone des fréquences** : Utile pour comparer plusieurs distributions.
+   - **Boîte à moustaches** : Utile pour comparer la dispersion, les médianes, et identifier les outliers.
+   - **Courbe cumulative** : Utile pour observer la somme cumulative et la distribution.
+
+---
+
+#### **3.4 Ateliers pratiques**
+1. **Utilisation d’outils comme Excel, R ou Python** :
+   - **Excel/Google Sheets** :
+     - Créer des graphiques en sélectionnant des données et en utilisant l'outil "Graphiques".
+   - **Python** :
+     - Utiliser **matplotlib**, **seaborn**, ou **pandas** pour générer des graphiques interactifs.
+     - **Exemple avec pandas** :
+       ```python
+       import pandas as pd
+       data = pd.Series([22, 25, 29, 29, 31, 35, 35, 40, 41, 45, 50, 55, 60])
+       data.plot(kind='box')
+       plt.title('Boxplot avec pandas')
+       plt.show()
+       ```
+
+---
+
+Avec ce détail, tu devrais être en mesure de bien comprendre les différentes façons de représenter graphiquement les données et les outils à utiliser pour chaque type de graphique. Si tu as des questions ou si tu veux des exemples supplémentaires, n’hésite pas à demander ! 😊
