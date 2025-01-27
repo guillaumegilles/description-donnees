@@ -1,0 +1,177 @@
+---
+title: Représentation Graphique
+---
+
+# Variables qualitatives
+
+## Diagramme en barres
+
+## Diagramme à secteurs
+
+$$\alpha_i = (n_i \times \frac{360}{n})^\circ = (f_i \times 360)^\circ
+
+#V Variables quantitatives
+
+## Discrètes
+
+## Continues
+
+histogramme
+
+
+----------------------------
+#########################
+         ChatGPT
+---------------------------
+
+Voici le détail structuré pour la **séance 2 : Collecte et organisation des données**.
+
+---
+
+### **2. Collecte et organisation des données**
+
+---
+
+#### **2.1 Collecte de données**
+La collecte de données est une étape fondamentale en statistiques. Elle permet de s'assurer que les données recueillies sont fiables, pertinentes et représentatives du phénomène étudié.
+
+1. **Méthodes de collecte de données** :
+   - **Sondages** :
+     - Définition : Questionnaires ou enquêtes utilisés pour recueillir des informations auprès d'un échantillon de population.
+     - Avantages :
+       - Rapide et économique pour obtenir une grande quantité de données.
+       - Permet d'étudier des phénomènes sur une large échelle.
+     - Limites : Risque de biais si les questions sont mal formulées ou si l’échantillon est mal choisi.
+   - **Observations** :
+     - Définition : Collecte directe de données par observation des comportements ou des événements.
+     - Exemple : Observer les comportements d’achat dans un supermarché.
+     - Limites : Subjectivité de l'observateur et difficulté de généralisation.
+   - **Bases de données** :
+     - Définition : Utilisation de données déjà collectées et stockées (p. ex. données d'entreprise, données publiques).
+     - Exemple : Analyse des bases de données sur les ventes d'une entreprise.
+   - **Expérimentations** :
+     - Définition : Réalisation de tests dans des conditions contrôlées pour mesurer l’effet d’un facteur.
+     - Exemple : Étude de l’effet d’un nouveau médicament sur des patients.
+
+2. **Éviter les biais dans la collecte** :
+   - **Définir un échantillon représentatif** :
+     - Utiliser des méthodes d’échantillonnage aléatoire ou stratifié pour garantir une représentativité.
+   - **Limiter les erreurs de mesure** :
+     - Bien formuler les questions d’un questionnaire.
+     - Utiliser des outils de mesure précis.
+   - **Éviter les biais de sélection** :
+     - Exemple : Ne pas inclure uniquement des volontaires pour une étude sur la santé, car ils pourraient avoir des comportements différents de la population générale.
+
+---
+
+#### **2.2 Organisation des données**
+Une fois les données collectées, il est crucial de les organiser afin de faciliter leur analyse.
+
+1. **Tableaux de données** :
+   - **Définition** : Un tableau de données présente les données brutes, organisées sous forme de lignes (individus) et de colonnes (variables).
+   - **Exemple** :
+     - Étude sur des élèves :
+       | Nom   | Âge | Sexe  | Note |
+       |-------|-----|-------|------|
+       | Alice | 20  | F     | 15   |
+       | Bob   | 22  | M     | 14   |
+       | Carla | 21  | F     | 16   |
+   - **Objectif** : Structurer les données pour qu'elles soient compréhensibles et prêtes à être analysées.
+
+2. **Construction d’une distribution de fréquences** :
+   - **Effectifs** :
+     - Définition : Nombre de fois qu’une valeur ou une classe apparaît dans les données.
+     - Exemple : Nombre d’élèves ayant obtenu une note de 15/20.
+   - **Fréquences relatives** :
+     - Définition : Proportion d’une valeur ou d’une classe par rapport au total des observations.
+       \[
+       \text{Fréquence relative} = \frac{\text{Effectif}}{\text{Total}}
+       \]
+     - Exemple : Si 5 élèves sur 20 ont eu une note de 15/20, la fréquence relative est \( \frac{5}{20} = 0.25 \) (ou 25%).
+   - **Fréquences cumulées** :
+     - Définition : Somme des fréquences des classes jusqu'à une certaine valeur.
+     - Exemple : Si 5 élèves ont une note ≤ 12 et 10 élèves ≤ 14, la fréquence cumulée pour 14 est \( \frac{10}{20} = 50\% \).
+
+3. **Présentation des données sous forme de tableau** :
+   - Exemple : Répartition des notes d’un groupe d’élèves :
+     | Classe de notes | Effectif | Fréquence relative | Fréquence cumulée |
+     |-----------------|----------|--------------------|-------------------|
+     | [0-10]         | 3        | 0.15               | 0.15              |
+     | [10-12]        | 5        | 0.25               | 0.40              |
+     | [12-14]        | 7        | 0.35               | 0.75              |
+     | [14-16]        | 4        | 0.20               | 0.95              |
+     | [16-20]        | 1        | 0.05               | 1.00              |
+
+---
+
+#### **2.3 Outils pratiques pour organiser les données**
+1. **Introduction aux tableurs (Excel/Google Sheets)** :
+   - **Organisation des données** :
+     - Saisie des données sous forme de tableau.
+     - Tri et filtrage des données.
+   - **Calculs automatiques** :
+     - Effectifs : Utiliser la fonction `NB.SI(plage; critère)`.
+     - Fréquences relatives : Diviser les effectifs par le total avec une formule.
+     - Exemple de formule dans Excel : `=B2/SOMME(B$2:B$6)` pour calculer une fréquence relative.
+   - **Création automatique de tableaux de fréquences** :
+     - Utiliser des tableaux croisés dynamiques pour analyser des regroupements.
+
+2. **Introduction à Python** (pandas) :
+   - **Organisation et analyse des données** :
+     - Exemple de code :
+       ```python
+       import pandas as pd
+
+       # Données brutes
+       data = {'Nom': ['Alice', 'Bob', 'Carla'], 'Âge': [20, 22, 21], 'Note': [15, 14, 16]}
+       df = pd.DataFrame(data)
+
+       # Distribution des fréquences
+       notes = [15, 14, 16, 15, 14, 15]
+       freq = pd.Series(notes).value_counts()
+       freq_relative = freq / len(notes)
+
+       print(freq)
+       print(freq_relative)
+       ```
+
+3. **Automatisation dans R** :
+   - Exemple de script R pour créer un tableau de fréquences :
+     ```R
+     # Données
+     notes <- c(15, 14, 16, 15, 14, 15)
+
+     # Effectifs
+     table(notes)
+
+     # Fréquences relatives
+     prop.table(table(notes))
+     ```
+
+---
+
+#### **2.4 Ateliers pratiques**
+1. **Atelier avec Excel/Google Sheets** :
+   - **Objectif** : Créer un tableau de données, calculer les fréquences et produire une distribution de fréquences.
+   - Étapes :
+     1. Saisir des données brutes.
+     2. Utiliser les formules pour calculer les effectifs et fréquences.
+     3. Organiser les données dans un tableau.
+
+2. **Atelier avec Python (pandas)** :
+   - **Objectif** : Utiliser Python pour organiser et analyser des données.
+   - Étapes :
+     1. Charger les données depuis un fichier CSV.
+     2. Créer un tableau de distribution de fréquences avec pandas.
+     3. Générer des statistiques descriptives simples.
+
+3. **Atelier avancé avec R** :
+   - **Objectif** : Explorer la puissance de R pour organiser et analyser les données.
+   - Étapes :
+     1. Importer des données.
+     2. Calculer les fréquences et les afficher sous forme de tableau.
+     3. Réaliser des graphiques de fréquences (barres, histogrammes).
+
+---
+
+Avec ce détail, les participants auront une vision complète de la collecte et de l'organisation des données, ainsi que des outils disponibles pour automatiser ces processus. Si tu veux approfondir une partie ou inclure un tutoriel plus technique, fais-moi signe ! 😊
