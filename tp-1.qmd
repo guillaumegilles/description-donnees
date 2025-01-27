@@ -1,0 +1,14 @@
+---
+title: "Travaux Pratiques #1"
+---
+
+Suivant le jeu de données xxxx
+
+1. Déterminer les types de variables (ordianle, nominale, discrète, continue)
+2. Présenter les données de façon synthétique en tableu, avec piur rappel:
+  - $n_i$
+  - $f_i$
+  - $n_i^+$
+  - $n_i^-$
+  - $f_i^+$
+  - $f_i^-$
