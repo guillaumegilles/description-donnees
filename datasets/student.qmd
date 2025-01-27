@@ -1,0 +1,5 @@
+---
+title: Student Alcohol Consumption
+---
+
+https://www.kaggle.com/datasets/uciml/student-alcohol-consumption
