@@ -1,5 +1,9 @@
 ---
-title: "Mesures de dispersion"
+title: "5. Mesures de dispersion"
+author: Guillaume Gilles
+format:
+  revealjs:
+    theme: dark
 ---
 
 #### **5.1 Définitions et calculs**
