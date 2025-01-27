@@ -1,5 +1,9 @@
 ---
-title: Représentation Graphique
+title: "2. Collecte et organisation des données"
+author: Guillaume Gilles
+format:
+  revealjs:
+    theme: dark
 ---
 
 # Variables qualitatives
