@@ -1,0 +1,111 @@
+---
+title: "Mesures de tendance centrale"
+---
+
+#### **4.1 Définitions et calculs**
+1. **Moyenne arithmétique** :
+   - **Définition** : La somme des valeurs des observations divisée par le nombre total d'observations.
+     \[
+     \text{Moyenne} = \frac{\sum x_i}{n}
+     \]
+   - **Avantages** :
+     - Facile à calculer.
+     - Représente bien les données symétriques.
+   - **Inconvénients** :
+     - Sensible aux valeurs extrêmes (outliers).
+
+2. **Médiane** :
+   - **Définition** : La valeur qui sépare les données en deux groupes égaux lorsqu'elles sont classées dans l'ordre croissant.
+     - Si \(n\) est impair : la médiane est l'observation au milieu.
+     - Si \(n\) est pair : la médiane est la moyenne des deux observations centrales.
+   - **Avantages** :
+     - Insensible aux valeurs extrêmes.
+     - Plus représentative des données asymétriques.
+   - **Exemple rapide** :
+     - Données : \(3, 7, 9, 12, 15\) → Médiane = \(9\).
+     - Données : \(3, 7, 9, 12\) → Médiane = \(\frac{7 + 9}{2} = 8\).
+
+3. **Mode** :
+   - **Définition** : La valeur qui apparaît le plus souvent dans un ensemble de données.
+   - **Cas particuliers** :
+     - Une distribution peut être unimodale, bimodale, ou sans mode (aucune valeur ne se répète).
+   - **Avantages** :
+     - Simple à comprendre et utile pour les variables qualitatives.
+   - **Exemple rapide** :
+     - Données : \(2, 3, 3, 5, 7, 7, 7, 8\) → Mode = \(7\).
+
+---
+
+#### **4.2 Comparaison et interprétation**
+1. **Quand utiliser chaque mesure ?**
+   - **Moyenne** :
+     - Appropriée pour des données quantitatives symétriques sans valeurs extrêmes.
+     - Exemples : calcul du revenu moyen, de la note moyenne.
+   - **Médiane** :
+     - Idéale pour des données asymétriques ou affectées par des valeurs extrêmes.
+     - Exemples : revenu médian pour analyser les inégalités, âge médian.
+   - **Mode** :
+     - Particulièrement utile pour des données qualitatives ou pour identifier les tendances dominantes.
+     - Exemples : marque de voiture préférée, catégorie d’âge prédominante.
+
+2. **Illustration des cas pratiques :**
+   - Données symétriques : \(4, 5, 6, 7, 8\).
+     - Moyenne = Médiane = \(6\).
+   - Données asymétriques : \(4, 5, 6, 7, 50\).
+     - Moyenne = \(14.4\) (tirée vers \(50\)).
+     - Médiane = \(6\) (plus représentative).
+   - Données qualitatives : "Rouge", "Bleu", "Rouge", "Vert", "Rouge".
+     - Mode = "Rouge".
+
+---
+
+#### **4.3 Exemples pratiques**
+1. **Calculs manuels sur de petits jeux de données** :
+   - Données : \(3, 7, 7, 10, 12, 12, 15\).
+     - Moyenne :
+       \[
+       \text{Moyenne} = \frac{3 + 7 + 7 + 10 + 12 + 12 + 15}{7} = 9.43
+       \]
+     - Médiane : données classées \((3, 7, 7, 10, 12, 12, 15)\), valeur centrale = \(10\).
+     - Mode : \(7\) et \(12\) (bimodale).
+   - Résultat interprétatif :
+     - La moyenne est affectée par des valeurs extrêmes si elles sont présentes.
+     - La médiane est stable et représente mieux les tendances si la distribution est asymétrique.
+
+2. **Exercices avec des outils automatisés** :
+   - Utilisation d’un **tableur (Excel/Google Sheets)** :
+     - Moyenne : =MOYENNE(A1:A10).
+     - Médiane : =MEDIAN(A1:A10).
+     - Mode : =MODE(A1:A10).
+   - Utilisation de **Python** :
+     ```python
+     import numpy as np
+
+     data = [3, 7, 7, 10, 12, 12, 15]
+     moyenne = np.mean(data)
+     mediane = np.median(data)
+     mode = max(set(data), key=data.count)
+
+     print(f"Moyenne: {moyenne}, Médiane: {mediane}, Mode: {mode}")
+     ```
+   - Résultat attendu :
+     - Moyenne = \(9.43\), Médiane = \(10\), Mode = \(7\) et \(12\).
+
+---
+
+#### **4.4 Applications pratiques**
+1. **Étude de cas** :
+   - Analyse de données salariales :
+     - Revenu moyen : \(40,000\) € (sensible aux très hauts salaires).
+     - Revenu médian : \(30,000\) € (plus représentatif pour analyser la répartition).
+   - Répartition des notes à un examen :
+     - Mode = \(15\) (note la plus fréquente).
+     - Moyenne et médiane permettent de comprendre la performance globale.
+
+2. **Visualisation des mesures** :
+   - Graphiques dans Excel ou Python (exemple d’un boxplot montrant médiane et dispersion).
+   - Ajout de la moyenne sur un histogramme pour voir son positionnement.
+
+---
+
+Cette structure devrait permettre une compréhension claire des mesures de tendance centrale, avec des exemples concrets et des exercices pratiques. Si tu veux des exemples supplémentaires ou des tutoriels pour un logiciel en particulier, fais-moi signe ! 😊
