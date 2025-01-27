@@ -1,5 +1,9 @@
 ---
-title: "Distribution des données"
+title: "6. Distribution des données"
+author: Guillaume Gilles
+format:
+  revealjs:
+    theme: dark
 ---
 
 #### **6.1 Formes de distribution**
