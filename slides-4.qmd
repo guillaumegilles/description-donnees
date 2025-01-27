@@ -1,5 +1,9 @@
 ---
-title: "Mesures de tendance centrale"
+title: "4. Mesures de tendance centrale"
+author: Guillaume Gilles
+format:
+  revealjs:
+    theme: dark
 ---
 
 #### **4.1 Définitions et calculs**
