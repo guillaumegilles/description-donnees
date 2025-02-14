@@ -44,4 +44,4 @@ Ce jeu de données peut être utilisé pour :
 
 Web scrapping
 
-## [Téléchargez le jeu de données](datasets/mba_decision_dataset.csv)
+## [Téléchargez le jeu de données](mba_decision_dataset.csv)
