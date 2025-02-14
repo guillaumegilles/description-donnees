@@ -84,75 +84,189 @@
     ]
   },
   {
-    "objectID": "datasets/mba-decision.html",
-    "href": "datasets/mba-decision.html",
-    "title": "MBA Decision After Bachelor’s",
+    "objectID": "seance-1.html",
+    "href": "seance-1.html",
+    "title": "1. Introduction aux statistiques descriptives",
     "section": "",
-    "text": "Ce jeu de données, disponible sur kaggle, concerne des individus ayant obtenu leur diplôme de licence et décidant s’ils vont poursuivre un MBA. Il inclut des informations démographiques, des antécédents académiques, une expérience professionnelle, des facteurs financiers et des aspirations de carrière afin d’analyser les tendances et les principaux moteurs derrière la décision de faire un MBA.\nCe jeu de données peut être utilisé pour :\n✔️ Modélisation prédictive – Identifier les tendances dans les décisions MBA\n✔️ Perspectives de carrière – Comprendre l’impact de l’expérience professionnelle et du salaire sur les choix\n✔️ Recherche sur l’éducation en gestion – Étudier les tendances du MBA dans différents secteurs",
-    "crumbs": [
-      "ABOUT",
-      "Jeux de Données",
-      "MBA Decision After Bachelor's"
-    ]
+    "text": "Back to top"
   },
   {
-    "objectID": "datasets/mba-decision.html#description",
-    "href": "datasets/mba-decision.html#description",
-    "title": "MBA Decision After Bachelor’s",
+    "objectID": "datasets/student.html",
+    "href": "datasets/student.html",
+    "title": "Student Alcohol Consumption",
     "section": "",
-    "text": "Ce jeu de données, disponible sur kaggle, concerne des individus ayant obtenu leur diplôme de licence et décidant s’ils vont poursuivre un MBA. Il inclut des informations démographiques, des antécédents académiques, une expérience professionnelle, des facteurs financiers et des aspirations de carrière afin d’analyser les tendances et les principaux moteurs derrière la décision de faire un MBA.\nCe jeu de données peut être utilisé pour :\n✔️ Modélisation prédictive – Identifier les tendances dans les décisions MBA\n✔️ Perspectives de carrière – Comprendre l’impact de l’expérience professionnelle et du salaire sur les choix\n✔️ Recherche sur l’éducation en gestion – Étudier les tendances du MBA dans différents secteurs",
+    "text": "https://www.kaggle.com/datasets/uciml/student-alcohol-consumption",
     "crumbs": [
       "ABOUT",
       "Jeux de Données",
-      "MBA Decision After Bachelor's"
+      "Student Alcohol Consumption"
     ]
   },
   {
-    "objectID": "datasets/mba-decision.html#variables-du-jeu-de-données",
-    "href": "datasets/mba-decision.html#variables-du-jeu-de-données",
-    "title": "MBA Decision After Bachelor’s",
-    "section": "Variables du jeu de données",
-    "text": "Variables du jeu de données\n\nID de la personne – Identifiant unique\n\nÂge – Âge au moment de la décision\n\nGenre – Homme, Femme, Autre\n\nMajeure en licence – Ingénierie, Commerce, Arts, Sciences, etc.\n\nGPA en licence – Échelle de 0 à 4\n\nAnnées d’expérience professionnelle – Nombre d’années avant la décision de faire un MBA\n\nIntitulé du poste actuel – Analyste, Manager, Consultant, etc.\n\nSalaire annuel (avant MBA) – En dollars américains (USD)\n\nA une expérience en gestion – Oui/Non\n\nScore GRE/GMAT – Score aux tests standardisés\n\nClassement de l’université de licence – Classement de l’établissement où le diplôme de licence a été obtenu\n\nIntérêt pour l’entrepreneuriat – Échelle de 1 à 10\n\nImportance du réseau – Échelle de 1 à 10\n\nSource de financement du MBA – Auto-financé, Prêt, Bourse, Employeur\n\nRôle souhaité après MBA – Consultant, Cadre dirigeant, Fondateur de startup, etc.\n\nSalaire attendu après MBA – Salaire estimé après l’obtention du MBA\n\nPréférence de localisation après MBA – Nationale, Internationale\n\nRaison du MBA – Évolution de carrière, Acquisition de compétences, Entrepreneuriat, etc.\n\nMBA en ligne vs. en présentiel – Préférence pour le mode d’apprentissage\n\nA décidé de poursuivre un MBA ? – Oui/Non (Variable cible)",
+    "objectID": "datasets/student.html#merging-dataset",
+    "href": "datasets/student.html#merging-dataset",
+    "title": "Student Alcohol Consumption",
+    "section": "Merging dataset",
+    "text": "Merging dataset\nd1=read.table(\"student-mat.csv\",sep=\";\",header=TRUE)\nd2=read.table(\"student-por.csv\",sep=\";\",header=TRUE)\n\nd3=merge(d1,d2,by=c(\"school\",\"sex\",\"age\",\"address\",\"famsize\",\"Pstatus\",\"Medu\",\"Fedu\",\"Mjob\",\"Fjob\",\"reason\",\"nursery\",\"internet\"))\nprint(nrow(d3)) # 382 students",
     "crumbs": [
       "ABOUT",
       "Jeux de Données",
-      "MBA Decision After Bachelor's"
+      "Student Alcohol Consumption"
     ]
   },
   {
-    "objectID": "datasets/mba-decision.html#source",
-    "href": "datasets/mba-decision.html#source",
-    "title": "MBA Decision After Bachelor’s",
-    "section": "Source",
-    "text": "Source\n\nAuteur\nAkshay Choudhary\n\n\nMéthodologie de collecte des données\nWeb scrapping",
+    "objectID": "slides-2.html#diagramme-en-barres",
+    "href": "slides-2.html#diagramme-en-barres",
+    "title": "2. Collecte et organisation des données",
+    "section": "Diagramme en barres",
+    "text": "Diagramme en barres",
     "crumbs": [
       "ABOUT",
-      "Jeux de Données",
-      "MBA Decision After Bachelor's"
+      "Cours",
+      "2. Collecte et organisation des données"
     ]
   },
   {
-    "objectID": "datasets/mba-decision.html#téléchargez-le-jeu-de-données",
-    "href": "datasets/mba-decision.html#téléchargez-le-jeu-de-données",
-    "title": "MBA Decision After Bachelor’s",
-    "section": "Téléchargez le jeu de données",
-    "text": "Téléchargez le jeu de données",
+    "objectID": "slides-2.html#diagramme-à-secteurs",
+    "href": "slides-2.html#diagramme-à-secteurs",
+    "title": "2. Collecte et organisation des données",
+    "section": "Diagramme à secteurs",
+    "text": "Diagramme à secteurs\n$$_i = (n_i )^= (f_i )^\n#V Variables quantitatives",
     "crumbs": [
       "ABOUT",
-      "Jeux de Données",
-      "MBA Decision After Bachelor's"
+      "Cours",
+      "2. Collecte et organisation des données"
     ]
   },
   {
-    "objectID": "datasets/winequality.html",
-    "href": "datasets/winequality.html",
-    "title": "Wine Quality",
+    "objectID": "slides-2.html#discrètes",
+    "href": "slides-2.html#discrètes",
+    "title": "2. Collecte et organisation des données",
+    "section": "Discrètes",
+    "text": "Discrètes",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "2. Collecte et organisation des données"
+    ]
+  },
+  {
+    "objectID": "slides-2.html#continues",
+    "href": "slides-2.html#continues",
+    "title": "2. Collecte et organisation des données",
+    "section": "Continues",
+    "text": "Continues\nhistogramme\n\n\n\n#########################\n\n\nChatGPT\n\n\n\nVoici le détail structuré pour la séance 2 : Collecte et organisation des données.",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "2. Collecte et organisation des données"
+    ]
+  },
+  {
+    "objectID": "slides-5.html#jeu-de-données",
+    "href": "slides-5.html#jeu-de-données",
+    "title": "Travaux Pratiques #2",
+    "section": "Jeu de données",
+    "text": "Jeu de données\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\nLes données ont été extraites du magazine américain Motor Trend de 1974 et comprennent la consommation de carburant ainsi que 10 aspects de la conception et des performances automobiles pour 32 voitures (modèles de 1973-74).",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "Travaux Pratiques #2"
+    ]
+  },
+  {
+    "objectID": "slides-5.html#jeu-de-données-1",
+    "href": "slides-5.html#jeu-de-données-1",
+    "title": "Travaux Pratiques #2",
+    "section": "Jeu de données",
+    "text": "Jeu de données\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n\nmpg : Miles par gallon (US)\ncyl : Nombre de cylindres\ndisp : Cylindrée (pouces cubes)\nhp : Puissance brute (chevaux)\nwt : Poids (1000 livres)",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "Travaux Pratiques #2"
+    ]
+  },
+  {
+    "objectID": "slides-5.html#question-1",
+    "href": "slides-5.html#question-1",
+    "title": "Travaux Pratiques #2",
+    "section": "Question 1",
+    "text": "Question 1\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n❔ La variable mpg, est :\n\n\nQualitative ordianle\n\n\n\n\nQuantitative discrète\n\n\n\n\nQualitative nominale\n\n\n\n\n\nQuantitative continue",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "Travaux Pratiques #2"
+    ]
+  },
+  {
+    "objectID": "slides-5.html#question-2",
+    "href": "slides-5.html#question-2",
+    "title": "Travaux Pratiques #2",
+    "section": "Question 2",
+    "text": "Question 2\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n❔ L’outil graphique adéquat pour représenter les données de la variable cyl, est l’histogramme :\n\n\nVrai\n\n\n\n\n\nFaux",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "Travaux Pratiques #2"
+    ]
+  },
+  {
+    "objectID": "slides-5.html#question-3",
+    "href": "slides-5.html#question-3",
+    "title": "Travaux Pratiques #2",
+    "section": "Question 3",
+    "text": "Question 3\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n❔ Quelles variables sont quantitative discrète :\n\n\nmpg\n\n\n\n\n\ncyl\n\n\n\n\n\n\ndisp\n\n\n\n\n\n\nhp",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "Travaux Pratiques #2"
+    ]
+  },
+  {
+    "objectID": "slides-5.html#question-4",
+    "href": "slides-5.html#question-4",
+    "title": "Travaux Pratiques #2",
+    "section": "Question 4",
+    "text": "Question 4\n\n\n\n\n\n\n\n\n\n\n\n\n❔ Pour la variable mpg, la médiane est :\n\n\n\\(22.8\\)\n\n\n\n\n\\(15.43\\)\n\n\n\n\n\\(20.09\\)\n\n\n\n\n\n\\(19.20\\)",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "Travaux Pratiques #2"
+    ]
+  },
+  {
+    "objectID": "slides-5.html#travaux-à-réaliser",
+    "href": "slides-5.html#travaux-à-réaliser",
+    "title": "Travaux Pratiques #2",
+    "section": "Travaux à réaliser",
+    "text": "Travaux à réaliser\nConstruisez une analyse statistique descriptive sur le jeu de données MBA Decision After Bachelor’s, pour cela :\n\nPour la variable Age, déterminez, les ages minimun et maximun, calculez les quartiles, et construisez une boîte à moustache ;\nPour les variable Undergraduate Major et Undergraduate GPA, déterminez et construisez les représentations graphiques les plus appropriées ;\nPour la variables Annual Salary (Before MBA) construisez un tableau statistiques en incluant, \\(n_i\\), \\(f_i\\), \\(n_i^+\\), \\(n_i^-\\), \\(f_i^+\\), et \\(f_i^-\\). Conseil : pensez à convertir la nature de la variable pour vous facilitez la retranscription dans un tableau.\nPour finir construisez la représentation graphique la plus approprié pour cette varaible, Annual Salary (Before MBA), ainsi que la courbe des fréquences cumulées croissante.",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "Travaux Pratiques #2"
+    ]
+  },
+  {
+    "objectID": "planning.html",
+    "href": "planning.html",
+    "title": "Planning",
     "section": "",
-    "text": "https://www.sciencedirect.com/science/article/abs/pii/S0167923609001377?via%3Dihub\nhttps://archive.ics.uci.edu/dataset/186/wine+quality\n\nCitation Request: This dataset is public available for research. The details are described in [Cortez et al., 2009]. Please include this citation if you plan to use this database:\nP. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.\nAvailable at: [@Elsevier] http://dx.doi.org/10.1016/j.dss.2009.05.016 [Pre-press (pdf)] http://www3.dsi.uminho.pt/pcortez/winequality09.pdf [bib] http://www3.dsi.uminho.pt/pcortez/dss09.bib\n\nTitle: Wine Quality\nSources Created by: Paulo Cortez (Univ. Minho), Antonio Cerdeira, Fernando Almeida, Telmo Matos and Jose Reis (CVRVV) @ 2009\nPast Usage:\n\nP. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.\nIn the above reference, two datasets were created, using red and white wine samples. The inputs include objective tests (e.g. PH values) and the output is based on sensory data (median of at least 3 evaluations made by wine experts). Each expert graded the wine quality between 0 (very bad) and 10 (very excellent). Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed: MAD, confusion matrix for a fixed error tolerance (T), etc. Also, we plot the relative importances of the input variables (as measured by a sensitivity analysis procedure).\n\nRelevant Information:\nThe two datasets are related to red and white variants of the Portuguese “Vinho Verde” wine. For more details, consult: http://www.vinhoverde.pt/en/ or the reference [Cortez et al., 2009]. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).\nThese datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced (e.g. there are munch more normal wines than excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, we are not sure if all input variables are relevant. So it could be interesting to test feature selection methods.\nNumber of Instances: red wine - 1599; white wine - 4898.\nNumber of Attributes: 11 + output attribute\nNote: several of the attributes may be correlated, thus it makes sense to apply some sort of feature selection.\nAttribute information:\nFor more information, read [Cortez et al., 2009].\nInput variables (based on physicochemical tests): 1 - fixed acidity 2 - volatile acidity 3 - citric acid 4 - residual sugar 5 - chlorides 6 - free sulfur dioxide 7 - total sulfur dioxide 8 - density 9 - pH 10 - sulphates 11 - alcohol Output variable (based on sensory data): 12 - quality (score between 0 and 10)\nMissing Attribute Values: None\n\n\n\n\n Back to top",
+    "text": "Séances\nDate\nCours\nPréparations\nSupports\nDevoirs\n\n\n\n\n1\nMardi 21 Janvier\n1. Introduction aux statistiques descriptives\n🎥 Identification d’un échantillon et d’une population  🎮 Individus, variables et données qualitatives & quantitatives\nSéance 1\n Moodle : Test de perfectionnement\n\n\n2\nVendredi 24 Janvier\n2. Collecte et organisation des données\n🎥   🎥 test\nSéance 2\n Moodle : Test de perfectionnement\n\n\n3\nVendredi 31 Janvier\nTP #1\n🎥   🎥 test\nTP #1\n Moodle : Test de perfectionnement\n\n\n4\nVendredi 7 Février\n3. Représentation graphique des données\n🎥   🎥 test\nSéance 3\n Moodle : Test de perfectionnement\n\n\n5\nVendredi 14 Février\nTP #2\n🎥   🎥 test\nTP #2\n Moodle : Test de perfectionnement\n\n\n6\nMardi 18 Février\n4. Mesures de tendance centrale\n🎥   🎥 test\nSéance 4\n Moodle : Test de perfectionnement\n\n\n7\nVendredi 21 Février\n5. Mesures de dispersion\n🎥   🎥 test\nSéance 5\n Moodle : Test de perfectionnement\n\n\n8\nVendredi 7 Mars\n6. Distribution des données\n🎥   🎥 test\nSéance 6\n Moodle : Test de perfectionnement\n\n\n9\nVendredi 14 Mars\nTP #3\n🎥   🎥 test\nTP #3\n Moodle : Test de perfectionnement\n\n\n10\nVendredi 21 Mars\n7. Corrélation entre deux variables\n🎥   🎥 test\nSéance 7\n Moodle : Test de perfectionnement\n\n\n11\nVendredi 28 Mars\nTP #4\n🎥   🎥 test\nTP #4\n Moodle : Test de perfectionnement\n\n\n12\nVendredi 4 Avril\nTP #5\n🎥   🎥 test\nTP #5\n Moodle : Test de perfectionnement\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "ABOUT",
-      "Jeux de Données",
-      "Wine Quality"
+      "Information",
+      "Planning"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MS02-001-G Description de données",
+    "section": "",
+    "text": "Dans ce cours, nous presentons les outils statistiques de base correspondant à la première étape de l’analyse des données (résumés numériques et représentations graphiques des données). À la fin du cours, l’étudiant aura assimilé les concepts requis pour la réussite des cours ultérieurs (statistique inférentielle, analyse des données, économétrie, etc)\n\n\n\n Back to top",
+    "crumbs": [
+      "ABOUT",
+      "MS02-001-G Description de données"
     ]
   },
   {
@@ -396,182 +510,75 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "MS02-001-G Description de données",
+    "objectID": "datasets/winequality.html",
+    "href": "datasets/winequality.html",
+    "title": "Wine Quality",
     "section": "",
-    "text": "Dans ce cours, nous presentons les outils statistiques de base correspondant à la première étape de l’analyse des données (résumés numériques et représentations graphiques des données). À la fin du cours, l’étudiant aura assimilé les concepts requis pour la réussite des cours ultérieurs (statistique inférentielle, analyse des données, économétrie, etc)\n\n\n\n Back to top",
-    "crumbs": [
-      "ABOUT",
-      "MS02-001-G Description de données"
-    ]
-  },
-  {
-    "objectID": "planning.html",
-    "href": "planning.html",
-    "title": "Planning",
-    "section": "",
-    "text": "Séances\nDate\nCours\nPréparations\nSupports\nDevoirs\n\n\n\n\n1\nMardi 21 Janvier\n1. Introduction aux statistiques descriptives\n🎥 Identification d’un échantillon et d’une population  🎮 Individus, variables et données qualitatives & quantitatives\nSéance 1\n Moodle : Test de perfectionnement\n\n\n2\nVendredi 24 Janvier\n2. Collecte et organisation des données\n🎥   🎥 test\nSéance 2\n Moodle : Test de perfectionnement\n\n\n3\nVendredi 31 Janvier\nTP #1\n🎥   🎥 test\nTP #1\n Moodle : Test de perfectionnement\n\n\n4\nVendredi 7 Février\n3. Représentation graphique des données\n🎥   🎥 test\nSéance 3\n Moodle : Test de perfectionnement\n\n\n5\nVendredi 14 Février\nTP #2\n🎥   🎥 test\nTP #2\n Moodle : Test de perfectionnement\n\n\n6\nMardi 18 Février\n4. Mesures de tendance centrale\n🎥   🎥 test\nSéance 4\n Moodle : Test de perfectionnement\n\n\n7\nVendredi 21 Février\n5. Mesures de dispersion\n🎥   🎥 test\nSéance 5\n Moodle : Test de perfectionnement\n\n\n8\nVendredi 7 Mars\n6. Distribution des données\n🎥   🎥 test\nSéance 6\n Moodle : Test de perfectionnement\n\n\n9\nVendredi 14 Mars\nTP #3\n🎥   🎥 test\nTP #3\n Moodle : Test de perfectionnement\n\n\n10\nVendredi 21 Mars\n7. Corrélation entre deux variables\n🎥   🎥 test\nSéance 7\n Moodle : Test de perfectionnement\n\n\n11\nVendredi 28 Mars\nTP #4\n🎥   🎥 test\nTP #4\n Moodle : Test de perfectionnement\n\n\n12\nVendredi 4 Avril\nTP #5\n🎥   🎥 test\nTP #5\n Moodle : Test de perfectionnement\n\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "ABOUT",
-      "Information",
-      "Planning"
-    ]
-  },
-  {
-    "objectID": "slides-5.html#jeu-de-données",
-    "href": "slides-5.html#jeu-de-données",
-    "title": "Travaux Pratiques #2",
-    "section": "Jeu de données",
-    "text": "Jeu de données\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\nLes données ont été extraites du magazine américain Motor Trend de 1974 et comprennent la consommation de carburant ainsi que 10 aspects de la conception et des performances automobiles pour 32 voitures (modèles de 1973-74).",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Travaux Pratiques #2"
-    ]
-  },
-  {
-    "objectID": "slides-5.html#jeu-de-données-1",
-    "href": "slides-5.html#jeu-de-données-1",
-    "title": "Travaux Pratiques #2",
-    "section": "Jeu de données",
-    "text": "Jeu de données\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n\nmpg : Miles par gallon (US)\ncyl : Nombre de cylindres\ndisp : Cylindrée (pouces cubes)\nhp : Puissance brute (chevaux)\nwt : Poids (1000 livres)",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Travaux Pratiques #2"
-    ]
-  },
-  {
-    "objectID": "slides-5.html#question-1",
-    "href": "slides-5.html#question-1",
-    "title": "Travaux Pratiques #2",
-    "section": "Question 1",
-    "text": "Question 1\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n❔ La variable mpg, est :\n\n\nQualitative ordianle\n\n\n\n\nQuantitative discrète\n\n\n\n\nQualitative nominale\n\n\n\n\n\nQuantitative continue",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Travaux Pratiques #2"
-    ]
-  },
-  {
-    "objectID": "slides-5.html#question-2",
-    "href": "slides-5.html#question-2",
-    "title": "Travaux Pratiques #2",
-    "section": "Question 2",
-    "text": "Question 2\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n❔ L’outil graphique adéquat pour représenter les données de la variable cyl, est l’histogramme :\n\n\nVrai\n\n\n\n\n\nFaux",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Travaux Pratiques #2"
-    ]
-  },
-  {
-    "objectID": "slides-5.html#question-3",
-    "href": "slides-5.html#question-3",
-    "title": "Travaux Pratiques #2",
-    "section": "Question 3",
-    "text": "Question 3\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n❔ Quelles variables sont quantitative discrète :\n\n\nmpg\n\n\n\n\n\ncyl\n\n\n\n\n\n\ndisp\n\n\n\n\n\n\nhp",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Travaux Pratiques #2"
-    ]
-  },
-  {
-    "objectID": "slides-5.html#question-4",
-    "href": "slides-5.html#question-4",
-    "title": "Travaux Pratiques #2",
-    "section": "Question 4",
-    "text": "Question 4\n\n\n\n\n\n\n\n\n\n\n\n\n❔ Pour la variable mpg, la médiane est :\n\n\n\\(22.8\\)\n\n\n\n\n\\(15.43\\)\n\n\n\n\n\\(20.09\\)\n\n\n\n\n\n\\(19.20\\)",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Travaux Pratiques #2"
-    ]
-  },
-  {
-    "objectID": "slides-5.html#travaux-à-réaliser",
-    "href": "slides-5.html#travaux-à-réaliser",
-    "title": "Travaux Pratiques #2",
-    "section": "Travaux à réaliser",
-    "text": "Travaux à réaliser\nConstruisez une analyse statistique descriptive sur le jeu de données MBA Decision After Bachelor’s, pour cela :\n\nPour la variable Age, déterminez, les ages minimun et maximun, calculez les quartiles, et construisez une boîte à moustache ;\nPour les variable Undergraduate Major et Undergraduate GPA, déterminez et construisez les représentations graphiques les plus appropriées ;\nPour la variables Annual Salary (Before MBA) construisez un tableau statistiques en incluant, \\(n_i\\), \\(f_i\\), \\(n_i^+\\), \\(n_i^-\\), \\(f_i^+\\), et \\(f_i^-\\). Conseil : pensez à convertir la nature de la variable pour vous facilitez la retranscription dans un tableau.\nPour finir construisez la représentation graphique la plus approprié pour cette varaible, Annual Salary (Before MBA), ainsi que la courbe des fréquences cumulées croissante.",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Travaux Pratiques #2"
-    ]
-  },
-  {
-    "objectID": "slides-2.html#diagramme-en-barres",
-    "href": "slides-2.html#diagramme-en-barres",
-    "title": "2. Collecte et organisation des données",
-    "section": "Diagramme en barres",
-    "text": "Diagramme en barres",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "2. Collecte et organisation des données"
-    ]
-  },
-  {
-    "objectID": "slides-2.html#diagramme-à-secteurs",
-    "href": "slides-2.html#diagramme-à-secteurs",
-    "title": "2. Collecte et organisation des données",
-    "section": "Diagramme à secteurs",
-    "text": "Diagramme à secteurs\n$$_i = (n_i )^= (f_i )^\n#V Variables quantitatives",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "2. Collecte et organisation des données"
-    ]
-  },
-  {
-    "objectID": "slides-2.html#discrètes",
-    "href": "slides-2.html#discrètes",
-    "title": "2. Collecte et organisation des données",
-    "section": "Discrètes",
-    "text": "Discrètes",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "2. Collecte et organisation des données"
-    ]
-  },
-  {
-    "objectID": "slides-2.html#continues",
-    "href": "slides-2.html#continues",
-    "title": "2. Collecte et organisation des données",
-    "section": "Continues",
-    "text": "Continues\nhistogramme\n\n\n\n#########################\n\n\nChatGPT\n\n\n\nVoici le détail structuré pour la séance 2 : Collecte et organisation des données.",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "2. Collecte et organisation des données"
-    ]
-  },
-  {
-    "objectID": "datasets/student.html",
-    "href": "datasets/student.html",
-    "title": "Student Alcohol Consumption",
-    "section": "",
-    "text": "https://www.kaggle.com/datasets/uciml/student-alcohol-consumption",
+    "text": "https://www.sciencedirect.com/science/article/abs/pii/S0167923609001377?via%3Dihub\nhttps://archive.ics.uci.edu/dataset/186/wine+quality\n\nCitation Request: This dataset is public available for research. The details are described in [Cortez et al., 2009]. Please include this citation if you plan to use this database:\nP. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.\nAvailable at: [@Elsevier] http://dx.doi.org/10.1016/j.dss.2009.05.016 [Pre-press (pdf)] http://www3.dsi.uminho.pt/pcortez/winequality09.pdf [bib] http://www3.dsi.uminho.pt/pcortez/dss09.bib\n\nTitle: Wine Quality\nSources Created by: Paulo Cortez (Univ. Minho), Antonio Cerdeira, Fernando Almeida, Telmo Matos and Jose Reis (CVRVV) @ 2009\nPast Usage:\n\nP. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.\nIn the above reference, two datasets were created, using red and white wine samples. The inputs include objective tests (e.g. PH values) and the output is based on sensory data (median of at least 3 evaluations made by wine experts). Each expert graded the wine quality between 0 (very bad) and 10 (very excellent). Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed: MAD, confusion matrix for a fixed error tolerance (T), etc. Also, we plot the relative importances of the input variables (as measured by a sensitivity analysis procedure).\n\nRelevant Information:\nThe two datasets are related to red and white variants of the Portuguese “Vinho Verde” wine. For more details, consult: http://www.vinhoverde.pt/en/ or the reference [Cortez et al., 2009]. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).\nThese datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced (e.g. there are munch more normal wines than excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, we are not sure if all input variables are relevant. So it could be interesting to test feature selection methods.\nNumber of Instances: red wine - 1599; white wine - 4898.\nNumber of Attributes: 11 + output attribute\nNote: several of the attributes may be correlated, thus it makes sense to apply some sort of feature selection.\nAttribute information:\nFor more information, read [Cortez et al., 2009].\nInput variables (based on physicochemical tests): 1 - fixed acidity 2 - volatile acidity 3 - citric acid 4 - residual sugar 5 - chlorides 6 - free sulfur dioxide 7 - total sulfur dioxide 8 - density 9 - pH 10 - sulphates 11 - alcohol Output variable (based on sensory data): 12 - quality (score between 0 and 10)\nMissing Attribute Values: None\n\n\n\n\n Back to top",
     "crumbs": [
       "ABOUT",
       "Jeux de Données",
-      "Student Alcohol Consumption"
+      "Wine Quality"
     ]
   },
   {
-    "objectID": "datasets/student.html#merging-dataset",
-    "href": "datasets/student.html#merging-dataset",
-    "title": "Student Alcohol Consumption",
-    "section": "Merging dataset",
-    "text": "Merging dataset\nd1=read.table(\"student-mat.csv\",sep=\";\",header=TRUE)\nd2=read.table(\"student-por.csv\",sep=\";\",header=TRUE)\n\nd3=merge(d1,d2,by=c(\"school\",\"sex\",\"age\",\"address\",\"famsize\",\"Pstatus\",\"Medu\",\"Fedu\",\"Mjob\",\"Fjob\",\"reason\",\"nursery\",\"internet\"))\nprint(nrow(d3)) # 382 students",
+    "objectID": "datasets/mba-decision.html",
+    "href": "datasets/mba-decision.html",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "",
+    "text": "Ce jeu de données, disponible sur kaggle, concerne des individus ayant obtenu leur diplôme de licence et décidant s’ils vont poursuivre un MBA. Il inclut des informations démographiques, des antécédents académiques, une expérience professionnelle, des facteurs financiers et des aspirations de carrière afin d’analyser les tendances et les principaux moteurs derrière la décision de faire un MBA.\nCe jeu de données peut être utilisé pour :\n✔️ Modélisation prédictive – Identifier les tendances dans les décisions MBA\n✔️ Perspectives de carrière – Comprendre l’impact de l’expérience professionnelle et du salaire sur les choix\n✔️ Recherche sur l’éducation en gestion – Étudier les tendances du MBA dans différents secteurs",
     "crumbs": [
       "ABOUT",
       "Jeux de Données",
-      "Student Alcohol Consumption"
+      "MBA Decision After Bachelor's"
+    ]
+  },
+  {
+    "objectID": "datasets/mba-decision.html#description",
+    "href": "datasets/mba-decision.html#description",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "",
+    "text": "Ce jeu de données, disponible sur kaggle, concerne des individus ayant obtenu leur diplôme de licence et décidant s’ils vont poursuivre un MBA. Il inclut des informations démographiques, des antécédents académiques, une expérience professionnelle, des facteurs financiers et des aspirations de carrière afin d’analyser les tendances et les principaux moteurs derrière la décision de faire un MBA.\nCe jeu de données peut être utilisé pour :\n✔️ Modélisation prédictive – Identifier les tendances dans les décisions MBA\n✔️ Perspectives de carrière – Comprendre l’impact de l’expérience professionnelle et du salaire sur les choix\n✔️ Recherche sur l’éducation en gestion – Étudier les tendances du MBA dans différents secteurs",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "MBA Decision After Bachelor's"
+    ]
+  },
+  {
+    "objectID": "datasets/mba-decision.html#variables-du-jeu-de-données",
+    "href": "datasets/mba-decision.html#variables-du-jeu-de-données",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "Variables du jeu de données",
+    "text": "Variables du jeu de données\n\nID de la personne – Identifiant unique\n\nÂge – Âge au moment de la décision\n\nGenre – Homme, Femme, Autre\n\nMajeure en licence – Ingénierie, Commerce, Arts, Sciences, etc.\n\nGPA en licence – Échelle de 0 à 4\n\nAnnées d’expérience professionnelle – Nombre d’années avant la décision de faire un MBA\n\nIntitulé du poste actuel – Analyste, Manager, Consultant, etc.\n\nSalaire annuel (avant MBA) – En dollars américains (USD)\n\nA une expérience en gestion – Oui/Non\n\nScore GRE/GMAT – Score aux tests standardisés\n\nClassement de l’université de licence – Classement de l’établissement où le diplôme de licence a été obtenu\n\nIntérêt pour l’entrepreneuriat – Échelle de 1 à 10\n\nImportance du réseau – Échelle de 1 à 10\n\nSource de financement du MBA – Auto-financé, Prêt, Bourse, Employeur\n\nRôle souhaité après MBA – Consultant, Cadre dirigeant, Fondateur de startup, etc.\n\nSalaire attendu après MBA – Salaire estimé après l’obtention du MBA\n\nPréférence de localisation après MBA – Nationale, Internationale\n\nRaison du MBA – Évolution de carrière, Acquisition de compétences, Entrepreneuriat, etc.\n\nMBA en ligne vs. en présentiel – Préférence pour le mode d’apprentissage\n\nA décidé de poursuivre un MBA ? – Oui/Non (Variable cible)",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "MBA Decision After Bachelor's"
+    ]
+  },
+  {
+    "objectID": "datasets/mba-decision.html#source",
+    "href": "datasets/mba-decision.html#source",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "Source",
+    "text": "Source\n\nAuteur\nAkshay Choudhary\n\n\nMéthodologie de collecte des données\nWeb scrapping",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "MBA Decision After Bachelor's"
+    ]
+  },
+  {
+    "objectID": "datasets/mba-decision.html#téléchargez-le-jeu-de-données",
+    "href": "datasets/mba-decision.html#téléchargez-le-jeu-de-données",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "Téléchargez le jeu de données",
+    "text": "Téléchargez le jeu de données",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "MBA Decision After Bachelor's"
     ]
   },
   {
