@@ -132,6 +132,18 @@
     ]
   },
   {
+    "objectID": "datasets/mba-decision.html#téléchargez-le-jeu-de-données",
+    "href": "datasets/mba-decision.html#téléchargez-le-jeu-de-données",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "Téléchargez le jeu de données",
+    "text": "Téléchargez le jeu de données",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "MBA Decision After Bachelor's"
+    ]
+  },
+  {
     "objectID": "datasets/winequality.html",
     "href": "datasets/winequality.html",
     "title": "Wine Quality",
