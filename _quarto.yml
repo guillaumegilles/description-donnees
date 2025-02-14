@@ -60,7 +60,23 @@ website:
           - href: syllabus.qmd
       - section: Cours
         contents:
-          - href: seance1.qmd
+          - href: slides-1.qmd
+          - href: slides-2.qmd
+          - href: slides-3.qmd
+          - href: slides-4.qmd
+          - href: slides-5.qmd
+          - href: slides-6.qmd
+          - href: slides-7.qmd
+          - href: slides-8.qmd
+          - href: slides-9.qmd
+          - href: slides-10.qmd
+          - href: slides-11.qmd
+          - href: slides-12.qmd
+      - section: Jeux de Données
+        contents: 
+          - href: datasets/mba-decision.qmd
+          - href: datasets/student.qmd
+          - href: datasets/winequality.qmd
   
   page-footer:
     center:

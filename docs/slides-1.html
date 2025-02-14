@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.537">
 
   <meta name="author" content="Guillaume Gilles">
-  <title>MS02-001-G Description de données - Séance 1 - Introduction aux statistiques descriptives</title>
+  <title>MS02-001-G Description de données - 1. Introduction aux statistiques descriptives</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -338,7 +338,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Séance 1 - Introduction aux statistiques descriptives</h1>
+  <h1 class="title">1. Introduction aux statistiques descriptives</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -915,6 +915,200 @@ f_i^- = \frac{n_i^-}{n}
 </tr>
 </tbody>
 </table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">######################</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ChatGPT</td>
+</tr>
+</tbody>
+</table>
+<p>Voici une proposition détaillée pour la <strong>séance 1 : Introduction aux statistiques descriptives</strong>.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="introduction-aux-statistiques-descriptives"><strong>1. Introduction aux statistiques descriptives</strong></h3>
+</section>
+<section class="slide level2">
+
+<h4 id="objectifs-du-cours"><strong>1.1 Objectifs du cours</strong></h4>
+<ol type="1">
+<li><strong>Comprendre les statistiques descriptives et leur utilité</strong> :
+<ul>
+<li><strong>Définition</strong> : Les statistiques descriptives regroupent des méthodes permettant de décrire, résumer et présenter des données de manière claire et concise.</li>
+<li><strong>Objectif principal</strong> : Extraire des informations clés à partir de grandes quantités de données.</li>
+<li><strong>Exemples d’application</strong> :
+<ul>
+<li>Résumer les résultats d’une enquête de satisfaction client.</li>
+<li>Décrire les performances des élèves dans une classe.</li>
+<li>Analyser les ventes d’un produit sur une période donnée.</li>
+</ul></li>
+<li><strong>Importance</strong> :
+<ul>
+<li>Facilite la prise de décision basée sur des faits.</li>
+<li>Simplifie la communication des résultats à un public non expert.</li>
+</ul></li>
+</ul></li>
+<li><strong>Différence entre statistiques descriptives et statistiques inférentielles</strong> :
+<ul>
+<li><strong>Statistiques descriptives</strong> :
+<ul>
+<li>Résumer et organiser les données (moyennes, graphiques, tableaux).</li>
+<li>Exemple : Calculer la moyenne des notes d’une classe.</li>
+</ul></li>
+<li><strong>Statistiques inférentielles</strong> :
+<ul>
+<li>Tirer des conclusions sur une population à partir d’un échantillon.</li>
+<li>Exemple : Estimer le score moyen des élèves d’un pays entier à partir d’un échantillon.</li>
+</ul></li>
+<li><strong>Comparaison</strong> :
+<ul>
+<li><strong>Descriptives</strong> : On travaille uniquement sur les données disponibles.</li>
+<li><strong>Inférentielles</strong> : On fait des généralisations à partir des données.</li>
+</ul></li>
+</ul></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h4 id="définitions-clés"><strong>1.2 Définitions clés</strong></h4>
+<ol type="1">
+<li><strong>Population</strong> :
+<ul>
+<li><strong>Définition</strong> : Ensemble complet des individus ou des objets que l’on souhaite étudier.</li>
+<li><strong>Exemple</strong> :
+<ul>
+<li>Tous les étudiants d’une université.</li>
+<li>Toutes les voitures vendues en France en 2024.</li>
+</ul></li>
+</ul></li>
+<li><strong>Échantillon</strong> :
+<ul>
+<li><strong>Définition</strong> : Sous-ensemble représentatif de la population, utilisé pour effectuer des analyses.</li>
+<li><strong>Exemple</strong> :
+<ul>
+<li>200 étudiants sélectionnés dans l’université.</li>
+<li>1 000 voitures prises au hasard parmi les ventes.</li>
+</ul></li>
+</ul></li>
+<li><strong>Individus</strong> :
+<ul>
+<li><strong>Définition</strong> : Chaque élément ou unité qui compose la population ou l’échantillon.</li>
+<li><strong>Exemple</strong> :
+<ul>
+<li>Un étudiant (individu dans une population d’étudiants).</li>
+<li>Une voiture (individu dans une population de voitures).</li>
+</ul></li>
+</ul></li>
+<li><strong>Variables</strong> :
+<ul>
+<li><strong>Définition</strong> : Caractéristiques mesurées ou observées sur chaque individu.</li>
+<li><strong>Exemple</strong> :
+<ul>
+<li>Variable : Âge d’un étudiant, couleur d’une voiture, note à un examen.</li>
+</ul></li>
+</ul></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h4 id="types-de-variables"><strong>1.3 Types de variables</strong></h4>
+<ol type="1">
+<li><strong>Variables qualitatives</strong> :
+<ul>
+<li><strong>Nominales</strong> :
+<ul>
+<li>Définition : Variables sans ordre ou hiérarchie.</li>
+<li>Exemple : Sexe (Homme/Femme), Couleur préférée (Rouge, Bleu, Vert).</li>
+</ul></li>
+<li><strong>Ordinales</strong> :
+<ul>
+<li>Définition : Variables qui peuvent être classées dans un ordre.</li>
+<li>Exemple : Niveau d’éducation (Primaire, Secondaire, Supérieur), Niveau de satisfaction (Pas satisfait, Satisfait, Très satisfait).</li>
+</ul></li>
+</ul></li>
+<li><strong>Variables quantitatives</strong> :
+<ul>
+<li><strong>Discrètes</strong> :
+<ul>
+<li>Définition : Variables numériques qui prennent des valeurs entières.</li>
+<li>Exemple : Nombre d’enfants dans une famille, Nombre de voitures dans un parking.</li>
+</ul></li>
+<li><strong>Continues</strong> :
+<ul>
+<li>Définition : Variables numériques qui peuvent prendre n’importe quelle valeur dans un intervalle donné.</li>
+<li>Exemple : Taille (en cm), Poids (en kg), Temps (en secondes).</li>
+</ul></li>
+</ul></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h4 id="exemples-pratiques"><strong>1.4 Exemples pratiques</strong></h4>
+<ol type="1">
+<li><strong>Identifier les variables dans différents contextes</strong> :
+<ul>
+<li><strong>Exemple 1 : Étude sur les étudiants</strong> :
+<ul>
+<li>Population : Tous les étudiants de l’université.</li>
+<li>Variables :
+<ul>
+<li>Qualitatives nominales : Sexe (Homme/Femme/Autre).</li>
+<li>Qualitatives ordinales : Niveau d’étude (Licence, Master, Doctorat).</li>
+<li>Quantitatives discrètes : Nombre de cours suivis.</li>
+<li>Quantitatives continues : Âge, Moyenne générale.</li>
+</ul></li>
+</ul></li>
+<li><strong>Exemple 2 : Enquête de satisfaction client</strong> :
+<ul>
+<li>Population : Tous les clients d’une entreprise.</li>
+<li>Variables :
+<ul>
+<li>Qualitatives ordinales : Niveau de satisfaction (1 à 5).</li>
+<li>Quantitatives discrètes : Nombre d’achats mensuels.</li>
+<li>Quantitatives continues : Montant des dépenses (en euros).</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><strong>Cas pratique en petits groupes</strong> :
+<ul>
+<li>Scénario : Vous êtes responsable d’une enquête pour une association sportive.</li>
+<li>Tâche :
+<ul>
+<li>Définir la population à étudier (ex. : Membres de l’association).</li>
+<li>Identifier les variables pertinentes (ex. : Âge, Sexe, Fréquence d’entraînement, Niveau de satisfaction avec les installations).</li>
+<li>Classer les variables en qualitatives/quantitatives et nominales/ordinales/discrètes/continues.</li>
+</ul></li>
+</ul></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h4 id="méthodologie-de-la-séance"><strong>1.5 Méthodologie de la séance</strong></h4>
+<ol type="1">
+<li><strong>Cours théorique</strong> :
+<ul>
+<li>Présentation des concepts avec des explications simples et claires.</li>
+<li>Utilisation de schémas pour différencier population, échantillon et individus.</li>
+</ul></li>
+<li><strong>Exemples illustrés</strong> :
+<ul>
+<li>Études de cas concrètes tirées de domaines variés (santé, éducation, entreprise).</li>
+<li>Comparaison des types de variables dans chaque contexte.</li>
+</ul></li>
+<li><strong>Atelier pratique</strong> :
+<ul>
+<li>Étape 1 : Les participants reçoivent des descriptions d’études fictives.</li>
+<li>Étape 2 : Ils identifient les populations, échantillons et variables.</li>
+<li>Étape 3 : Discussion en groupe pour valider les réponses et corriger les erreurs.</li>
+</ul></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<p>Avec cette structure, cette première séance pose les bases solides des concepts clés tout en incluant des exemples concrets et des ateliers interactifs pour bien engager les participants. 😊 Si tu souhaites approfondir un point ou ajouter un exercice spécifique, fais-moi signe !</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

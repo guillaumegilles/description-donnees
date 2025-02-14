@@ -1,8 +1,9 @@
 ---
 title: Wine Quality
-https://www.sciencedirect.com/science/article/abs/pii/S0167923609001377?via%3Dihub
-https://archive.ics.uci.edu/dataset/186/wine+quality
 ---
+
+- https://www.sciencedirect.com/science/article/abs/pii/S0167923609001377?via%3Dihub
+- https://archive.ics.uci.edu/dataset/186/wine+quality
 
 Citation Request:
   This dataset is public available for research. The details are described in [Cortez et al., 2009]. 

@@ -2,4 +2,45 @@
 title: MBA Decision After Bachelor's
 ---
 
-https://www.kaggle.com/datasets/ashaychoudhary/dataset-mba-decision-after-bachelors
+## Description
+
+Ce jeu de données, [disponible sur kaggle](https://www.kaggle.com/datasets/ashaychoudhary/dataset-mba-decision-after-bachelors), concerne des individus ayant obtenu leur diplôme de licence et décidant s’ils vont poursuivre un MBA. Il inclut des informations démographiques, des antécédents académiques, une expérience professionnelle, des facteurs financiers et des aspirations de carrière afin d’analyser les tendances et les principaux moteurs derrière la décision de faire un MBA.  
+
+Ce jeu de données peut être utilisé pour :  
+✔️ Modélisation prédictive – Identifier les tendances dans les décisions MBA  
+✔️ Perspectives de carrière – Comprendre l'impact de l'expérience professionnelle et du salaire sur les choix  
+✔️ Recherche sur l'éducation en gestion – Étudier les tendances du MBA dans différents secteurs  
+
+## Variables du jeu de données
+
+- **ID de la personne** – Identifiant unique  
+- **Âge** – Âge au moment de la décision  
+- **Genre** – Homme, Femme, Autre  
+- **Majeure en licence** – Ingénierie, Commerce, Arts, Sciences, etc.  
+- **GPA en licence** – Échelle de 0 à 4  
+- **Années d'expérience professionnelle** – Nombre d'années avant la décision de faire un MBA  
+- **Intitulé du poste actuel** – Analyste, Manager, Consultant, etc.  
+- **Salaire annuel (avant MBA)** – En dollars américains (USD)  
+- **A une expérience en gestion** – Oui/Non  
+- **Score GRE/GMAT** – Score aux tests standardisés  
+- **Classement de l’université de licence** – Classement de l’établissement où le diplôme de licence a été obtenu  
+- **Intérêt pour l'entrepreneuriat** – Échelle de 1 à 10  
+- **Importance du réseau** – Échelle de 1 à 10  
+- **Source de financement du MBA** – Auto-financé, Prêt, Bourse, Employeur  
+- **Rôle souhaité après MBA** – Consultant, Cadre dirigeant, Fondateur de startup, etc.  
+- **Salaire attendu après MBA** – Salaire estimé après l'obtention du MBA  
+- **Préférence de localisation après MBA** – Nationale, Internationale  
+- **Raison du MBA** – Évolution de carrière, Acquisition de compétences, Entrepreneuriat, etc.  
+- **MBA en ligne vs. en présentiel** – Préférence pour le mode d’apprentissage  
+- **A décidé de poursuivre un MBA ?** – Oui/Non (Variable cible)  
+
+## Source
+
+### Auteur
+
+[Akshay Choudhary](https://www.kaggle.com/ashaychoudhary)
+
+### Méthodologie de collecte des données
+
+Web scrapping
+

@@ -84,6 +84,306 @@
     ]
   },
   {
+    "objectID": "datasets/mba-decision.html",
+    "href": "datasets/mba-decision.html",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "",
+    "text": "Ce jeu de données, disponible sur kaggle, concerne des individus ayant obtenu leur diplôme de licence et décidant s’ils vont poursuivre un MBA. Il inclut des informations démographiques, des antécédents académiques, une expérience professionnelle, des facteurs financiers et des aspirations de carrière afin d’analyser les tendances et les principaux moteurs derrière la décision de faire un MBA.\nCe jeu de données peut être utilisé pour :\n✔️ Modélisation prédictive – Identifier les tendances dans les décisions MBA\n✔️ Perspectives de carrière – Comprendre l’impact de l’expérience professionnelle et du salaire sur les choix\n✔️ Recherche sur l’éducation en gestion – Étudier les tendances du MBA dans différents secteurs",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "MBA Decision After Bachelor's"
+    ]
+  },
+  {
+    "objectID": "datasets/mba-decision.html#description",
+    "href": "datasets/mba-decision.html#description",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "",
+    "text": "Ce jeu de données, disponible sur kaggle, concerne des individus ayant obtenu leur diplôme de licence et décidant s’ils vont poursuivre un MBA. Il inclut des informations démographiques, des antécédents académiques, une expérience professionnelle, des facteurs financiers et des aspirations de carrière afin d’analyser les tendances et les principaux moteurs derrière la décision de faire un MBA.\nCe jeu de données peut être utilisé pour :\n✔️ Modélisation prédictive – Identifier les tendances dans les décisions MBA\n✔️ Perspectives de carrière – Comprendre l’impact de l’expérience professionnelle et du salaire sur les choix\n✔️ Recherche sur l’éducation en gestion – Étudier les tendances du MBA dans différents secteurs",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "MBA Decision After Bachelor's"
+    ]
+  },
+  {
+    "objectID": "datasets/mba-decision.html#variables-du-jeu-de-données",
+    "href": "datasets/mba-decision.html#variables-du-jeu-de-données",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "Variables du jeu de données",
+    "text": "Variables du jeu de données\n\nID de la personne – Identifiant unique\n\nÂge – Âge au moment de la décision\n\nGenre – Homme, Femme, Autre\n\nMajeure en licence – Ingénierie, Commerce, Arts, Sciences, etc.\n\nGPA en licence – Échelle de 0 à 4\n\nAnnées d’expérience professionnelle – Nombre d’années avant la décision de faire un MBA\n\nIntitulé du poste actuel – Analyste, Manager, Consultant, etc.\n\nSalaire annuel (avant MBA) – En dollars américains (USD)\n\nA une expérience en gestion – Oui/Non\n\nScore GRE/GMAT – Score aux tests standardisés\n\nClassement de l’université de licence – Classement de l’établissement où le diplôme de licence a été obtenu\n\nIntérêt pour l’entrepreneuriat – Échelle de 1 à 10\n\nImportance du réseau – Échelle de 1 à 10\n\nSource de financement du MBA – Auto-financé, Prêt, Bourse, Employeur\n\nRôle souhaité après MBA – Consultant, Cadre dirigeant, Fondateur de startup, etc.\n\nSalaire attendu après MBA – Salaire estimé après l’obtention du MBA\n\nPréférence de localisation après MBA – Nationale, Internationale\n\nRaison du MBA – Évolution de carrière, Acquisition de compétences, Entrepreneuriat, etc.\n\nMBA en ligne vs. en présentiel – Préférence pour le mode d’apprentissage\n\nA décidé de poursuivre un MBA ? – Oui/Non (Variable cible)",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "MBA Decision After Bachelor's"
+    ]
+  },
+  {
+    "objectID": "datasets/mba-decision.html#source",
+    "href": "datasets/mba-decision.html#source",
+    "title": "MBA Decision After Bachelor’s",
+    "section": "Source",
+    "text": "Source\n\nAuteur\nAkshay Choudhary\n\n\nMéthodologie de collecte des données\nWeb scrapping",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "MBA Decision After Bachelor's"
+    ]
+  },
+  {
+    "objectID": "datasets/winequality.html",
+    "href": "datasets/winequality.html",
+    "title": "Wine Quality",
+    "section": "",
+    "text": "https://www.sciencedirect.com/science/article/abs/pii/S0167923609001377?via%3Dihub\nhttps://archive.ics.uci.edu/dataset/186/wine+quality\n\nCitation Request: This dataset is public available for research. The details are described in [Cortez et al., 2009]. Please include this citation if you plan to use this database:\nP. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.\nAvailable at: [@Elsevier] http://dx.doi.org/10.1016/j.dss.2009.05.016 [Pre-press (pdf)] http://www3.dsi.uminho.pt/pcortez/winequality09.pdf [bib] http://www3.dsi.uminho.pt/pcortez/dss09.bib\n\nTitle: Wine Quality\nSources Created by: Paulo Cortez (Univ. Minho), Antonio Cerdeira, Fernando Almeida, Telmo Matos and Jose Reis (CVRVV) @ 2009\nPast Usage:\n\nP. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. Modeling wine preferences by data mining from physicochemical properties. In Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.\nIn the above reference, two datasets were created, using red and white wine samples. The inputs include objective tests (e.g. PH values) and the output is based on sensory data (median of at least 3 evaluations made by wine experts). Each expert graded the wine quality between 0 (very bad) and 10 (very excellent). Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed: MAD, confusion matrix for a fixed error tolerance (T), etc. Also, we plot the relative importances of the input variables (as measured by a sensitivity analysis procedure).\n\nRelevant Information:\nThe two datasets are related to red and white variants of the Portuguese “Vinho Verde” wine. For more details, consult: http://www.vinhoverde.pt/en/ or the reference [Cortez et al., 2009]. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).\nThese datasets can be viewed as classification or regression tasks. The classes are ordered and not balanced (e.g. there are munch more normal wines than excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, we are not sure if all input variables are relevant. So it could be interesting to test feature selection methods.\nNumber of Instances: red wine - 1599; white wine - 4898.\nNumber of Attributes: 11 + output attribute\nNote: several of the attributes may be correlated, thus it makes sense to apply some sort of feature selection.\nAttribute information:\nFor more information, read [Cortez et al., 2009].\nInput variables (based on physicochemical tests): 1 - fixed acidity 2 - volatile acidity 3 - citric acid 4 - residual sugar 5 - chlorides 6 - free sulfur dioxide 7 - total sulfur dioxide 8 - density 9 - pH 10 - sulphates 11 - alcohol Output variable (based on sensory data): 12 - quality (score between 0 and 10)\nMissing Attribute Values: None\n\n\n\n\n Back to top",
+    "crumbs": [
+      "ABOUT",
+      "Jeux de Données",
+      "Wine Quality"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#population-et-échantillon",
+    "href": "slides-1.html#population-et-échantillon",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Population et échantillon",
+    "text": "Population et échantillon\n\nPopulation, \\(N\\) : un ensemble d’éléments partageant une ou plusieurs caractéristiques qui servent à les regrouper\nUne population est dite finie si nous pouvons déterminer le nombre exact de ses individus, sinon elle est dite infinie.\nExemple d’utilisation: Si on a une population finie de taille \\(N = 50\\), les individus peuvent être numérotés comme \\({1,2,3,...,N}\\).\nIndividu, \\(n\\) : un élément de la population \\(N\\).",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variables",
+    "href": "slides-1.html#variables",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variables",
+    "text": "Variables\nEn statistiques, une variable est une caractéristique ou une propriété mesurable qui peut varier d’un individu à un autre au sein d’une population. Elle représente les données que l’on observe, mesure ou collecte pour effectuer des analyses.\nLes variables se classent en deux grandes catégories principale",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variables-qualitatives",
+    "href": "slides-1.html#variables-qualitatives",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variables qualitatives",
+    "text": "Variables qualitatives\nCes variables expriment une qualité, une catégorie ou une caractéristique non mesurable numériquement.\n\nNominale : Pas d’ordre logique entre les catégories. Exemple : Couleur des yeux (bleu, vert, marron).\nOrdinale : Un ordre logique existe entre les catégories. Exemple : Niveau de satisfaction (faible, moyen, élevé).",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variables-quantitatives",
+    "href": "slides-1.html#variables-quantitatives",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variables quantitatives",
+    "text": "Variables quantitatives\nCes variables prennent des valeurs numériques qui peuvent être mesurées ou comptées.\n\nDiscrète : Prend un nombre fini ou dénombrable de valeurs. Exemple : Nombre d’enfants dans une famille (0, 1, 2, 3, …).\nContinue : Peut prendre une infinité de valeurs dans un intervalle donné. Exemple : Taille d’une personne (1,72 m, 1,723 m, etc.).",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variables-1",
+    "href": "slides-1.html#variables-1",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variables",
+    "text": "Variables\n\n\n\n\n\nflowchart TD\n  A([Variables]) --&gt; B([Quantitatives])\n  B --&gt; D([Discrètes])\n  B --&gt; E([Continues])\n  A --&gt; C([Qualitatives])\n  C --&gt; F([Nominales])\n  C --&gt; G([Ordianles])\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nLes variables sont au cœur de toute analyse statistique. Elles déterminent la nature des données et influencent le choix des méthodes d’analyse et de représentation graphique.",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#caractéristiques-des-données-univariées",
+    "href": "slides-1.html#caractéristiques-des-données-univariées",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Caractéristiques des données univariées",
+    "text": "Caractéristiques des données univariées\n\nDésignent un ensemble de valeurs collectées pour une seule variable.\nElles représentent les observations brutes, souvent sans organisation.\nExemple : Les tailles de 10 personnes mesurées : \\(160\\), \\(165\\), \\(170\\), \\(160\\), \\(175\\), \\(…\\).\n\nObjectif : L’analyse univariée vise à comprendre la distribution, la tendance centrale et la dispersion des données pour cette variable.",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#série-statistiques",
+    "href": "slides-1.html#série-statistiques",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Série statistiques",
+    "text": "Série statistiques\n\nCorrespondent à une organisation structurée des données d’une variable.\nLes valeurs sont souvent regroupées avec leurs effectifs ou fréquences.\nExemple : Taille des personnes organisées :\n\n\\(160\\) cm : \\(2\\) personnes,\n\\(165\\) cm : \\(1\\) personne,\n\\(170\\) cm : \\(1\\) personne.\n\n\n\n\n\n\n\n\nCaution\n\n\nLes séries statistiques et les données univariées sont des concepts proches, mais ils diffèrent dans leur nature et leur objectif d’utilisation.",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#modalité",
+    "href": "slides-1.html#modalité",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Modalité",
+    "text": "Modalité\nModalité / Classe (\\(X\\)) : Valeur ou catégorie rangées par ordre croissant, sauf pour les variables qualitatives nominales.",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#effectif",
+    "href": "slides-1.html#effectif",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Effectif",
+    "text": "Effectif\n\nEffectif (\\(n_i\\)) : Nombre d’observations pour chaque modalité.\nEffectif cumulé croissant (\\(n_i^+\\)) : la somme cumulée des effectifs de toutes les modalités dont la “valeur” est inférieure à celle de \\(m_i\\). \\[\nn_i^+ = n_1 + n_2 + n_3 + \\dots + n_i\n\\]\nEffectif cumulé décroissant (\\(n_i^-\\)) : la somme cumulée des effectifs de toutes les modalités dont la “valeur” est supérieure à celle de \\(m_i\\). \\[\nn_i^- = n_i + \\dots + n_k\n\\]",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#fréquence",
+    "href": "slides-1.html#fréquence",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Fréquence",
+    "text": "Fréquence\n\nFréquence relative (\\(f_i\\)) : Proportion des observations dans chaque modalité. \\[\nf_i = \\frac{n_i}{n}\n\\]\nFréquence cumulée croissante (\\(f_i^+\\)) \\[\nf_i^+ = \\frac{n_i^+}{n}\n\\]\nFréquence cumulée décroissante (\\(f_i^-\\)) \\[\nf_i^- = \\frac{n_i^-}{n}\n\\]",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#structure-dun-tableau-statistique",
+    "href": "slides-1.html#structure-dun-tableau-statistique",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Structure d’un tableau statistique",
+    "text": "Structure d’un tableau statistique\n\n\n\n\n\n\n\n\n\n\nModalité/Classe \\(X\\)\nEffectif \\(n_i\\)\nFréquence \\(f_i\\)\nEffectif cumulé \\(n_i^+\\)\nFréquence cumulée \\(f_i^+\\)\n\n\n\n\nModalité 1\n\\(n_1\\)\n\\(f_1 = \\frac{n_1}{n}\\)\n\\(n_1^+ = n_1\\)\n\\(f_1^+ = f_1\\)\n\n\nModalité 2\n\\(n_2\\)\n\\(f_2 = \\frac{n_2}{n}\\)\n\\(n_2^+ = n_1 + n_2\\)\n\\(f_2^+ = f_1 + f_2\\)\n\n\n…\n…\n…\n…\n…\n\n\nTotal\n\\(n = \\sum n_i\\)\n\\(\\sum f_i = 1\\)",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variable-qualitative-nominale",
+    "href": "slides-1.html#variable-qualitative-nominale",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variable qualitative nominale",
+    "text": "Variable qualitative nominale\n\nDonnées univariées : Le genre de 24 candidats à un concours\n\nH, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\nH\n\n\n\n\nF\n\n\n\n\n\\(n\\) Total",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variable-qualitative-nominale-2",
+    "href": "slides-1.html#variable-qualitative-nominale-2",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variable qualitative nominale 2",
+    "text": "Variable qualitative nominale 2\n\nDonnées univariées : Le genre de 24 candidats à un concours\n\nH, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\nH\n13\n\\(0,54\\)\n\n\nF\n11\n\\(0,46\\)\n\n\n\\(n\\) Total\n24\n\\(1\\)",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variable-qualitative-ordinale",
+    "href": "slides-1.html#variable-qualitative-ordinale",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variable qualitative ordinale",
+    "text": "Variable qualitative ordinale\n\nDonnées univariées : Le niveau d’étude de 24 étudiants\n\nL, M, L, M, D, M, L, L, M, L, M, D, M, L, M, L, L, M, M, M, L, L, L, D.\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\nL\n\n\n\n\nM\n\n\n\n\nD\n\n\n\n\n\\(n\\) Total",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variable-qualitative-ordinale-2",
+    "href": "slides-1.html#variable-qualitative-ordinale-2",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variable qualitative ordinale 2",
+    "text": "Variable qualitative ordinale 2\n\nDonnées univariées : Le niveau d’étude de 24 étudiants\n\nL, M, L, M, D, M, L, L, M, L, M, D, M, L, M, L, L, M, M, M, L, L, L, D.\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\nL\n11\n\\(0,46\\)\n\n\nM\n10\n\\(0,42\\)\n\n\nD\n3\n$0,12\n\n\n\\(n\\) Total\n24\n\\(1\\)",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variable-quantitative-discrète",
+    "href": "slides-1.html#variable-quantitative-discrète",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variable quantitative discrète",
+    "text": "Variable quantitative discrète\n\nDonnées univariées : Le notes de 24 étudiants\n\n11, 13, 8, 16.5, 11, 7, 13, 12, 11, 12, 12, 8, 11, 8, 12, 11, 7, 16.5, 8, 11, 8, 12, 8,16.5\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\n7\n\n\n\n\n8\n\n\n\n\n11\n\n\n\n\n12\n\n\n\n\n13\n\n\n\n\n16,5\n\n\n\n\n\\(n\\) Total\n24\n\\(1\\)",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variable-quantitative-discrète-2",
+    "href": "slides-1.html#variable-quantitative-discrète-2",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variable quantitative discrète 2",
+    "text": "Variable quantitative discrète 2\n\nDonnées univariées : Le notes de 24 étudiants\n\n11, 13, 8, 16.5, 11, 7, 13, 12, 11, 12, 12, 8, 11, 8, 12, 11, 7, 16.5, 8, 11, 8, 12, 8,16.5\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\n7\n2\n\\(0,08\\)\n\n\n8\n6\n\\(0,25\\)\n\n\n11\n6\n\\(0,25\\)\n\n\n12\n5\n\\(0,21\\)\n\n\n13\n2\n\\(0,08\\)\n\n\n16,5\n3\n\\(0,13\\)\n\n\n\\(n\\) Total\n24\n\\(1\\)",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variable-quantitative-continue",
+    "href": "slides-1.html#variable-quantitative-continue",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variable quantitative continue",
+    "text": "Variable quantitative continue\nLa synthèse par tableau des données (observées à l’état brut) d’une variable continue révèle le nombre des modalités est presque égal à l’effectif total, i.e. \\(k \\approx n\\), car les observations sont presque toutes distinctes.\n\n\n\n\n\n\nSolution\n\n\nRegrouper les modalités en intervalles.",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variables-quantitative-continue-2",
+    "href": "slides-1.html#variables-quantitative-continue-2",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variables quantitative continue 2",
+    "text": "Variables quantitative continue 2\n\nDonnées univariées : Le salaire mensuel de 24 candidats à un concours\n\n1958.49, 2055.75, 1812.48, 1955.69, 2024.48, 2055.61, 1988.52, 2123.32, 1958.81, 1948.22, 2039.01, 1882.25, 2148.81, 2043.28, 2120.25, 1938.33, 1907.65, 2092.08, 2026.33, 2016.89, 1922.31, 1970.89, 2015.67, 2049.11\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\nOn regroupe les observations selon les 7 intervalles de modalités suivantes:\n\n\\(m_1 = [1800; 1850[\\)\n\\(m_2 = [1850; 1900[\\)\n\\(m_3 = [1900; 1950[\\)\n\\(m_4 = [1950; 2000[\\)\n\\(m_5 = [2000; 2050[\\)\n\\(m_6 = [2050; 2100[\\)\n\\(m_7 = [2100; 2150[\\)",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
+    "objectID": "slides-1.html#variables-quantitative-continue-3",
+    "href": "slides-1.html#variables-quantitative-continue-3",
+    "title": "1. Introduction aux statistiques descriptives",
+    "section": "Variables quantitative continue 3",
+    "text": "Variables quantitative continue 3\n\nDonnées univariées : Le salaire mensuel de 24 candidats à un concours\n\n1958.49, 2055.75, 1812.48, 1955.69, 2024.48, 2055.61, 1988.52, 2123.32, 1958.81, 1948.22, 2039.01, 1882.25, 2148.81, 2043.28, 2120.25, 1938.33, 1907.65, 2092.08, 2026.33, 2016.89, 1922.31, 1970.89, 2015.67, 2049.11\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\nOn regroupe les observations selon les intervalles de modalités suivantes:\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\n\\([1800; 1850[\\)\n\\(1\\)\n\\(0,042\\)\n\n\n\\([1850; 1900[\\)\n\\(1\\)\n\\(0,042\\)\n\n\n\\([1900; 1950[\\)\n\\(4\\)\n\\(0,167\\)\n\n\n\\([1950; 2000[\\)\n\\(5\\)\n\\(0,208\\)\n\n\n\\([2000; 2050[\\)\n\\(7\\)\n\\(0,292\\)\n\n\n\\([2050; 2100[\\)\n\\(3\\)\n\\(0,125\\)\n\n\n\\([2100; 2150[\\)\n\\(3\\)\n\\(0,125\\)\n\n\n\\(n\\) Total\n24\n\\(1\\)\n\n\n\n\n\n\n######################\n\n\nChatGPT\n\n\n\nVoici une proposition détaillée pour la séance 1 : Introduction aux statistiques descriptives.",
+    "crumbs": [
+      "ABOUT",
+      "Cours",
+      "1. Introduction aux statistiques descriptives"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "MS02-001-G Description de données",
@@ -99,7 +399,7 @@
     "href": "planning.html",
     "title": "Planning",
     "section": "",
-    "text": "Séances\nDate\nCours\nPréparations\nSupports\nDevoirs\n\n\n\n\n1\nMardi 21 Janvier\nIntroduction aux statistiques descriptives\n🎥 Identification d’un échantillon et d’une population  🎮 Individus, variables et données qualitatives & quantitatives\nSéance 1\n Moodle : Test de perfectionnement\n\n\n\n\n\n\n\n Back to top",
+    "text": "Séances\nDate\nCours\nPréparations\nSupports\nDevoirs\n\n\n\n\n1\nMardi 21 Janvier\n1. Introduction aux statistiques descriptives\n🎥 Identification d’un échantillon et d’une population  🎮 Individus, variables et données qualitatives & quantitatives\nSéance 1\n Moodle : Test de perfectionnement\n\n\n2\nVendredi 24 Janvier\n2. Collecte et organisation des données\n🎥   🎥 test\nSéance 2\n Moodle : Test de perfectionnement\n\n\n3\nVendredi 31 Janvier\nTP #1\n🎥   🎥 test\nTP #1\n Moodle : Test de perfectionnement\n\n\n4\nVendredi 7 Février\n3. Représentation graphique des données\n🎥   🎥 test\nSéance 3\n Moodle : Test de perfectionnement\n\n\n5\nVendredi 14 Février\nTP #2\n🎥   🎥 test\nTP #2\n Moodle : Test de perfectionnement\n\n\n6\nMardi 18 Février\n4. Mesures de tendance centrale\n🎥   🎥 test\nSéance 4\n Moodle : Test de perfectionnement\n\n\n7\nVendredi 21 Février\n5. Mesures de dispersion\n🎥   🎥 test\nSéance 5\n Moodle : Test de perfectionnement\n\n\n8\nVendredi 7 Mars\n6. Distribution des données\n🎥   🎥 test\nSéance 6\n Moodle : Test de perfectionnement\n\n\n9\nVendredi 14 Mars\nTP #3\n🎥   🎥 test\nTP #3\n Moodle : Test de perfectionnement\n\n\n10\nVendredi 21 Mars\n7. Corrélation entre deux variables\n🎥   🎥 test\nSéance 7\n Moodle : Test de perfectionnement\n\n\n11\nVendredi 28 Mars\nTP #4\n🎥   🎥 test\nTP #4\n Moodle : Test de perfectionnement\n\n\n12\nVendredi 4 Avril\nTP #5\n🎥   🎥 test\nTP #5\n Moodle : Test de perfectionnement\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "ABOUT",
       "Information",
@@ -107,243 +407,171 @@
     ]
   },
   {
-    "objectID": "seance1.html#population-et-échantillon",
-    "href": "seance1.html#population-et-échantillon",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Population et échantillon",
-    "text": "Population et échantillon\n\nPopulation, \\(N\\) : un ensemble d’éléments partageant une ou plusieurs caractéristiques qui servent à les regrouper\nUne population est dite finie si nous pouvons déterminer le nombre exact de ses individus, sinon elle est dite infinie.\nExemple d’utilisation: Si on a une population finie de taille \\(N = 50\\), les individus peuvent être numérotés comme \\({1,2,3,...,N}\\).\nIndividu, \\(n\\) : un élément de la population \\(N\\).",
+    "objectID": "slides-5.html#jeu-de-données",
+    "href": "slides-5.html#jeu-de-données",
+    "title": "Travaux Pratiques #2",
+    "section": "Jeu de données",
+    "text": "Jeu de données\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\nLes données ont été extraites du magazine américain Motor Trend de 1974 et comprennent la consommation de carburant ainsi que 10 aspects de la conception et des performances automobiles pour 32 voitures (modèles de 1973-74).",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Travaux Pratiques #2"
     ]
   },
   {
-    "objectID": "seance1.html#variables",
-    "href": "seance1.html#variables",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variables",
-    "text": "Variables\nEn statistiques, une variable est une caractéristique ou une propriété mesurable qui peut varier d’un individu à un autre au sein d’une population. Elle représente les données que l’on observe, mesure ou collecte pour effectuer des analyses.\nLes variables se classent en deux grandes catégories principale",
+    "objectID": "slides-5.html#jeu-de-données-1",
+    "href": "slides-5.html#jeu-de-données-1",
+    "title": "Travaux Pratiques #2",
+    "section": "Jeu de données",
+    "text": "Jeu de données\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n\nmpg : Miles par gallon (US)\ncyl : Nombre de cylindres\ndisp : Cylindrée (pouces cubes)\nhp : Puissance brute (chevaux)\nwt : Poids (1000 livres)",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Travaux Pratiques #2"
     ]
   },
   {
-    "objectID": "seance1.html#variables-qualitatives",
-    "href": "seance1.html#variables-qualitatives",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variables qualitatives",
-    "text": "Variables qualitatives\nCes variables expriment une qualité, une catégorie ou une caractéristique non mesurable numériquement.\n\nNominale : Pas d’ordre logique entre les catégories. Exemple : Couleur des yeux (bleu, vert, marron).\nOrdinale : Un ordre logique existe entre les catégories. Exemple : Niveau de satisfaction (faible, moyen, élevé).",
+    "objectID": "slides-5.html#question-1",
+    "href": "slides-5.html#question-1",
+    "title": "Travaux Pratiques #2",
+    "section": "Question 1",
+    "text": "Question 1\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n❔ La variable mpg, est :\n\n\nQualitative ordianle\n\n\n\n\nQuantitative discrète\n\n\n\n\nQualitative nominale\n\n\n\n\n\nQuantitative continue",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Travaux Pratiques #2"
     ]
   },
   {
-    "objectID": "seance1.html#variables-quantitatives",
-    "href": "seance1.html#variables-quantitatives",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variables quantitatives",
-    "text": "Variables quantitatives\nCes variables prennent des valeurs numériques qui peuvent être mesurées ou comptées.\n\nDiscrète : Prend un nombre fini ou dénombrable de valeurs. Exemple : Nombre d’enfants dans une famille (0, 1, 2, 3, …).\nContinue : Peut prendre une infinité de valeurs dans un intervalle donné. Exemple : Taille d’une personne (1,72 m, 1,723 m, etc.).",
+    "objectID": "slides-5.html#question-2",
+    "href": "slides-5.html#question-2",
+    "title": "Travaux Pratiques #2",
+    "section": "Question 2",
+    "text": "Question 2\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n❔ L’outil graphique adéquat pour représenter les données de la variable cyl, est l’histogramme :\n\n\nVrai\n\n\n\n\n\nFaux",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Travaux Pratiques #2"
     ]
   },
   {
-    "objectID": "seance1.html#variables-1",
-    "href": "seance1.html#variables-1",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variables",
-    "text": "Variables\n\n\n\n\n\nflowchart TD\n  A([Variables]) --&gt; B([Quantitatives])\n  B --&gt; D([Discrètes])\n  B --&gt; E([Continues])\n  A --&gt; C([Qualitatives])\n  C --&gt; F([Nominales])\n  C --&gt; G([Ordianles])\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nLes variables sont au cœur de toute analyse statistique. Elles déterminent la nature des données et influencent le choix des méthodes d’analyse et de représentation graphique.",
+    "objectID": "slides-5.html#question-3",
+    "href": "slides-5.html#question-3",
+    "title": "Travaux Pratiques #2",
+    "section": "Question 3",
+    "text": "Question 3\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n2.620\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n2.875\n\n\nDatsun 710\n22.8\n4\n108\n93\n2.320\n\n\n\n\n\n❔ Quelles variables sont quantitative discrète :\n\n\nmpg\n\n\n\n\n\ncyl\n\n\n\n\n\n\ndisp\n\n\n\n\n\n\nhp",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Travaux Pratiques #2"
     ]
   },
   {
-    "objectID": "seance1.html#caractéristiques-des-données-univariées",
-    "href": "seance1.html#caractéristiques-des-données-univariées",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Caractéristiques des données univariées",
-    "text": "Caractéristiques des données univariées\n\nDésignent un ensemble de valeurs collectées pour une seule variable.\nElles représentent les observations brutes, souvent sans organisation.\nExemple : Les tailles de 10 personnes mesurées : \\(160\\), \\(165\\), \\(170\\), \\(160\\), \\(175\\), \\(…\\).\n\nObjectif : L’analyse univariée vise à comprendre la distribution, la tendance centrale et la dispersion des données pour cette variable.",
+    "objectID": "slides-5.html#question-4",
+    "href": "slides-5.html#question-4",
+    "title": "Travaux Pratiques #2",
+    "section": "Question 4",
+    "text": "Question 4\n\n\n\n\n\n\n\n\n\n\n\n\n❔ Pour la variable mpg, la médiane est :\n\n\n\\(22.8\\)\n\n\n\n\n\\(15.43\\)\n\n\n\n\n\\(20.09\\)\n\n\n\n\n\n\\(19.20\\)",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Travaux Pratiques #2"
     ]
   },
   {
-    "objectID": "seance1.html#série-statistiques",
-    "href": "seance1.html#série-statistiques",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Série statistiques",
-    "text": "Série statistiques\n\nCorrespondent à une organisation structurée des données d’une variable.\nLes valeurs sont souvent regroupées avec leurs effectifs ou fréquences.\nExemple : Taille des personnes organisées :\n\n\\(160\\) cm : \\(2\\) personnes,\n\\(165\\) cm : \\(1\\) personne,\n\\(170\\) cm : \\(1\\) personne.\n\n\n\n\n\n\n\n\nCaution\n\n\nLes séries statistiques et les données univariées sont des concepts proches, mais ils diffèrent dans leur nature et leur objectif d’utilisation.",
+    "objectID": "slides-5.html#travaux-à-réaliser",
+    "href": "slides-5.html#travaux-à-réaliser",
+    "title": "Travaux Pratiques #2",
+    "section": "Travaux à réaliser",
+    "text": "Travaux à réaliser\nConstruisez une analyse statistique descriptive sur le jeu de données MBA Decision After Bachelor’s, pour cela :\n\nPour la variable Age, déterminez, les ages minimun et maximun, calculez les quartiles, et construisez une boîte à moustache ;\nPour les variable Undergraduate Major et Undergraduate GPA, déterminez et construisez les représentations graphiques les plus appropriées ;\nPour la variables Annual Salary (Before MBA) construisez un tableau statistiques en incluant, \\(n_i\\), \\(f_i\\), \\(n_i^+\\), \\(n_i^-\\), \\(f_i^+\\), et \\(f_i^-\\). Conseil : pensez à convertir la nature de la variable pour vous facilitez la retranscription dans un tableau.\nPour finir construisez la représentation graphique la plus approprié pour cette varaible, Annual Salary (Before MBA), ainsi que la courbe des fréquences cumulées croissante.",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Travaux Pratiques #2"
     ]
   },
   {
-    "objectID": "seance1.html#modalité",
-    "href": "seance1.html#modalité",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Modalité",
-    "text": "Modalité\nModalité / Classe (\\(X\\)) : Valeur ou catégorie rangées par ordre croissant, sauf pour les variables qualitatives nominales.",
+    "objectID": "slides-2.html#diagramme-en-barres",
+    "href": "slides-2.html#diagramme-en-barres",
+    "title": "2. Collecte et organisation des données",
+    "section": "Diagramme en barres",
+    "text": "Diagramme en barres",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "2. Collecte et organisation des données"
     ]
   },
   {
-    "objectID": "seance1.html#effectif",
-    "href": "seance1.html#effectif",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Effectif",
-    "text": "Effectif\n\nEffectif (\\(n_i\\)) : Nombre d’observations pour chaque modalité.\nEffectif cumulé croissant (\\(n_i^+\\)) : la somme cumulée des effectifs de toutes les modalités dont la “valeur” est inférieure à celle de \\(m_i\\). \\[\nn_i^+ = n_1 + n_2 + n_3 + \\dots + n_i\n\\]\nEffectif cumulé décroissant (\\(n_i^-\\)) : la somme cumulée des effectifs de toutes les modalités dont la “valeur” est supérieure à celle de \\(m_i\\). \\[\nn_i^- = n_i + \\dots + n_k\n\\]",
+    "objectID": "slides-2.html#diagramme-à-secteurs",
+    "href": "slides-2.html#diagramme-à-secteurs",
+    "title": "2. Collecte et organisation des données",
+    "section": "Diagramme à secteurs",
+    "text": "Diagramme à secteurs\n$$_i = (n_i )^= (f_i )^\n#V Variables quantitatives",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "2. Collecte et organisation des données"
     ]
   },
   {
-    "objectID": "seance1.html#fréquence",
-    "href": "seance1.html#fréquence",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Fréquence",
-    "text": "Fréquence\n\nFréquence relative (\\(f_i\\)) : Proportion des observations dans chaque modalité. \\[\nf_i = \\frac{n_i}{n}\n\\]\nFréquence cumulée croissante (\\(f_i^+\\)) \\[\nf_i^+ = \\frac{n_i^+}{n}\n\\]\nFréquence cumulée décroissante (\\(f_i^-\\)) \\[\nf_i^- = \\frac{n_i^-}{n}\n\\]",
+    "objectID": "slides-2.html#discrètes",
+    "href": "slides-2.html#discrètes",
+    "title": "2. Collecte et organisation des données",
+    "section": "Discrètes",
+    "text": "Discrètes",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "2. Collecte et organisation des données"
     ]
   },
   {
-    "objectID": "seance1.html#structure-dun-tableau-statistique",
-    "href": "seance1.html#structure-dun-tableau-statistique",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Structure d’un tableau statistique",
-    "text": "Structure d’un tableau statistique\n\n\n\n\n\n\n\n\n\n\nModalité/Classe \\(X\\)\nEffectif \\(n_i\\)\nFréquence \\(f_i\\)\nEffectif cumulé \\(n_i^+\\)\nFréquence cumulée \\(f_i^+\\)\n\n\n\n\nModalité 1\n\\(n_1\\)\n\\(f_1 = \\frac{n_1}{n}\\)\n\\(n_1^+ = n_1\\)\n\\(f_1^+ = f_1\\)\n\n\nModalité 2\n\\(n_2\\)\n\\(f_2 = \\frac{n_2}{n}\\)\n\\(n_2^+ = n_1 + n_2\\)\n\\(f_2^+ = f_1 + f_2\\)\n\n\n…\n…\n…\n…\n…\n\n\nTotal\n\\(n = \\sum n_i\\)\n\\(\\sum f_i = 1\\)",
+    "objectID": "slides-2.html#continues",
+    "href": "slides-2.html#continues",
+    "title": "2. Collecte et organisation des données",
+    "section": "Continues",
+    "text": "Continues\nhistogramme\n\n\n\n#########################\n\n\nChatGPT\n\n\n\nVoici le détail structuré pour la séance 2 : Collecte et organisation des données.",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "2. Collecte et organisation des données"
     ]
   },
   {
-    "objectID": "seance1.html#variable-qualitative-nominale",
-    "href": "seance1.html#variable-qualitative-nominale",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variable qualitative nominale",
-    "text": "Variable qualitative nominale\n\nDonnées univariées : Le genre de 24 candidats à un concours\n\nH, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\nH\n\n\n\n\nF\n\n\n\n\n\\(n\\) Total",
+    "objectID": "datasets/student.html",
+    "href": "datasets/student.html",
+    "title": "Student Alcohol Consumption",
+    "section": "",
+    "text": "https://www.kaggle.com/datasets/uciml/student-alcohol-consumption",
     "crumbs": [
       "ABOUT",
-      "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Jeux de Données",
+      "Student Alcohol Consumption"
     ]
   },
   {
-    "objectID": "seance1.html#variable-qualitative-nominale-2",
-    "href": "seance1.html#variable-qualitative-nominale-2",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variable qualitative nominale 2",
-    "text": "Variable qualitative nominale 2\n\nDonnées univariées : Le genre de 24 candidats à un concours\n\nH, H, F, H, F, F, F, H, H, H, F, H, F, F, F, H, H, H, F, H, H, F, H, F.\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\nH\n13\n\\(0,54\\)\n\n\nF\n11\n\\(0,46\\)\n\n\n\\(n\\) Total\n24\n\\(1\\)",
+    "objectID": "datasets/student.html#merging-dataset",
+    "href": "datasets/student.html#merging-dataset",
+    "title": "Student Alcohol Consumption",
+    "section": "Merging dataset",
+    "text": "Merging dataset\nd1=read.table(\"student-mat.csv\",sep=\";\",header=TRUE)\nd2=read.table(\"student-por.csv\",sep=\";\",header=TRUE)\n\nd3=merge(d1,d2,by=c(\"school\",\"sex\",\"age\",\"address\",\"famsize\",\"Pstatus\",\"Medu\",\"Fedu\",\"Mjob\",\"Fjob\",\"reason\",\"nursery\",\"internet\"))\nprint(nrow(d3)) # 382 students",
     "crumbs": [
       "ABOUT",
-      "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Jeux de Données",
+      "Student Alcohol Consumption"
     ]
   },
   {
-    "objectID": "seance1.html#variable-qualitative-ordinale",
-    "href": "seance1.html#variable-qualitative-ordinale",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variable qualitative ordinale",
-    "text": "Variable qualitative ordinale\n\nDonnées univariées : Le niveau d’étude de 24 étudiants\n\nL, M, L, M, D, M, L, L, M, L, M, D, M, L, M, L, L, M, M, M, L, L, L, D.\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\nL\n\n\n\n\nM\n\n\n\n\nD\n\n\n\n\n\\(n\\) Total",
+    "objectID": "slides-3.html",
+    "href": "slides-3.html",
+    "title": "Travaux Pratiques #1",
+    "section": "",
+    "text": "Suivant le jeu de données xxxx\n\nDéterminer les types de variables (ordianle, nominale, discrète, continue)\nPrésenter les données de façon synthétique en tableu, avec pour rappel:\n\n\n\\(n_i\\)\n\\(f_i\\)\n\\(n_i^+\\)\n\\(n_i^-\\)\n\\(f_i^+\\)\n\\(f_i^-\\)\n\n\n\n\n Back to top",
     "crumbs": [
       "ABOUT",
       "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
-    ]
-  },
-  {
-    "objectID": "seance1.html#variable-qualitative-ordinale-2",
-    "href": "seance1.html#variable-qualitative-ordinale-2",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variable qualitative ordinale 2",
-    "text": "Variable qualitative ordinale 2\n\nDonnées univariées : Le niveau d’étude de 24 étudiants\n\nL, M, L, M, D, M, L, L, M, L, M, D, M, L, M, L, L, M, M, M, L, L, L, D.\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\nL\n11\n\\(0,46\\)\n\n\nM\n10\n\\(0,42\\)\n\n\nD\n3\n$0,12\n\n\n\\(n\\) Total\n24\n\\(1\\)",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
-    ]
-  },
-  {
-    "objectID": "seance1.html#variable-quantitative-discrète",
-    "href": "seance1.html#variable-quantitative-discrète",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variable quantitative discrète",
-    "text": "Variable quantitative discrète\n\nDonnées univariées : Le notes de 24 étudiants\n\n11, 13, 8, 16.5, 11, 7, 13, 12, 11, 12, 12, 8, 11, 8, 12, 11, 7, 16.5, 8, 11, 8, 12, 8,16.5\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\n7\n\n\n\n\n8\n\n\n\n\n11\n\n\n\n\n12\n\n\n\n\n13\n\n\n\n\n16,5\n\n\n\n\n\\(n\\) Total\n24\n\\(1\\)",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
-    ]
-  },
-  {
-    "objectID": "seance1.html#variable-quantitative-discrète-2",
-    "href": "seance1.html#variable-quantitative-discrète-2",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variable quantitative discrète 2",
-    "text": "Variable quantitative discrète 2\n\nDonnées univariées : Le notes de 24 étudiants\n\n11, 13, 8, 16.5, 11, 7, 13, 12, 11, 12, 12, 8, 11, 8, 12, 11, 7, 16.5, 8, 11, 8, 12, 8,16.5\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\n7\n2\n\\(0,08\\)\n\n\n8\n6\n\\(0,25\\)\n\n\n11\n6\n\\(0,25\\)\n\n\n12\n5\n\\(0,21\\)\n\n\n13\n2\n\\(0,08\\)\n\n\n16,5\n3\n\\(0,13\\)\n\n\n\\(n\\) Total\n24\n\\(1\\)",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
-    ]
-  },
-  {
-    "objectID": "seance1.html#variable-quantitative-continue",
-    "href": "seance1.html#variable-quantitative-continue",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variable quantitative continue",
-    "text": "Variable quantitative continue\nLa synthèse par tableau des données (observées à l’état brut) d’une variable continue révèle le nombre des modalités est presque égal à l’effectif total, i.e. \\(k \\approx n\\), car les observations sont presque toutes distinctes.\n\n\n\n\n\n\nSolution\n\n\nRegrouper les modalités en intervalles.",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
-    ]
-  },
-  {
-    "objectID": "seance1.html#variables-quantitative-continue-2",
-    "href": "seance1.html#variables-quantitative-continue-2",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variables quantitative continue 2",
-    "text": "Variables quantitative continue 2\n\nDonnées univariées : Le salaire mensuel de 24 candidats à un concours\n\n1958.49, 2055.75, 1812.48, 1955.69, 2024.48, 2055.61, 1988.52, 2123.32, 1958.81, 1948.22, 2039.01, 1882.25, 2148.81, 2043.28, 2120.25, 1938.33, 1907.65, 2092.08, 2026.33, 2016.89, 1922.31, 1970.89, 2015.67, 2049.11\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\nOn regroupe les observations selon les 7 intervalles de modalités suivantes:\n\n\\(m_1 = [1800; 1850[\\)\n\\(m_2 = [1850; 1900[\\)\n\\(m_3 = [1900; 1950[\\)\n\\(m_4 = [1950; 2000[\\)\n\\(m_5 = [2000; 2050[\\)\n\\(m_6 = [2050; 2100[\\)\n\\(m_7 = [2100; 2150[\\)",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
-    ]
-  },
-  {
-    "objectID": "seance1.html#variables-quantitative-continue-3",
-    "href": "seance1.html#variables-quantitative-continue-3",
-    "title": "Séance 1 - Introduction aux statistiques descriptives",
-    "section": "Variables quantitative continue 3",
-    "text": "Variables quantitative continue 3\n\nDonnées univariées : Le salaire mensuel de 24 candidats à un concours\n\n1958.49, 2055.75, 1812.48, 1955.69, 2024.48, 2055.61, 1988.52, 2123.32, 1958.81, 1948.22, 2039.01, 1882.25, 2148.81, 2043.28, 2120.25, 1938.33, 1907.65, 2092.08, 2026.33, 2016.89, 1922.31, 1970.89, 2015.67, 2049.11\n\nSéries statistiques : présentées dans un tableau ou regroupées en modalités.\n\nOn regroupe les observations selon les intervalles de modalités suivantes:\n\n\n\nModalités\n\\(n_i\\) Effectif\n\\(f_i\\) Fréquence\n\n\n\n\n\\([1800; 1850[\\)\n\\(1\\)\n\\(0,042\\)\n\n\n\\([1850; 1900[\\)\n\\(1\\)\n\\(0,042\\)\n\n\n\\([1900; 1950[\\)\n\\(4\\)\n\\(0,167\\)\n\n\n\\([1950; 2000[\\)\n\\(5\\)\n\\(0,208\\)\n\n\n\\([2000; 2050[\\)\n\\(7\\)\n\\(0,292\\)\n\n\n\\([2050; 2100[\\)\n\\(3\\)\n\\(0,125\\)\n\n\n\\([2100; 2150[\\)\n\\(3\\)\n\\(0,125\\)\n\n\n\\(n\\) Total\n24\n\\(1\\)",
-    "crumbs": [
-      "ABOUT",
-      "Cours",
-      "Séance 1 - Introduction aux statistiques descriptives"
+      "Travaux Pratiques #1"
     ]
   }
 ]

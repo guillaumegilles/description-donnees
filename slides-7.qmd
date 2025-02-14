@@ -1,0 +1,167 @@
+---
+title: "5. Mesures de dispersion"
+author: Guillaume Gilles
+format:
+  revealjs:
+    theme: dark
+---
+
+#### **5.1 Définitions et calculs**
+
+1. **Étendue** :
+   - **Définition** : Différence entre la valeur maximale et la valeur minimale d'un jeu de données.
+   - **Formule** :  
+     \[
+     \text{Étendue} = \text{Valeur maximale} - \text{Valeur minimale}
+     \]
+   - **Exemple** :  
+     Si les notes d’une classe sont : \( 10, 12, 14, 18 \), alors :
+     \[
+     \text{Étendue} = 18 - 10 = 8
+     \]
+   - **Avantages** :
+     - Simple à calculer.
+   - **Limites** :
+     - Ne prend en compte que deux valeurs extrêmes, donc sensible aux valeurs aberrantes.
+
+2. **Variance** :
+   - **Définition** : Mesure de la dispersion des données autour de leur moyenne. Elle reflète la variabilité globale des données.
+   - **Formule pour une population** :
+     \[
+     \sigma^2 = \frac{\sum_{i=1}^N (x_i - \mu)^2}{N}
+     \]
+     Où :
+     - \( x_i \) est une valeur individuelle,
+     - \( \mu \) est la moyenne des données,
+     - \( N \) est le nombre total d'observations.
+   - **Formule pour un échantillon** :
+     \[
+     s^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n - 1}
+     \]
+   - **Exemple** :  
+     Pour les valeurs \( 10, 12, 14 \), si \( \bar{x} = 12 \) :
+     \[
+     \text{Variance} = \frac{(10-12)^2 + (12-12)^2 + (14-12)^2}{3-1} = \frac{4 + 0 + 4}{2} = 4
+     \]
+
+3. **Écart-type** :
+   - **Définition** : Racine carrée de la variance. Il exprime la dispersion dans les mêmes unités que les données.
+   - **Formule** :  
+     \[
+     \sigma = \sqrt{\sigma^2} \quad \text{ou} \quad s = \sqrt{s^2}
+     \]
+   - **Exemple** :  
+     Si la variance est \( 4 \), alors l’écart-type est :
+     \[
+     \sigma = \sqrt{4} = 2
+     \]
+
+4. **Coefficient de variation (CV)** :
+   - **Définition** : Rapport entre l’écart-type et la moyenne, exprimé en pourcentage. Il permet de comparer la dispersion de jeux de données avec des unités ou échelles différentes.
+   - **Formule** :  
+     \[
+     CV = \frac{\text{Écart-type}}{\text{Moyenne}} \times 100
+     \]
+   - **Exemple** :  
+     Si \( \bar{x} = 12 \) et \( \sigma = 2 \), alors :
+     \[
+     CV = \frac{2}{12} \times 100 = 16.67\%
+     \]
+   - **Utilité** : Identifier les jeux de données avec la plus grande variabilité relative.
+
+---
+
+#### **5.2 Interprétation des mesures de dispersion**
+
+1. **Étendue** :
+   - Donne une idée rapide de l’amplitude des données.
+   - Indique si les données sont étalées ou concentrées, mais ne fournit pas d’information sur la répartition globale.
+
+2. **Variance et écart-type** :
+   - Plus les valeurs de variance et d’écart-type sont grandes, plus les données sont dispersées autour de la moyenne.
+   - **Exemple** : Deux classes ont les mêmes moyennes de note (12), mais des dispersions différentes :
+     - Classe 1 : \( 12, 12, 12, 12 \) → Écart-type = 0.
+     - Classe 2 : \( 8, 10, 14, 16 \) → Écart-type élevé, indiquant plus de variabilité.
+
+3. **Coefficient de variation** :
+   - Permet de comparer deux jeux de données ayant des moyennes ou unités différentes.
+   - **Exemple** : Comparer la dispersion des poids (en kg) et des tailles (en cm) d’un groupe.
+
+4. **Contexte réel** :
+   - **Applications** :
+     - Analyse de risques financiers : Identifier les investissements avec la volatilité la plus faible.
+     - Études de santé : Comparer la variabilité des temps de réaction sous différents traitements.
+
+---
+
+#### **5.3 Exercices pratiques**
+
+1. **Calculs manuels sur des petits jeux de données** :
+   - **Exemple 1** : Les âges des participants à une conférence sont \( 25, 30, 35, 40, 45 \).
+     - Étendue : \( 45 - 25 = 20 \).
+     - Moyenne : \( \bar{x} = \frac{25+30+35+40+45}{5} = 35 \).
+     - Variance : \( s^2 = \frac{(25-35)^2 + (30-35)^2 + \dots}{4} \).
+     - Écart-type : \( s = \sqrt{s^2} \).
+
+   - **Exemple 2** : Comparer deux séries de données :
+     - Série A : \( 10, 12, 14, 16, 18 \).
+     - Série B : \( 10, 10, 10, 10, 50 \).
+     - Question : Quelle série est la plus dispersée ? Pourquoi ?
+
+2. **Comparaison entre plusieurs jeux de données** :
+   - Étudier deux groupes d’élèves ayant les mêmes moyennes mais des dispersions différentes.
+   - Discuter des implications dans le contexte (par exemple, homogénéité des résultats scolaires).
+
+3. **Ateliers avec des outils automatisés** :
+   - **Excel/Google Sheets** :
+     - Utilisation des fonctions intégrées :
+       - Étendue : Trouver les valeurs MAX et MIN.
+       - Variance : `=VAR.P(plage)` (population) ou `=VAR.S(plage)` (échantillon).
+       - Écart-type : `=ECARTYPE.P(plage)` ou `=ECARTYPE.S(plage)`.
+     - Générer un tableau comparatif de dispersion pour plusieurs jeux de données.
+
+   - **Python (pandas)** :
+     - Exemple de code pour calculer les mesures de dispersion :
+       ```python
+       import pandas as pd
+
+       # Données
+       data = [10, 12, 14, 16, 18]
+
+       # Étendue
+       etendue = max(data) - min(data)
+
+       # Variance et écart-type
+       variance = pd.Series(data).var(ddof=1)  # ddof=1 pour un échantillon
+       ecart_type = pd.Series(data).std(ddof=1)
+
+       print(f"Étendue : {etendue}")
+       print(f"Variance : {variance}")
+       print(f"Écart-type : {ecart_type}")
+       ```
+
+   - **R** :
+     - Script pour calculer les mesures de dispersion :
+       ```R
+       # Données
+       data <- c(10, 12, 14, 16, 18)
+
+       # Étendue
+       etendue <- max(data) - min(data)
+
+       # Variance et écart-type
+       variance <- var(data)
+       ecart_type <- sd(data)
+
+       print(paste("Étendue :", etendue))
+       print(paste("Variance :", variance))
+       print(paste("Écart-type :", ecart_type))
+       ```
+
+4. **Interprétation dans des contextes concrets** :
+   - Comparer la dispersion des salaires dans deux entreprises.
+   - Étudier la variabilité des temps de réaction dans une expérience scientifique.
+
+---
+
+Avec ce détail, cette séance aborde à la fois les concepts théoriques et des exercices pratiques, ce qui aide à ancrer les notions. Si tu veux approfondir un point ou ajouter un cas d’étude spécifique, je peux compléter ! 😊

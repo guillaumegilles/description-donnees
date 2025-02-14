@@ -1,0 +1,152 @@
+---
+title: "6. Distribution des données"
+author: Guillaume Gilles
+format:
+  revealjs:
+    theme: dark
+---
+
+#### **6.1 Formes de distribution**
+
+1. **Distribution symétrique** :
+   - **Définition** : Une distribution est symétrique lorsque la partie gauche du graphique (par rapport à la moyenne) est un miroir de la partie droite.
+   - **Exemple** :
+     - Distribution des tailles dans une population adulte (souvent proche d'une symétrie).
+   - **Caractéristiques** :
+     - Moyenne ≈ Médiane ≈ Mode.
+     - Exemple graphique : Courbe en cloche (distribution normale).
+
+2. **Distribution asymétrique (skewed)** :
+   - **Définition** : Une distribution est asymétrique lorsque les données sont étirées plus fortement d'un côté que de l'autre.
+   - **Deux types** :
+     - **Asymétrie positive** (queue à droite) :
+       - Les valeurs extrêmes se trouvent du côté des grandes valeurs.
+       - Exemple : Revenu des ménages (quelques valeurs très élevées).
+     - **Asymétrie négative** (queue à gauche) :
+       - Les valeurs extrêmes se trouvent du côté des petites valeurs.
+       - Exemple : Temps d'attente dans un service rapide (souvent très courts, avec quelques exceptions plus longues).
+
+3. **Distribution normale** :
+   - **Définition** : Distribution symétrique en forme de cloche, où la majorité des valeurs se regroupent autour de la moyenne.
+   - **Caractéristiques** :
+     - Moyenne = Médiane = Mode.
+     - Courbe en cloche.
+     - Exemples : Notes d’un examen bien conçu, tailles des individus dans une population homogène.
+   - **Importance** :
+     - De nombreuses analyses statistiques supposent une distribution normale (tests paramétriques).
+
+---
+
+#### **6.2 Mesures de forme**
+
+1. **Coefficient d’asymétrie (skewness)** :
+   - **Définition** : Mesure numérique indiquant si une distribution est symétrique ou asymétrique, et dans quel sens.
+   - **Formule générale** :
+     \[
+     \text{Skewness} = \frac{\frac{1}{N} \sum_{i=1}^N (x_i - \bar{x})^3}{\left( \frac{1}{N} \sum_{i=1}^N (x_i - \bar{x})^2 \right)^{3/2}}
+     \]
+   - **Interprétation** :
+     - **Skewness = 0** : Distribution parfaitement symétrique.
+     - **Skewness > 0** : Asymétrie positive (queue à droite).
+     - **Skewness < 0** : Asymétrie négative (queue à gauche).
+   - **Exemple** :
+     - Skewness de la distribution des revenus d’un pays est souvent > 0.
+
+2. **Coefficient d’aplatissement (kurtosis)** :
+   - **Définition** : Mesure de la concentration des valeurs autour de la moyenne, ou de l’épaisseur des queues d’une distribution.
+   - **Formule générale** :
+     \[
+     \text{Kurtosis} = \frac{\frac{1}{N} \sum_{i=1}^N (x_i - \bar{x})^4}{\left( \frac{1}{N} \sum_{i=1}^N (x_i - \bar{x})^2 \right)^2}
+     \]
+   - **Types de kurtosis** :
+     - **Kurtosis ≈ 3** : Distribution normale (mésocurtique).
+     - **Kurtosis > 3** : Distribution leptocurtique (queues plus épaisses, données plus concentrées au centre).
+     - **Kurtosis < 3** : Distribution platicurtique (queues plus fines, données plus dispersées).
+   - **Exemple** :
+     - Une distribution leptocurtique pourrait décrire des événements financiers rares mais extrêmes (ex. : crises économiques).
+
+3. **Résumé des deux mesures** :
+   - Skewness et kurtosis sont complémentaires :
+     - Skewness indique si la distribution penche vers un côté.
+     - Kurtosis indique la concentration des données au centre et aux extrémités.
+
+---
+
+#### **6.3 Cas pratiques**
+
+1. **Identifier la forme de distributions à partir de graphiques** :
+   - **Étape 1** : Observer le graphique (histogramme, polygone des fréquences, boxplot).
+     - Une distribution en cloche indique souvent une symétrie.
+     - Une queue prolongée indique une asymétrie.
+   - **Étape 2** : Vérifier la skewness et la kurtosis pour quantifier les observations.
+   - **Exemples graphiques** :
+     - Un histogramme de la distribution des âges dans une entreprise.
+     - Une boîte à moustaches montrant les salaires dans deux secteurs.
+
+2. **Calculs manuels ou automatisés** :
+   - **Exercice 1 : Calculer les coefficients sur un petit jeu de données** :
+     - Données : \( 10, 15, 20, 25, 30 \).
+     - Skewness : Calcul manuel ou à l’aide d’un outil (formule simplifiée).
+     - Kurtosis : Idem.
+   - **Exercice 2 : Comparer deux distributions** :
+     - Distribution A : Symétrique (notes d’une classe homogène).
+     - Distribution B : Asymétrique positive (temps de trajet en heure de pointe).
+     - Question : Quelle est la plus concentrée autour de la moyenne ?
+
+3. **Ateliers avec outils numériques** :
+   - **Excel/Google Sheets** :
+     - Skewness : `=SKEW(plage)`.
+     - Kurtosis : `=KURT(plage)`.
+   - **Python (pandas et scipy)** :
+     ```python
+     import pandas as pd
+     from scipy.stats import skew, kurtosis
+
+     # Données
+     data = [10, 15, 20, 25, 30]
+
+     # Calculs
+     skewness = skew(data)
+     kurt = kurtosis(data)
+
+     print(f"Skewness : {skewness}")
+     print(f"Kurtosis : {kurt}")
+     ```
+   - **R** :
+     ```R
+     library(e1071)
+
+     # Données
+     data <- c(10, 15, 20, 25, 30)
+
+     # Calculs
+     skewness <- skewness(data)
+     kurtosis <- kurtosis(data)
+
+     print(paste("Skewness :", skewness))
+     print(paste("Kurtosis :", kurtosis))
+     ```
+
+4. **Interprétation dans des contextes réels** :
+   - Étudier les asymétries dans la distribution des salaires dans deux entreprises (pour vérifier l’équité salariale).
+   - Analyser la kurtosis des résultats sportifs pour voir si les performances sont concentrées ou variées.
+
+---
+
+### **6.4 Méthodologie de la séance**
+
+1. **Introduction théorique** :
+   - Explications détaillées des formes de distribution.
+   - Illustrations graphiques pour mieux comprendre la symétrie, l’asymétrie et la kurtosis.
+
+2. **Exercices pratiques** :
+   - Étapes guidées pour calculer les coefficients sur des données simples.
+   - Comparaison des distributions à partir de graphiques et de calculs.
+
+3. **Travail en groupe** :
+   - Étudier des cas pratiques (par exemple : comparer les distributions des prix de l’immobilier dans différentes villes).
+   - Présentation des résultats et interprétation collective.
+
+---
+
+Cette séance permet aux apprenants de mieux comprendre comment interpréter la distribution des données, un concept clé pour analyser des jeux de données. Si tu veux des exemples supplémentaires ou des variations sur les ateliers, fais-moi signe ! 😊
