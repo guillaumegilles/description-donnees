@@ -38,7 +38,7 @@ knitr::kable(head(mtcars, n = 3)[,c("mpg", "cyl", "disp", "hp", "wt")])
 ❔ La variable `mpg`, est :
 
 ::: {.fragment}
-- Qualitative ordianle
+- Qualitative ordinale
 :::
 
 ::: {.fragment}
@@ -154,6 +154,6 @@ ggplot(mtcars, aes(y = mpg)) +
 Construisez une analyse statistique descriptive sur le jeu de données [MBA Decision After Bachelor's](datasets/mba-decision.qmd), pour cela :
 
 1. Pour la variable `Age`, déterminez, les ages minimun et maximun, calculez les quartiles, et construisez une boîte à moustache ;
-2. Pour les variable `Undergraduate Major` et `Undergraduate GPA`, déterminez et construisez les représentations graphiques les plus appropriées ;
+2. Pour les variables `Undergraduate Major` et `Undergraduate GPA`, déterminez et construisez les représentations graphiques les plus appropriées ;
 3. Pour la variables `Annual Salary (Before MBA)` construisez un tableau statistiques en incluant, $n_i$, $f_i$, $n_i^+$, $n_i^-$, $f_i^+$, et $f_i^-$. **Conseil** : pensez à convertir la nature de la variable pour vous facilitez la retranscription dans un tableau.
 4. Pour finir construisez la représentation graphique la plus approprié pour cette varaible, `Annual Salary (Before MBA)`, ainsi que la **courbe des fréquences cumulées croissante**.

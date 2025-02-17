@@ -53,25 +53,26 @@ website:
         text: Moodle
         href: https://moodle.essca.fr/course/view.php?id=12466#module-241126
     contents:
-      - index.qmd
+      - href: index.qmd
+        text: HOME
       - section: Information
         contents:
           - href: planning.qmd
           - href: syllabus.qmd
       - section: Cours
         contents:
-          - href: slides-1.qmd
-          - href: slides-2.qmd
-          - href: slides-3.qmd
-          - href: slides-4.qmd
-          - href: slides-5.qmd
-          - href: slides-6.qmd
-          - href: slides-7.qmd
-          - href: slides-8.qmd
-          - href: slides-9.qmd
-          - href: slides-10.qmd
-          - href: slides-11.qmd
-          - href: slides-12.qmd
+          - href: session-1.qmd
+          - href: session-2.qmd
+          - href: session-3.qmd
+          - href: session-4.qmd
+          - href: session-5.qmd
+          - href: session-6.qmd
+          - href: session-7.qmd
+          - href: session-8.qmd
+          - href: session-9.qmd
+          - href: session-10.qmd
+          - href: session-11.qmd
+          - href: session-12.qmd
       - section: Jeux de Données
         contents: 
           - href: datasets/mba-decision.qmd
@@ -89,8 +90,14 @@ website:
 
 format:
   html:
-    page-layout: full
     theme: flaty
+    page-layout: full
+    toc: true
+    other-links:
+      - text: Présentation
+        icon: projector-fill
+        href: {{< meta title >}}
+
 
     # References
     citation-location: margin

@@ -1,5 +1,5 @@
 ---
-title: MS02-001-G Description de données
+title: Description de Données
 ---
 
 Dans ce cours, nous presentons les outils statistiques de base correspondant à la première étape de l’analyse des données (résumés numériques et représentations graphiques des données). À la fin du cours, l'étudiant aura assimilé les concepts requis pour la réussite des cours ultérieurs (statistique inférentielle, analyse des données, économétrie, etc)
