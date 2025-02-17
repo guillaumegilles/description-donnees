@@ -11,6 +11,7 @@
   <meta name="generator" content="quarto-1.4.537">
 
   <meta name="author" content="Guillaume Gilles">
+  <meta name="dcterms.date" content="2025-02-18">
   <title>MS02-001-G Description de données - 6. Mesures de tendance centrale</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -29,71 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #f8f8f2;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6BXJC408ED"></script>
@@ -108,6 +44,8 @@
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -410,176 +348,353 @@ Guillaume Gilles
 </div>
 </div>
 
+  <p class="date">2025-02-18</p>
 </section>
-<section class="slide level2">
-
-<h4 id="définitions-et-calculs"><strong>4.1 Définitions et calculs</strong></h4>
+<section>
+<section id="agenda" class="title-slide slide level1 center">
+<h1>Agenda</h1>
 <ol type="1">
-<li><strong>Moyenne arithmétique</strong> :
-<ul>
-<li><strong>Définition</strong> : La somme des valeurs des observations divisée par le nombre total d’observations. [ = ]</li>
-<li><strong>Avantages</strong> :
+<li><strong>Moyenne</strong></li>
+<li><strong>Mode</strong></li>
+</ol>
+</section>
+<section id="moyenne-arithmétique" class="slide level2">
+<h2>Moyenne arithmétique</h2>
+<h3 id="définition">Définition</h3>
+<p>la somme des valeurs des observations divisée par le nombre total d’observations.</p>
+<p><span class="math display">\[
+\bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n} = \frac{1}{n} \sum_{i=n}^{n} x_i
+\]</span></p>
+</section>
+<section id="moyenne-arithmétique-1" class="slide level2">
+<h2>Moyenne arithmétique</h2>
+<h3 id="avantages">Avantages</h3>
 <ul>
 <li>Facile à calculer.</li>
 <li>Représente bien les données symétriques.</li>
-</ul></li>
-<li><strong>Inconvénients</strong> :
+</ul>
+<h3 id="inconvénients">Inconvénients</h3>
 <ul>
 <li>Sensible aux valeurs extrêmes (outliers).</li>
-</ul></li>
-</ul></li>
-<li><strong>Médiane</strong> :
-<ul>
-<li><strong>Définition</strong> : La valeur qui sépare les données en deux groupes égaux lorsqu’elles sont classées dans l’ordre croissant.
-<ul>
-<li>Si (n) est impair : la médiane est l’observation au milieu.</li>
-<li>Si (n) est pair : la médiane est la moyenne des deux observations centrales.</li>
-</ul></li>
-<li><strong>Avantages</strong> :
-<ul>
-<li>Insensible aux valeurs extrêmes.</li>
-<li>Plus représentative des données asymétriques.</li>
-</ul></li>
-<li><strong>Exemple rapide</strong> :
-<ul>
-<li>Données : (3, 7, 9, 12, 15) → Médiane = (9).</li>
-<li>Données : (3, 7, 9, 12) → Médiane = ( = 8).</li>
-</ul></li>
-</ul></li>
-<li><strong>Mode</strong> :
-<ul>
-<li><strong>Définition</strong> : La valeur qui apparaît le plus souvent dans un ensemble de données.</li>
-<li><strong>Cas particuliers</strong> :
-<ul>
-<li>Une distribution peut être unimodale, bimodale, ou sans mode (aucune valeur ne se répète).</li>
-</ul></li>
-<li><strong>Avantages</strong> :
-<ul>
-<li>Simple à comprendre et utile pour les variables qualitatives.</li>
-</ul></li>
-<li><strong>Exemple rapide</strong> :
-<ul>
-<li>Données : (2, 3, 3, 5, 7, 7, 7, 8) → Mode = (7).</li>
-</ul></li>
-</ul></li>
-</ol>
+</ul>
 </section>
-<section class="slide level2">
-
-<h4 id="comparaison-et-interprétation"><strong>4.2 Comparaison et interprétation</strong></h4>
-<ol type="1">
-<li><strong>Quand utiliser chaque mesure ?</strong>
-<ul>
-<li><strong>Moyenne</strong> :
-<ul>
-<li>Appropriée pour des données quantitatives symétriques sans valeurs extrêmes.</li>
-<li>Exemples : calcul du revenu moyen, de la note moyenne.</li>
-</ul></li>
-<li><strong>Médiane</strong> :
-<ul>
-<li>Idéale pour des données asymétriques ou affectées par des valeurs extrêmes.</li>
-<li>Exemples : revenu médian pour analyser les inégalités, âge médian.</li>
-</ul></li>
-<li><strong>Mode</strong> :
-<ul>
-<li>Particulièrement utile pour des données qualitatives ou pour identifier les tendances dominantes.</li>
-<li>Exemples : marque de voiture préférée, catégorie d’âge prédominante.</li>
-</ul></li>
-</ul></li>
-<li><strong>Illustration des cas pratiques :</strong>
-<ul>
-<li>Données symétriques : (4, 5, 6, 7, 8).
-<ul>
-<li>Moyenne = Médiane = (6).</li>
-</ul></li>
-<li>Données asymétriques : (4, 5, 6, 7, 50).
-<ul>
-<li>Moyenne = (14.4) (tirée vers (50)).</li>
-<li>Médiane = (6) (plus représentative).</li>
-</ul></li>
-<li>Données qualitatives : “Rouge”, “Bleu”, “Rouge”, “Vert”, “Rouge”.
-<ul>
-<li>Mode = “Rouge”.</li>
-</ul></li>
-</ul></li>
-</ol>
+<section id="moyenne-arithmétique-2" class="slide level2">
+<h2>Moyenne arithmétique</h2>
+<h3 id="exemple">Exemple</h3>
+<p>Les miles par gallon des voitures du jeu de données mtcars</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
+[16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
+[31] 15.0 21.4</code></pre>
+</div>
+</div>
+<p>❔ Calculer la moyenne arithmétique, au centième prés.</p>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20.09</code></pre>
+</div>
+</div>
+</div>
 </section>
-<section class="slide level2">
+<section id="moyenne-arithmétique-3" class="slide level2">
+<h2>Moyenne arithmétique</h2>
+<h3 id="représentation-graphique">Représentation graphique</h3>
 
-<h4 id="exemples-pratiques"><strong>4.3 Exemples pratiques</strong></h4>
-<ol type="1">
-<li><strong>Calculs manuels sur de petits jeux de données</strong> :
-<ul>
-<li>Données : (3, 7, 7, 10, 12, 12, 15).
-<ul>
-<li>Moyenne : [ = = 9.43 ]</li>
-<li>Médiane : données classées ((3, 7, 7, 10, 12, 12, 15)), valeur centrale = (10).</li>
-<li>Mode : (7) et (12) (bimodale).</li>
-</ul></li>
-<li>Résultat interprétatif :
-<ul>
-<li>La moyenne est affectée par des valeurs extrêmes si elles sont présentes.</li>
-<li>La médiane est stable et représente mieux les tendances si la distribution est asymétrique.</li>
-</ul></li>
-</ul></li>
-<li><strong>Exercices avec des outils automatisés</strong> :
-<ul>
-<li><p>Utilisation d’un <strong>tableur (Excel/Google Sheets)</strong> :</p>
-<ul>
-<li>Moyenne : =MOYENNE(A1:A10).</li>
-<li>Médiane : =MEDIAN(A1:A10).</li>
-<li>Mode : =MODE(A1:A10).</li>
-</ul></li>
-<li><p>Utilisation de <strong>Python</strong> :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a>data <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">7</span>, <span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">12</span>, <span class="dv">15</span>]</span>
-<span id="cb1-4"><a></a>moyenne <span class="op">=</span> np.mean(data)</span>
-<span id="cb1-5"><a></a>mediane <span class="op">=</span> np.median(data)</span>
-<span id="cb1-6"><a></a>mode <span class="op">=</span> <span class="bu">max</span>(<span class="bu">set</span>(data), key<span class="op">=</span>data.count)</span>
-<span id="cb1-7"><a></a></span>
-<span id="cb1-8"><a></a><span class="bu">print</span>(<span class="ss">f"Moyenne: </span><span class="sc">{</span>moyenne<span class="sc">}</span><span class="ss">, Médiane: </span><span class="sc">{</span>mediane<span class="sc">}</span><span class="ss">, Mode: </span><span class="sc">{</span>mode<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Résultat attendu :</p>
-<ul>
-<li>Moyenne = (9.43), Médiane = (10), Mode = (7) et (12).</li>
-</ul></li>
-</ul></li>
-</ol>
+<img data-src="slides-6_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="moyenne-pondérée" class="slide level2">
+<h2>Moyenne pondérée</h2>
+<h3 id="variable-discrète">Variable discrète</h3>
+<p>Pour une variable discrète dont les modalités <span class="math inline">\(m_i\)</span> sont des valeurs exactes représentées en tableau:</p>
+<p><span class="math display">\[
+\bar{x} = \frac{\sum_{i=1}^{k} n_i \times m_i}{n} = \frac{n_1 \times m_1 + n_2 \times m_2 + \dots + n_k \times m_k}{n}
+\]</span></p>
+<p>Où <span class="math inline">\(n_i\)</span> est l’effectif associé à <span class="math inline">\(m_i\)</span>. Dans ce cas, <span class="math inline">\(\bar{x}\)</span> est appelée la <strong>moyenne pondérée</strong> des données.</p>
 </section>
-<section class="slide level2">
-
-<h4 id="applications-pratiques"><strong>4.4 Applications pratiques</strong></h4>
-<ol type="1">
-<li><strong>Étude de cas</strong> :
-<ul>
-<li>Analyse de données salariales :
-<ul>
-<li>Revenu moyen : (40,000) € (sensible aux très hauts salaires).</li>
-<li>Revenu médian : (30,000) € (plus représentatif pour analyser la répartition).</li>
-</ul></li>
-<li>Répartition des notes à un examen :
-<ul>
-<li>Mode = (15) (note la plus fréquente).</li>
-<li>Moyenne et médiane permettent de comprendre la performance globale.</li>
-</ul></li>
-</ul></li>
-<li><strong>Visualisation des mesures</strong> :
-<ul>
-<li>Graphiques dans Excel ou Python (exemple d’un boxplot montrant médiane et dispersion).</li>
-<li>Ajout de la moyenne sur un histogramme pour voir son positionnement.</li>
-</ul></li>
-</ol>
+<section id="moyenne-pondérée-variable-discrète" class="slide level2">
+<h2>Moyenne pondérée :: variable discrète</h2>
+<h3 id="exemple-1">Exemple</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Effectif des valeurs de la variable gear</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Nombre de vitesses</th>
+<th style="text-align: center;">Effectif</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>❔ Calculer la moyenne pondérée, au centième prés.</p>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.69</code></pre>
+</div>
+</div>
+</div>
 </section>
-<section class="slide level2">
+<section id="moyenne-pondérée-variable-discrète-1" class="slide level2">
+<h2>Moyenne pondérée :: variable discrète</h2>
+<h3 id="représentation-graphique-1">Représentation graphique</h3>
 
-<p>Cette structure devrait permettre une compréhension claire des mesures de tendance centrale, avec des exemples concrets et des exercices pratiques. Si tu veux des exemples supplémentaires ou des tutoriels pour un logiciel en particulier, fais-moi signe ! 😊</p>
+<img data-src="slides-6_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="moyenne-pondérée-1" class="slide level2">
+<h2>Moyenne pondérée</h2>
+<h3 id="variable-continue">Variable continue</h3>
+<p>Pour une variable continue dont les modalités sont des classes représentées en tableau:</p>
+<p><span class="math display">\[
+\bar{x} = \frac{\sum_{i=1}^{k} n_i \times c_i}{n} = \frac{n_1 \times c_1 + n_2 \times c_2 + \dots + n_k \times c_k}{n}
+\]</span></p>
+<p>Où <span class="math inline">\(c_i\)</span> est le centre (<em>milieu</em>) de la <span class="math inline">\(i^e\)</span> classe et <span class="math inline">\(n_i\)</span> est son effectif associé. Dans ce cas, <span class="math inline">\(\bar{x}\)</span> est également appelée la <strong>moyenne pondérée</strong> des données.</p>
+</section>
+<section id="moyenne-pondérée-variable-continue" class="slide level2">
+<h2>Moyenne pondérée :: variable continue</h2>
+<h3 id="exemple-2">Exemple</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Effectif des voitures par intervalle de poids</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Intervalle de poids (wt)</th>
+<th style="text-align: center;">Effectif</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">[1.51,2]</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">(2,2.49]</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">(2.49,2.98]</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">(2.98,3.47]</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">(3.47,3.96]</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">(3.96,4.45]</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">(4.94,5.43]</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>❔ Calculer la moyenne pondérée, au centième prés.</p>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.22</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="moyenne-pondérée-variable-continue-1" class="slide level2">
+<h2>Moyenne pondérée :: variable continue</h2>
+<h3 id="représentation-graphique-2">Représentation graphique</h3>
+
+<img data-src="slides-6_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="mode" class="slide level2">
+<h2>Mode</h2>
+<h3 id="définiton">Définiton</h3>
+<p>Le <code>mode</code> est la valeur la plus fréquente, qui apparaît le plus souvent, dans un ensemble de données.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>C’est le seul indicateur de tendance centrale qui peut être utilisée sur des données nominales</p>
+</div>
+</div>
+</div>
+<p>Une répartition peut être <strong>unimodale</strong> ou <strong>plurimodale</strong> (bimodale, trimodale…), si deux ou plusieurs valeurs de la variable considérée émergent également, voire sans aucun mode (distribution uniforme) si toutes les valeurs de la variable considérée émergent également. Aussi, sa définition ne s’obtient pas directement comme une fonction des termes de la série.</p>
+</section>
+<section id="mode-1" class="slide level2">
+<h2>Mode</h2>
+<h3 id="les-variables-qualitatives-ou-discrète">Les variables qualitatives ou discrète</h3>
+<p>Le mode est la (ou les) modalité(s) da la varaible dont la valeur de l’effectif (ou fréquence) est la plus élevée.</p>
+</section>
+<section id="mode-variables-qualitatives-ou-discrète" class="slide level2">
+<h2>Mode :: variables qualitatives ou discrète</h2>
+<h3 id="exemples">Exemples</h3>
+<p>Les cylindrées des voitures du jeu de données mtcars</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 6 6 4 6 8 6 8 4 4 6 6 8 8 8 8 8 8 4 4 4 4 8 8 8 8 4 4 4 8 6 8 4</code></pre>
+</div>
+</div>
+<p>❔ Identifier le(s) mode(s) associés à ce jeu de données</p>
+<div class="fragment">
+<ul>
+<li>4</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>6</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="fragment highlight-green">
+<ul>
+<li>8</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="mode-variable-discrète" class="slide level2">
+<h2>Mode :: variable discrète</h2>
+<h3 id="représentation-graphique-3">Représentation graphique</h3>
+
+<img data-src="slides-6_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="mode-variables-qualitatives" class="slide level2">
+<h2>Mode :: variables qualitatives</h2>
+<h3 id="représentation-graphique-4">Représentation graphique</h3>
+
+<img data-src="slides-6_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<section id="mode-2" class="slide level2 smaller">
+<h2>Mode</h2>
+<h3 id="les-variables-continues">Les variables continues</h3>
+<p>Dans le cas d’une répartition en classes d’amplitudes égales, la classe modale désigne celle qui a le plus fort effectif. La convention est d’appeler mode le centre de la classe modale. Si les classes sont d’amplitudes diverses, il convient de relativiser pour désigner ce paramètre. La classe modale est alors celle qui a la plus forte densité.</p>
+<p>Le mode appartient à la <strong>classe modale</strong> (celle qui possède la plus grande hauteur). Soit <span class="math inline">\([a; b[\)</span> la classe modale, le mode est calculé ainsi :</p>
+<p><span class="math display">\[
+Mode = a + \left((b - a) \times \frac{\Delta_1}{\Delta_1 + \Delta_2}\right)
+\]</span></p>
+<p>Où:</p>
+<ul>
+<li><span class="math inline">\(\Delta_1 = h_c - h_c-1\)</span></li>
+<li><span class="math inline">\(\Delta_2 = h_c - h_c+1\)</span></li>
+</ul>
+<p>Avec:</p>
+<ul>
+<li><span class="math inline">\(h_c\)</span> la hauteur de la classe modale <span class="math inline">\([a; b[\)</span></li>
+<li><span class="math inline">\(h_c-1\)</span> la hauteur qui <strong>précède</strong> <span class="math inline">\([a; b[\)</span></li>
+<li>et <span class="math inline">\(h_c+1\)</span> la hauteur qui <strong>succède</strong> <span class="math inline">\([a; b[\)</span></li>
+</ul>
+</section>
+<section id="mode-variables-continues" class="slide level2">
+<h2>Mode :: variables continues</h2>
+<h3 id="exemple-3">Exemple</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table>
+<caption>Effectif des voitures par intervalle de poids</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Intervalle de poids (wt)</th>
+<th style="text-align: right;">Effectif</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">[1.51,2]</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(2,2.49]</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(2.49,2.98]</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(2.98,3.47]</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(3.47,3.96]</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(3.96,4.45]</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(4.94,5.43]</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>❔ Identifier le(s) mode(s) associés à ce jeu de données</p>
+<div class="fragment">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.44</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="mode-variables-continues-1" class="slide level2">
+<h2>Mode :: variables continues</h2>
+<h3 id="représentation-graphique-5">Représentation graphique</h3>
+
+<img data-src="slides-6_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="quand-utiliser-chaque-indicateur" class="slide level2">
+<h2>Quand utiliser chaque indicateur ?</h2>
+<div>
+<ul>
+<li class="fragment"><strong>Moyenne</strong> :
+<ul>
+<li class="fragment">Appropriée pour des données quantitatives symétriques sans valeurs extrêmes.</li>
+<li class="fragment">Exemples : calcul du revenu moyen, de la note moyenne.</li>
+</ul></li>
+<li class="fragment"><strong>Médiane</strong> :
+<ul>
+<li class="fragment">Idéale pour des données asymétriques ou affectées par des valeurs extrêmes.</li>
+<li class="fragment">Exemples : revenu médian pour analyser les inégalités, âge médian.</li>
+</ul></li>
+<li class="fragment"><strong>Mode</strong> :
+<ul>
+<li class="fragment">Particulièrement utile pour des données qualitatives ou pour identifier les tendances dominantes.</li>
+<li class="fragment">Exemples : marque de voiture préférée, catégorie d’âge prédominante.</li>
+</ul></li>
+</ul>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -590,6 +705,7 @@ Guillaume Gilles
   <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -610,7 +726,8 @@ Guillaume Gilles
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -781,7 +898,7 @@ Guillaume Gilles
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -790,6 +907,44 @@ Guillaume Gilles
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

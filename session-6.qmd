@@ -1,16 +1,20 @@
 ---
 title: "6. Indicateurs de Tendance Centrale"
+execute:
+  echo: false
+format-links:
+  - text: Slides
+    href: slides/slides-6.qmd
+    icon: projector-fill
 ---
 
 ```{r}
+#| output: false
+
 library(dplyr)
 library(ggplot2)
 library(knitr)
 ```
-
-::: {.callout-important}
-En statistique, un **indicateur de tendance centrale** est une valeur résumant une série statistique pour une `variable quantitative` ou `ordinale`.
-:::
 
 Les deux principaux indicateurs de tendance centrale sont la moyenne et la médiane, mais on trouve parfois aussi la valeur centrale (moyenne des valeurs minimale et maximale) ou le mode. Un indicateur de tendance centrale est toujours compris entre les valeurs maximale et minimale. 
 
@@ -18,25 +22,26 @@ Les deux principaux indicateurs de tendance centrale sont la moyenne et la médi
 
 ### Moyenne Arithmétique
 
-La moyenne arithmétique, souvent notée $\bar{x}$, est l'indicateur de tendance centrale le plus connu. Elle est définie, en général, comme étant le quotient de la somme de toutes les valeurs d'une série par le nombre d'observations.
+La moyenne arithmétique, souvent notée $\bar{x}$, est l'indicateur de tendance centrale le plus connu. Elle est définie, en général, comme la somme des valeurs des observations divisée par le nombre total d'observations.
 
 $$
 \bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n} = \frac{1}{n} \sum_{i=n}^{n} x_i
 $$
+
 #### Exemple
 
 ```{r}
-# Afficher, sous forme de tableau, la variable mpg du jeu de données mtcars
-knitr::kable(t(mtcars[,c("mpg")]),
-             caption = "Les miles par gallons des voitures du jeu de données mtcars")
+knitr::kable(mtcars$mpg,
+              align = 'c',
+              caption = "Les miles par gallon des voitures du jeu de données mtcars")
 ```
 
-❔ Calculer  la  moyenne  arithmétique , au centième  prés
+❔ Calculer la moyenne arithmétique, au centième prés.
 
 ```{r}
 # Calcul de la moyenne de mpg
 mean_mpg <- mean(mtcars$mpg)
-mean_mpg
+print(mean_mpg, digits = 4)
 ```
 
 #### Représentation graphique
@@ -67,15 +72,16 @@ Où $n_i$ est l'effectif associé à $m_i$. Dans ce cas, $\bar{x}$ est appelée 
 mtcars %>%
   count(gear) %>%
   kable(col.names = c("Nombre de vitesses", "Effectif"),
+        align = 'cc',
         caption = "Effectif des valeurs de la variable gear")
 ```
 
- Calculer  la  moyenne  pondérée, au centième  prés
+❔ Calculer la moyenne pondérée, au centième prés.
  
 ```{r}
 # Calcul de la moyenne de gear
 mean_gear <- mean(mtcars$gear)
-mean_gear
+print(mean_gear, digits = 3)
 ```
 
 #### Représentation graphique
@@ -113,6 +119,7 @@ mtcars_wt_intervals <- mtcars %>%
 
 mtcars_wt_intervals %>%
   kable(col.names = c("Intervalle de poids (wt)", "Effectif"),
+        align = 'rc',
         caption = "Effectif des voitures par intervalle de poids")
 ```
 
@@ -121,7 +128,7 @@ mtcars_wt_intervals %>%
 ```{r}
 # Calcul de la moyenne
 mean_wt <- mean(mtcars$wt)
-mean_wt
+print(mean_wt, digits = 3)
 ```
 
 #### Représentation graphique
@@ -158,8 +165,7 @@ Le mode est la (ou les) modalité(s) da la varaible dont la valeur de l’effect
 
 ```{r}
 # Afficher, sous forme de tableau, la variable cyl du jeu de données mtcars
-knitr::kable(t(mtcars[,c("cyl")]),
-             caption = "Les cylindrées des voitures du jeu de données mtcars")
+knitr::kable(mtcars$cyl, caption = "Les cylindrées des voitures du jeu de données mtcars")
 ```
 
 ❔ Identifier le(s) mode(s) associés à ce jeu de donné

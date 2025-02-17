@@ -1,115 +1,373 @@
 ---
 title: "6. Mesures de tendance centrale"
 author: Guillaume Gilles
+date: 2025-02-18
 format:
   revealjs:
     theme: dark
+    chalkboard: true
 ---
 
-#### **4.1 Définitions et calculs**
-1. **Moyenne arithmétique** :
-   - **Définition** : La somme des valeurs des observations divisée par le nombre total d'observations.
-     \[
-     \text{Moyenne} = \frac{\sum x_i}{n}
-     \]
-   - **Avantages** :
-     - Facile à calculer.
-     - Représente bien les données symétriques.
-   - **Inconvénients** :
-     - Sensible aux valeurs extrêmes (outliers).
+```{r}
+#| output: false
 
-2. **Médiane** :
-   - **Définition** : La valeur qui sépare les données en deux groupes égaux lorsqu'elles sont classées dans l'ordre croissant.
-     - Si \(n\) est impair : la médiane est l'observation au milieu.
-     - Si \(n\) est pair : la médiane est la moyenne des deux observations centrales.
-   - **Avantages** :
-     - Insensible aux valeurs extrêmes.
-     - Plus représentative des données asymétriques.
-   - **Exemple rapide** :
-     - Données : \(3, 7, 9, 12, 15\) → Médiane = \(9\).
-     - Données : \(3, 7, 9, 12\) → Médiane = \(\frac{7 + 9}{2} = 8\).
+library(dplyr)
+library(ggplot2)
+library(knitr)
+```
 
-3. **Mode** :
-   - **Définition** : La valeur qui apparaît le plus souvent dans un ensemble de données.
-   - **Cas particuliers** :
-     - Une distribution peut être unimodale, bimodale, ou sans mode (aucune valeur ne se répète).
-   - **Avantages** :
-     - Simple à comprendre et utile pour les variables qualitatives.
-   - **Exemple rapide** :
-     - Données : \(2, 3, 3, 5, 7, 7, 7, 8\) → Mode = \(7\).
+# Agenda
 
----
+1. **Moyenne**
+2. **Mode**
 
-#### **4.2 Comparaison et interprétation**
-1. **Quand utiliser chaque mesure ?**
-   - **Moyenne** :
-     - Appropriée pour des données quantitatives symétriques sans valeurs extrêmes.
-     - Exemples : calcul du revenu moyen, de la note moyenne.
-   - **Médiane** :
-     - Idéale pour des données asymétriques ou affectées par des valeurs extrêmes.
-     - Exemples : revenu médian pour analyser les inégalités, âge médian.
-   - **Mode** :
-     - Particulièrement utile pour des données qualitatives ou pour identifier les tendances dominantes.
-     - Exemples : marque de voiture préférée, catégorie d’âge prédominante.
+## Moyenne arithmétique
 
-2. **Illustration des cas pratiques :**
-   - Données symétriques : \(4, 5, 6, 7, 8\).
-     - Moyenne = Médiane = \(6\).
-   - Données asymétriques : \(4, 5, 6, 7, 50\).
-     - Moyenne = \(14.4\) (tirée vers \(50\)).
-     - Médiane = \(6\) (plus représentative).
-   - Données qualitatives : "Rouge", "Bleu", "Rouge", "Vert", "Rouge".
-     - Mode = "Rouge".
+### Définition
 
----
+la somme des valeurs des observations divisée par le nombre total d'observations.
 
-#### **4.3 Exemples pratiques**
-1. **Calculs manuels sur de petits jeux de données** :
-   - Données : \(3, 7, 7, 10, 12, 12, 15\).
-     - Moyenne :
-       \[
-       \text{Moyenne} = \frac{3 + 7 + 7 + 10 + 12 + 12 + 15}{7} = 9.43
-       \]
-     - Médiane : données classées \((3, 7, 7, 10, 12, 12, 15)\), valeur centrale = \(10\).
-     - Mode : \(7\) et \(12\) (bimodale).
-   - Résultat interprétatif :
-     - La moyenne est affectée par des valeurs extrêmes si elles sont présentes.
-     - La médiane est stable et représente mieux les tendances si la distribution est asymétrique.
+$$
+\bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n} = \frac{1}{n} \sum_{i=n}^{n} x_i
+$$
 
-2. **Exercices avec des outils automatisés** :
-   - Utilisation d’un **tableur (Excel/Google Sheets)** :
-     - Moyenne : =MOYENNE(A1:A10).
-     - Médiane : =MEDIAN(A1:A10).
-     - Mode : =MODE(A1:A10).
-   - Utilisation de **Python** :
-     ```python
-     import numpy as np
+## Moyenne arithmétique
 
-     data = [3, 7, 7, 10, 12, 12, 15]
-     moyenne = np.mean(data)
-     mediane = np.median(data)
-     mode = max(set(data), key=data.count)
+### Avantages
 
-     print(f"Moyenne: {moyenne}, Médiane: {mediane}, Mode: {mode}")
-     ```
-   - Résultat attendu :
-     - Moyenne = \(9.43\), Médiane = \(10\), Mode = \(7\) et \(12\).
+- Facile à calculer.
+- Représente bien les données symétriques.
 
----
+### Inconvénients
 
-#### **4.4 Applications pratiques**
-1. **Étude de cas** :
-   - Analyse de données salariales :
-     - Revenu moyen : \(40,000\) € (sensible aux très hauts salaires).
-     - Revenu médian : \(30,000\) € (plus représentatif pour analyser la répartition).
-   - Répartition des notes à un examen :
-     - Mode = \(15\) (note la plus fréquente).
-     - Moyenne et médiane permettent de comprendre la performance globale.
+- Sensible aux valeurs extrêmes (outliers).
 
-2. **Visualisation des mesures** :
-   - Graphiques dans Excel ou Python (exemple d’un boxplot montrant médiane et dispersion).
-   - Ajout de la moyenne sur un histogramme pour voir son positionnement.
+## Moyenne arithmétique
 
----
+### Exemple
 
-Cette structure devrait permettre une compréhension claire des mesures de tendance centrale, avec des exemples concrets et des exercices pratiques. Si tu veux des exemples supplémentaires ou des tutoriels pour un logiciel en particulier, fais-moi signe ! 😊
+Les miles par gallon des voitures du jeu de données mtcars
+
+```{r}
+print(mtcars$mpg)
+```
+
+❔ Calculer la moyenne arithmétique, au centième prés.
+
+::: {.fragment}
+
+```{r}
+# Calcul de la moyenne de mpg
+mean_mpg <- mean(mtcars$mpg)
+print(mean_mpg, digits = 4)
+```
+
+:::
+
+## Moyenne arithmétique
+
+### Représentation graphique
+
+```{r}
+# Histogramme de la variable mpg avec la moyenne en rouge
+ggplot(mtcars, aes(x = mpg)) +
+  geom_histogram(binwidth = 2, fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_vline(aes(xintercept = mean_mpg), color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = mean_mpg + 1, y = 5, label = paste("Moyenne =", round(mean_mpg, 2)), color = "red", hjust = -0.5) +
+  labs(title = "Répartition de mpg avec sa moyenne", x = "Miles per gallon (mpg)", y = "Fréquence") +
+  theme_minimal()
+```
+
+## Moyenne pondérée
+
+### Variable discrète
+
+Pour une variable discrète dont les modalités $m_i$ sont des valeurs exactes représentées en tableau:
+
+$$
+\bar{x} = \frac{\sum_{i=1}^{k} n_i \times m_i}{n} = \frac{n_1 \times m_1 + n_2 \times m_2 + \dots + n_k \times m_k}{n}
+$$
+
+Où $n_i$ est l'effectif associé à $m_i$. Dans ce cas, $\bar{x}$ est appelée la **moyenne pondérée** des données.
+
+## Moyenne pondérée :: variable discrète
+
+### Exemple
+
+```{r}
+mtcars %>%
+  count(gear) %>%
+  kable(col.names = c("Nombre de vitesses", "Effectif"),
+        align = 'cc',
+        caption = "Effectif des valeurs de la variable gear")
+```
+
+❔ Calculer la moyenne pondérée, au centième prés.
+
+::: {.fragment}
+
+```{r}
+# Calcul de la moyenne de gear
+mean_gear <- mean(mtcars$gear)
+print(mean_gear, digits = 3)
+```
+
+:::
+
+## Moyenne pondérée :: variable discrète
+
+### Représentation graphique
+
+```{r}
+# Diagramme en barres de la variable gear avec la moyenne en rouge
+ggplot(mtcars, aes(x = gear)) +
+  geom_bar(fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_vline(aes(xintercept = mean_gear), color = "red", linetype = "dashed", linewidth = 1) +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5, size = 5) +
+  labs(title = "Distribution du nombre de vitesses (gear)",
+       x = "Nombre de vitesses (gear)",
+       y = "Effectif") +
+  theme_minimal()
+```
+
+## Moyenne pondérée
+
+### Variable continue
+
+Pour une variable continue dont les modalités sont des classes représentées en tableau:
+
+$$
+\bar{x} = \frac{\sum_{i=1}^{k} n_i \times c_i}{n} = \frac{n_1 \times c_1 + n_2 \times c_2 + \dots + n_k \times c_k}{n}
+$$
+
+Où $c_i$ est le centre (_milieu_) de la $i^e$ classe et $n_i$ est son effectif associé. Dans ce cas, $\bar{x}$ est également appelée la **moyenne pondérée** des données.
+
+## Moyenne pondérée :: variable continue
+
+### Exemple
+
+```{r}
+# Regrouper wt en intervalles
+mtcars_wt_intervals <- mtcars %>%
+  mutate(wt_interval = cut(wt, breaks = 8, include.lowest = TRUE)) %>%
+  count(wt_interval) %>%
+  arrange(wt_interval)
+
+mtcars_wt_intervals %>%
+  kable(col.names = c("Intervalle de poids (wt)", "Effectif"),
+        align = 'rc',
+        caption = "Effectif des voitures par intervalle de poids")
+```
+
+❔ Calculer la moyenne pondérée, au centième prés.
+ 
+::: {.fragment}
+
+```{r}
+# Calcul de la moyenne
+mean_wt <- mean(mtcars$wt)
+print(mean_wt, digits = 3)
+```
+
+:::
+
+## Moyenne pondérée :: variable continue
+
+### Représentation graphique
+
+```{r}
+# Diagramme en barres de la variable wt avec la moyenne en rouge
+ggplot(mtcars_wt_intervals, aes(x = wt_interval, y = n)) +
+  geom_bar(stat = "identity", fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_text(aes(label = n), vjust = -0.5, size = 5) +
+  geom_vline(aes(xintercept = mean_wt), color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = mean_wt, y = max(mtcars_wt_intervals$n) + 1, label = paste("Moyenne =", round(mean_wt, 2)), color = "red", hjust = -0.5) +
+  labs(title = "Effectif des voitures par intervalle de poids avec la moyenne",
+       x = "Intervalle de poids (wt)",
+       y = "Effectif") +
+  theme_minimal()
+```
+
+## Mode
+
+### Définiton
+
+Le `mode` est la valeur la plus fréquente, qui apparaît le plus souvent, dans un ensemble de données.
+
+::: {.callout-important}
+C'est le seul indicateur de tendance centrale qui peut être utilisée sur des données nominales
+:::
+
+Une répartition peut être **unimodale** ou **plurimodale** (bimodale, trimodale…), si deux ou plusieurs valeurs de la variable considérée émergent également, voire sans aucun mode (distribution uniforme) si toutes les valeurs de la variable considérée émergent également. Aussi, sa définition ne s’obtient pas directement comme une fonction des termes de la série.
+
+## Mode
+
+### Les variables qualitatives ou discrète
+
+Le mode est la (ou les) modalité(s) da la varaible dont la valeur de l’effectif (ou fréquence) est la plus élevée.
+
+
+## Mode :: variables qualitatives ou discrète
+
+### Exemples
+
+Les cylindrées des voitures du jeu de données mtcars
+
+```{r}
+# Afficher, sous forme de tableau, la variable cyl du jeu de données mtcars
+print(mtcars$cyl)
+```
+
+❔ Identifier le(s) mode(s) associés à ce jeu de données
+
+::: {.fragment}
+- 4
+:::
+
+::: {.fragment}
+- 6
+:::
+
+::: {.fragment}
+::: {.fragment .highlight-green}
+- 8
+:::
+:::
+
+## Mode :: variable discrète
+
+### Représentation graphique
+
+```{r}
+# Calcul du mode de cyl (la valeur la plus fréquente)
+mode_cyl <- mtcars %>%
+  count(cyl) %>%
+  filter(n == max(n)) %>%
+  pull(cyl)
+
+# Création du graphique
+ggplot(mtcars, aes(x = cyl)) +
+  geom_bar(fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5, size = 5) +
+  geom_vline(aes(xintercept = as.numeric(mode_cyl)), color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = as.numeric(mode_cyl) + 0.2, 
+           y = max(table(mtcars$cyl)) + 1, 
+           label = paste("Mode =", mode_cyl), 
+           color = "red", hjust = 0) +
+  labs(title = "Distribution du nombre de cylindres (cyl) avec le mode",
+       x = "Nombre de cylindres (cyl)",
+       y = "Effectif") +
+  theme_minimal()
+```
+
+## Mode :: variables qualitatives
+
+### Représentation graphique
+
+```{r}
+# Conversion de la variable am en catégories
+mtcars <- mtcars %>%
+  mutate(am_label = ifelse(am == 0, "Automatique", "Manuelle"))
+
+# Calcul du mode (valeur la plus fréquente)
+mode_am <- mtcars %>%
+  count(am_label) %>%
+  filter(n == max(n)) %>%
+  pull(am_label)
+
+# Création du graphique
+ggplot(mtcars, aes(x = am_label)) +
+  geom_bar(fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5, size = 5) +
+  geom_vline(aes(xintercept = which(levels(factor(mtcars$am_label)) == mode_am)), 
+             color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = which(levels(factor(mtcars$am_label)) == mode_am) + 0.2, 
+           y = max(table(mtcars$am_label)) + 1, 
+           label = paste("Mode =", mode_am), 
+           color = "red", hjust = 0) +
+  labs(title = "Distribution des types de transmission (am) avec le mode",
+       x = "Type de transmission",
+       y = "Effectif") +
+  theme_minimal()
+```
+
+## Mode {.smaller}
+
+### Les variables continues
+
+Dans le cas d'une répartition en classes d'amplitudes égales, la classe modale désigne celle qui a le plus fort effectif. La convention est d'appeler mode le centre de la classe modale. Si les classes sont d'amplitudes diverses, il convient de relativiser pour désigner ce paramètre. La classe modale est alors celle qui a la plus forte densité. 
+
+Le mode appartient à la **classe modale** (celle qui possède la plus grande hauteur). Soit $[a; b[$ la classe modale, le mode est calculé ainsi :
+
+$$
+Mode = a + \left((b - a) \times \frac{\Delta_1}{\Delta_1 + \Delta_2}\right)
+$$
+
+Où:
+
+- $\Delta_1 = h_c - h_c-1$
+- $\Delta_2 = h_c - h_c+1$
+
+Avec:
+
+- $h_c$ la hauteur de la classe modale $[a; b[$
+- $h_c-1$ la hauteur qui **précède** $[a; b[$
+- et $h_c+1$ la hauteur qui **succède** $[a; b[$
+
+## Mode :: variables continues
+
+### Exemple
+
+```{r}
+mtcars_wt_intervals %>%
+  kable(col.names = c("Intervalle de poids (wt)", "Effectif"),
+        caption = "Effectif des voitures par intervalle de poids")
+```
+
+❔ Identifier le(s) mode(s) associés à ce jeu de données
+
+::: {.fragment}
+
+```{r}
+# Calcul du mode de wt (la valeur la plus fréquente)
+mode_wt <- mtcars %>%
+  count(wt) %>%
+  filter(n == max(n)) %>%
+  pull(wt)
+print(mode_wt)
+```
+
+:::
+
+## Mode :: variables continues
+
+### Représentation graphique
+
+```{r}
+# Création du graphique
+ggplot(mtcars, aes(x = wt)) +
+  geom_histogram(binwidth = (max(mtcars$wt) - min(mtcars$wt)) / 8, 
+                 fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_vline(aes(xintercept = mode_wt), color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = mode_wt + 0.1, y = 8, 
+           label = paste("Mode =", round(mode_wt, 2)), 
+           color = "red", hjust = 0) +
+  labs(title = "Répartition du poids des voitures (wt) avec le mode",
+       x = "Poids (wt)",
+       y = "Fréquence") +
+  theme_minimal()
+```
+
+## Quand utiliser chaque indicateur ?
+
+::: {.incremental}
+- **Moyenne** :
+  - Appropriée pour des données quantitatives symétriques sans valeurs extrêmes.
+  - Exemples : calcul du revenu moyen, de la note moyenne.
+- **Médiane** :
+  - Idéale pour des données asymétriques ou affectées par des valeurs extrêmes.
+  - Exemples : revenu médian pour analyser les inégalités, âge médian.
+- **Mode** :
+  - Particulièrement utile pour des données qualitatives ou pour identifier les tendances dominantes.
+  - Exemples : marque de voiture préférée, catégorie d’âge prédominante.
+:::

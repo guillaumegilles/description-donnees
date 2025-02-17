@@ -329,8 +329,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#moyenne-arithmétique" id="toc-moyenne-arithmétique" class="nav-link active" data-scroll-target="#moyenne-arithmétique">Moyenne Arithmétique</a></li>
-  <li><a href="#mode" id="toc-mode" class="nav-link" data-scroll-target="#mode">Mode</a></li>
+  <li><a href="#moyenne" id="toc-moyenne" class="nav-link active" data-scroll-target="#moyenne">Moyenne</a>
+  <ul class="collapse">
+  <li><a href="#moyenne-arithmétique" id="toc-moyenne-arithmétique" class="nav-link" data-scroll-target="#moyenne-arithmétique">Moyenne Arithmétique</a></li>
+  <li><a href="#variable-discrète" id="toc-variable-discrète" class="nav-link" data-scroll-target="#variable-discrète">Variable discrète</a></li>
+  <li><a href="#variable-continue" id="toc-variable-continue" class="nav-link" data-scroll-target="#variable-continue">Variable continue</a></li>
+  </ul></li>
+  <li><a href="#mode" id="toc-mode" class="nav-link" data-scroll-target="#mode">Mode</a>
+  <ul class="collapse">
+  <li><a href="#les-variables-qualitatives-ou-discrète" id="toc-les-variables-qualitatives-ou-discrète" class="nav-link" data-scroll-target="#les-variables-qualitatives-ou-discrète">Les variables qualitatives ou discrète</a></li>
+  <li><a href="#les-variables-continues" id="toc-les-variables-continues" class="nav-link" data-scroll-target="#les-variables-continues">Les variables continues</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -356,25 +365,275 @@ window.Quarto = {
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>En statistique, un <strong>indicateur de tendance centrale</strong> est une valeur résumant une série statistique pour une <code>variable quantitative</code> ou <code>ordinale</code>.</p>
-</div>
-</div>
 <p>Les deux principaux indicateurs de tendance centrale sont la moyenne et la médiane, mais on trouve parfois aussi la valeur centrale (moyenne des valeurs minimale et maximale) ou le mode. Un indicateur de tendance centrale est toujours compris entre les valeurs maximale et minimale.</p>
-<section id="moyenne-arithmétique" class="level2">
-<h2 class="anchored" data-anchor-id="moyenne-arithmétique">Moyenne Arithmétique</h2>
-<p>La moyenne arithmétique, notée <span class="math inline">\(\bar{x}\)</span> <span class="math display">\[
+<section id="moyenne" class="level2">
+<h2 class="anchored" data-anchor-id="moyenne">Moyenne</h2>
+<section id="moyenne-arithmétique" class="level3">
+<h3 class="anchored" data-anchor-id="moyenne-arithmétique">Moyenne Arithmétique</h3>
+<p>La moyenne arithmétique, souvent notée <span class="math inline">\(\bar{x}\)</span>, est l’indicateur de tendance centrale le plus connu. Elle est définie, en général, comme la somme des valeurs des observations divisée par le nombre total d’observations.</p>
+<p><span class="math display">\[
 \bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n} = \frac{1}{n} \sum_{i=n}^{n} x_i
 \]</span></p>
+<section id="exemple" class="level4">
+<h4 class="anchored" data-anchor-id="exemple">Exemple</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Les miles par gallon des voitures du jeu de données mtcars</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">21.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">21.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">22.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">21.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">18.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">18.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">14.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">24.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">22.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">19.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">17.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">17.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">15.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">14.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">32.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">30.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">33.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">21.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">15.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">13.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">19.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">27.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">26.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">30.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">19.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">21.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>❔ Calculer la moyenne arithmétique, au centième prés.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20.09</code></pre>
+</div>
+</div>
+</section>
+<section id="représentation-graphique" class="level4">
+<h4 class="anchored" data-anchor-id="représentation-graphique">Représentation graphique</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session-6_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="variable-discrète" class="level3">
+<h3 class="anchored" data-anchor-id="variable-discrète">Variable discrète</h3>
+<p>Pour une variable discrète dont les modalités <span class="math inline">\(m_i\)</span> sont des valeurs exactes représentées en tableau:</p>
+<p><span class="math display">\[
+\bar{x} = \frac{\sum_{i=1}^{k} n_i \times m_i}{n} = \frac{n_1 \times m_1 + n_2 \times m_2 + \dots + n_k \times m_k}{n}
+\]</span></p>
+<p>Où <span class="math inline">\(n_i\)</span> est l’effectif associé à <span class="math inline">\(m_i\)</span>. Dans ce cas, <span class="math inline">\(\bar{x}\)</span> est appelée la <strong>moyenne pondérée</strong> des données.</p>
+<section id="exemple-1" class="level4">
+<h4 class="anchored" data-anchor-id="exemple-1">Exemple</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Effectif des valeurs de la variable gear</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Nombre de vitesses</th>
+<th style="text-align: center;">Effectif</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>❔ Calculer la moyenne pondérée, au centième prés.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.69</code></pre>
+</div>
+</div>
+</section>
+<section id="représentation-graphique-1" class="level4">
+<h4 class="anchored" data-anchor-id="représentation-graphique-1">Représentation graphique</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session-6_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="variable-continue" class="level3">
+<h3 class="anchored" data-anchor-id="variable-continue">Variable continue</h3>
+<p>Pour une variable continue dont les modalités sont des classes représentées en tableau:</p>
+<p><span class="math display">\[
+\bar{x} = \frac{\sum_{i=1}^{k} n_i \times c_i}{n} = \frac{n_1 \times c_1 + n_2 \times c_2 + \dots + n_k \times c_k}{n}
+\]</span></p>
+<p>Où <span class="math inline">\(c_i\)</span> est le centre (<em>milieu</em>) de la <span class="math inline">\(i^e\)</span> classe et <span class="math inline">\(n_i\)</span> est son effectif associé. Dans ce cas, ${x} est également appelée la <strong>moyenne pondérée</strong> des données.</p>
+<section id="exemple-2" class="level4">
+<h4 class="anchored" data-anchor-id="exemple-2">Exemple</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Effectif des voitures par intervalle de poids</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Intervalle de poids (wt)</th>
+<th style="text-align: center;">Effectif</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">[1.51,2]</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">(2,2.49]</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">(2.49,2.98]</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">(2.98,3.47]</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">(3.47,3.96]</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">(3.96,4.45]</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">(4.94,5.43]</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Calculer la moyenne pondérée, au centième prés</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.22</code></pre>
+</div>
+</div>
+</section>
+<section id="représentation-graphique-2" class="level4">
+<h4 class="anchored" data-anchor-id="représentation-graphique-2">Représentation graphique</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session-6_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 <section id="mode" class="level2">
 <h2 class="anchored" data-anchor-id="mode">Mode</h2>
@@ -393,13 +652,178 @@ Important
 </div>
 </div>
 <p>Une répartition peut être <strong>unimodale</strong> ou <strong>plurimodale</strong> (bimodale, trimodale…), si deux ou plusieurs valeurs de la variable considérée émergent également, voire sans aucun mode (distribution uniforme) si toutes les valeurs de la variable considérée émergent également. Aussi, sa définition ne s’obtient pas directement comme une fonction des termes de la série.</p>
-<ol type="1">
-<li><strong>Les variables qualitatives ou dicréte</strong> :</li>
-</ol>
+<section id="les-variables-qualitatives-ou-discrète" class="level3">
+<h3 class="anchored" data-anchor-id="les-variables-qualitatives-ou-discrète">Les variables qualitatives ou discrète</h3>
 <p>Le mode est la (ou les) modalité(s) da la varaible dont la valeur de l’effectif (ou fréquence) est la plus élevée.</p>
-<ol start="2" type="1">
-<li><strong>Les variables continues</strong> :</li>
+<section id="exemples" class="level4">
+<h4 class="anchored" data-anchor-id="exemples">Exemples</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Les cylindrées des voitures du jeu de données mtcars</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">x</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>❔ Identifier le(s) mode(s) associés à ce jeu de donné</p>
+<div class="fragment">
+<ul>
+<li>4</li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>6</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="fragment highlight-green">
+<ul>
+<li>8</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="représentation-graphique-3" class="level4">
+<h4 class="anchored" data-anchor-id="représentation-graphique-3">Représentation graphique</h4>
+<ol type="1">
+<li><strong>Varibales discètes</strong> :</li>
 </ol>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(count)` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session-6_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Variables qualitatives</strong></li>
+</ol>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Use of `mtcars$am_label` is discouraged.
+ℹ Use `am_label` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session-6_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="les-variables-continues" class="level3">
+<h3 class="anchored" data-anchor-id="les-variables-continues">Les variables continues</h3>
 <p>Dans le cas d’une répartition en classes d’amplitudes égales, la classe modale désigne celle qui a le plus fort effectif. La convention est d’appeler mode le centre de la classe modale. Si les classes sont d’amplitudes diverses, il convient de relativiser pour désigner ce paramètre. La classe modale est alors celle qui a la plus forte densité.</p>
 <p>Le mode appartient à la <strong>classe modale</strong> (celle qui possède la plus grande hauteur). Soit <span class="math inline">\([a; b[\)</span> la classe modale, le mode est calculé ainsi :</p>
 <p><span class="math display">\[
@@ -416,8 +840,68 @@ Mode = a + \left((b - a) \times \frac{\Delta_1}{\Delta_1 + \Delta_2}\right)
 <li><span class="math inline">\(h_c-1\)</span> la hauteur qui <strong>précède</strong> <span class="math inline">\([a; b[\)</span></li>
 <li>et <span class="math inline">\(h_c+1\)</span> la hauteur qui <strong>succède</strong> <span class="math inline">\([a; b[\)</span></li>
 </ul>
+<section id="exemple-3" class="level4">
+<h4 class="anchored" data-anchor-id="exemple-3">Exemple</h4>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Effectif des voitures par intervalle de poids</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Intervalle de poids (wt)</th>
+<th style="text-align: right;">Effectif</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">[1.51,2]</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(2,2.49]</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(2.49,2.98]</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(2.98,3.47]</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(3.47,3.96]</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(3.96,4.45]</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">(4.94,5.43]</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Identifier le mode</p>
+</section>
+<section id="représentation-graphique-4" class="level4">
+<h4 class="anchored" data-anchor-id="représentation-graphique-4">Représentation graphique</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="session-6_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

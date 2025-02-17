@@ -6,6 +6,19 @@ format:
     theme: dark
 ---
 
+
+2. **Médiane** :
+   - **Définition** : La valeur qui sépare les données en deux groupes égaux lorsqu'elles sont classées dans l'ordre croissant.
+     - Si \(n\) est impair : la médiane est l'observation au milieu.
+     - Si \(n\) est pair : la médiane est la moyenne des deux observations centrales.
+   - **Avantages** :
+     - Insensible aux valeurs extrêmes.
+     - Plus représentative des données asymétriques.
+   - **Exemple rapide** :
+     - Données : \(3, 7, 9, 12, 15\) → Médiane = \(9\).
+     - Données : \(3, 7, 9, 12\) → Médiane = \(\frac{7 + 9}{2} = 8\).
+
+
 #### **3.1 Graphiques pour les variables qualitatives**
 Les variables qualitatives (ou catégorielles) sont des variables dont les valeurs sont des catégories ou des groupes, comme les couleurs, les genres, ou les marques. Les graphiques les plus utilisés pour représenter ce type de données sont les diagrammes en barres et les diagrammes circulaires.
 

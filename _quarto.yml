@@ -93,10 +93,10 @@ format:
     theme: flaty
     page-layout: full
     toc: true
-    other-links:
-      - text: Présentation
-        icon: projector-fill
-        href: {{< meta title >}}
+    # other-links:
+    #   - text: Présentation
+    #     icon: projector-fill
+    #     href: {{< meta title >}}
 
 
     # References
