@@ -2,18 +2,143 @@
 title: "6. Indicateurs de Tendance Centrale"
 ---
 
+```{r}
+library(dplyr)
+library(ggplot2)
+library(knitr)
+```
+
 ::: {.callout-important}
 En statistique, un **indicateur de tendance centrale** est une valeur résumant une série statistique pour une `variable quantitative` ou `ordinale`.
 :::
 
 Les deux principaux indicateurs de tendance centrale sont la moyenne et la médiane, mais on trouve parfois aussi la valeur centrale (moyenne des valeurs minimale et maximale) ou le mode. Un indicateur de tendance centrale est toujours compris entre les valeurs maximale et minimale. 
 
-##  Moyenne Arithmétique
+##  Moyenne
 
-La moyenne arithmétique, notée $\bar{x}$
+### Moyenne Arithmétique
+
+La moyenne arithmétique, souvent notée $\bar{x}$, est l'indicateur de tendance centrale le plus connu. Elle est définie, en général, comme étant le quotient de la somme de toutes les valeurs d'une série par le nombre d'observations.
+
 $$
 \bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n} = \frac{1}{n} \sum_{i=n}^{n} x_i
 $$
+#### Exemple
+
+```{r}
+# Afficher, sous forme de tableau, la variable mpg du jeu de données mtcars
+knitr::kable(t(mtcars[,c("mpg")]),
+             caption = "Les miles par gallons des voitures du jeu de données mtcars")
+```
+
+❔ Calculer  la  moyenne  arithmétique , au centième  prés
+
+```{r}
+# Calcul de la moyenne de mpg
+mean_mpg <- mean(mtcars$mpg)
+mean_mpg
+```
+
+#### Représentation graphique
+
+```{r}
+# Histogramme de la variable mpg avec la moyenne en rouge
+ggplot(mtcars, aes(x = mpg)) +
+  geom_histogram(binwidth = 2, fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_vline(aes(xintercept = mean_mpg), color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = mean_mpg + 1, y = 5, label = paste("Moyenne =", round(mean_mpg, 2)), color = "red", hjust = -0.5) +
+  labs(title = "Répartition de mpg avec sa moyenne", x = "Miles per gallon (mpg)", y = "Fréquence") +
+  theme_minimal()
+```
+
+### Variable discrète
+
+Pour une variable discrète dont les modalités $m_i$ sont des valeurs exactes représentées en tableau:
+
+$$
+\bar{x} = \frac{\sum_{i=1}^{k} n_i \times m_i}{n} = \frac{n_1 \times m_1 + n_2 \times m_2 + \dots + n_k \times m_k}{n}
+$$
+
+Où $n_i$ est l'effectif associé à $m_i$. Dans ce cas, $\bar{x}$ est appelée la **moyenne pondérée** des données.
+
+#### Exemple
+
+```{r}
+mtcars %>%
+  count(gear) %>%
+  kable(col.names = c("Nombre de vitesses", "Effectif"),
+        caption = "Effectif des valeurs de la variable gear")
+```
+
+ Calculer  la  moyenne  pondérée, au centième  prés
+ 
+```{r}
+# Calcul de la moyenne de gear
+mean_gear <- mean(mtcars$gear)
+mean_gear
+```
+
+#### Représentation graphique
+
+```{r}
+# Diagramme en barres de la variable gear avec la moyenne en rouge
+ggplot(mtcars, aes(x = factor(gear))) +
+  geom_bar(fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_vline(aes(xintercept = mean_gear), color = "red", linetype = "dashed", linewidth = 1) +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5, size = 5) +
+  labs(title = "Distribution du nombre de vitesses (gear)",
+       x = "Nombre de vitesses (gear)",
+       y = "Effectif") +
+  theme_minimal()
+```
+
+### Variable continue
+
+Pour une variable continue dont les modalités sont des classes représentées en tableau:
+
+$$
+\bar{x} = \frac{\sum_{i=1}^{k} n_i \times c_i}{n} = \frac{n_1 \times c_1 + n_2 \times c_2 + \dots + n_k \times c_k}{n}
+$$
+
+Où $c_i$ est le centre (_milieu_) de la $i^e$ classe et $n_i$ est son effectif associé. Dans ce cas, $\bar{x} est également appelée la **moyenne pondérée** des données.
+
+#### Exemple
+
+```{r}
+# Regrouper wt en intervalles
+mtcars_wt_intervals <- mtcars %>%
+  mutate(wt_interval = cut(wt, breaks = 8, include.lowest = TRUE)) %>%
+  count(wt_interval) %>%
+  arrange(wt_interval)
+
+mtcars_wt_intervals %>%
+  kable(col.names = c("Intervalle de poids (wt)", "Effectif"),
+        caption = "Effectif des voitures par intervalle de poids")
+```
+
+ Calculer  la  moyenne  pondérée, au centième  prés
+ 
+```{r}
+# Calcul de la moyenne
+mean_wt <- mean(mtcars$wt)
+mean_wt
+```
+
+#### Représentation graphique
+
+```{r}
+# Diagramme en barres de la variable wt avec la moyenne en rouge
+ggplot(mtcars_wt_intervals, aes(x = wt_interval, y = n)) +
+  geom_bar(stat = "identity", fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_text(aes(label = n), vjust = -0.5, size = 5) +
+  geom_vline(aes(xintercept = mean_wt), color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = mean_wt, y = max(mtcars_wt_intervals$n) + 1, label = paste("Moyenne =", round(mean_wt, 2)), color = "red", hjust = -0.5) +
+  labs(title = "Effectif des voitures par intervalle de poids avec la moyenne",
+       x = "Intervalle de poids (wt)",
+       y = "Effectif") +
+  theme_minimal()
+```
+
 
 ## Mode
 
@@ -25,14 +150,94 @@ C'est le seul indicateur de tendance centrale qui peut être utilisée sur des d
 
 Une répartition peut être **unimodale** ou **plurimodale** (bimodale, trimodale…), si deux ou plusieurs valeurs de la variable considérée émergent également, voire sans aucun mode (distribution uniforme) si toutes les valeurs de la variable considérée émergent également. Aussi, sa définition ne s’obtient pas directement comme une fonction des termes de la série.
 
-1. **Les variables qualitatives ou dicréte** :
+### Les variables qualitatives ou discrète
 
 Le mode est la (ou les) modalité(s) da la varaible dont la valeur de l’effectif (ou fréquence) est la plus élevée.
 
-2. **Les variables continues** :
+#### Exemples
+
+```{r}
+# Afficher, sous forme de tableau, la variable cyl du jeu de données mtcars
+knitr::kable(t(mtcars[,c("cyl")]),
+             caption = "Les cylindrées des voitures du jeu de données mtcars")
+```
+
+❔ Identifier le(s) mode(s) associés à ce jeu de donné
+
+::: {.fragment}
+- 4
+:::
+
+::: {.fragment}
+- 6
+:::
+
+::: {.fragment}
+::: {.fragment .highlight-green}
+- 8
+:::
+:::
+
+#### Représentation graphique
+
+1. **Varibales discètes** :
+
+```{r}
+# Calcul du mode de cyl (la valeur la plus fréquente)
+mode_cyl <- mtcars %>%
+  count(cyl) %>%
+  filter(n == max(n)) %>%
+  pull(cyl)
+
+# Création du graphique
+ggplot(mtcars, aes(x = cyl)) +
+  geom_bar(fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.5, size = 5) +
+  geom_vline(aes(xintercept = as.numeric(mode_cyl)), color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = as.numeric(mode_cyl) + 0.2, 
+           y = max(table(mtcars$cyl)) + 1, 
+           label = paste("Mode =", mode_cyl), 
+           color = "red", hjust = 0) +
+  labs(title = "Distribution du nombre de cylindres (cyl) avec le mode",
+       x = "Nombre de cylindres (cyl)",
+       y = "Effectif") +
+  theme_minimal()
+
+```
+
+
+2. **Variables qualitatives**
+
+```{r}
+# Conversion de la variable am en catégories
+mtcars <- mtcars %>%
+  mutate(am_label = ifelse(am == 0, "Automatique", "Manuelle"))
+
+# Calcul du mode (valeur la plus fréquente)
+mode_am <- mtcars %>%
+  count(am_label) %>%
+  filter(n == max(n)) %>%
+  pull(am_label)
+
+# Création du graphique
+ggplot(mtcars, aes(x = am_label)) +
+  geom_bar(fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5, size = 5) +
+  geom_vline(aes(xintercept = which(levels(factor(mtcars$am_label)) == mode_am)), 
+             color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = which(levels(factor(mtcars$am_label)) == mode_am) + 0.2, 
+           y = max(table(mtcars$am_label)) + 1, 
+           label = paste("Mode =", mode_am), 
+           color = "red", hjust = 0) +
+  labs(title = "Distribution des types de transmission (am) avec le mode",
+       x = "Type de transmission",
+       y = "Effectif") +
+  theme_minimal()
+```
+
+### Les variables continues
 
 Dans le cas d'une répartition en classes d'amplitudes égales, la classe modale désigne celle qui a le plus fort effectif. La convention est d'appeler mode le centre de la classe modale. Si les classes sont d'amplitudes diverses, il convient de relativiser pour désigner ce paramètre. La classe modale est alors celle qui a la plus forte densité. 
-
 
 Le mode appartient à la **classe modale** (celle qui possède la plus grande hauteur). Soit $[a; b[$ la classe modale, le mode est calculé ainsi :
 
@@ -50,3 +255,39 @@ Avec:
 - $h_c$ la hauteur de la classe modale $[a; b[$
 - $h_c-1$ la hauteur qui **précède** $[a; b[$
 - et $h_c+1$ la hauteur qui **succède** $[a; b[$
+
+#### Exemple
+
+```{r}
+mtcars_wt_intervals %>%
+  kable(col.names = c("Intervalle de poids (wt)", "Effectif"),
+        caption = "Effectif des voitures par intervalle de poids")
+```
+
+Identifier le mode
+
+
+```{r}
+# Calcul du mode de wt (la valeur la plus fréquente)
+mode_wt <- mtcars %>%
+  count(wt) %>%
+  filter(n == max(n)) %>%
+  pull(wt)
+```
+
+#### Représentation graphique
+
+```{r}
+# Création du graphique
+ggplot(mtcars, aes(x = wt)) +
+  geom_histogram(binwidth = (max(mtcars$wt) - min(mtcars$wt)) / 8, 
+                 fill = "lightblue", color = "black", alpha = 0.7) +
+  geom_vline(aes(xintercept = mode_wt), color = "red", linetype = "dashed", linewidth = 1) +
+  annotate("text", x = mode_wt + 0.1, y = 8, 
+           label = paste("Mode =", round(mode_wt, 2)), 
+           color = "red", hjust = 0) +
+  labs(title = "Répartition du poids des voitures (wt) avec le mode",
+       x = "Poids (wt)",
+       y = "Fréquence") +
+  theme_minimal()
+```
