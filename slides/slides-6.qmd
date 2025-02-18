@@ -305,14 +305,14 @@ $$
 
 Où:
 
-- $\Delta_1 = h_c - h_c-1$
-- $\Delta_2 = h_c - h_c+1$
+- $\Delta_1 = h_c - h_{c-1}$
+- $\Delta_2 = h_c - h_{c+1}$
 
 Avec:
 
 - $h_c$ la hauteur de la classe modale $[a; b[$
-- $h_c-1$ la hauteur qui **précède** $[a; b[$
-- et $h_c+1$ la hauteur qui **succède** $[a; b[$
+- $h_{c-1}$ la hauteur qui **précède** $[a; b[$
+- et $h_{c+1}$ la hauteur qui **succède** $[a; b[$
 
 ## Mode :: variables continues
 
