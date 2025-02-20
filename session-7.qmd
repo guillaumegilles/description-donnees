@@ -1,4 +1,140 @@
 ---
-title: "7. Dispersion"
+title: "7. Les indicateurs de dispersion"
+date: 2025-02-21
 ---
 
+En statistique, un **indicateur de dispersion** mesure la variabilité des valeurs d’une série statistique. Il est toujours positif et d’autant plus grand que les valeurs de la série sont étalées autour d’un indicateur de position centrale (la moyenne, la médiane, ou le mode).
+
+Les plus courants sont la variance, l'écart-type et l'écart interquartile.
+
+## variance
+
+La variance est une mesure statistique qui quantifie la **dispersion** d'un ensemble de valeurs **par rapport à leur moyenne**. Elle indique à quel point les valeurs d'un échantillon ou d'une population s'écartent, en moyenne, de la moyenne globale.
+
+::: {.callout-tip}
+La variance est la moyenne des carrés des écarts par rapport à la moyenne.
+:::
+
+Plus formellement, soit $d_i$ la distance (c'est-à-dire l'écart en valeur absolue) qui sépare la $i$e modalité (observation) de la moyenne. La variance, souvent notée $s^2$, est la moyenne des $d_i^2$  (la distance Euclidienne) 
+
+
+### Formules de la variance
+
+#### Pour une population (variance populationnelle)
+
+$$
+\sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2
+$$
+
+Où :
+
+- $\sigma^2$ est la variance de la population,
+- $N$ est le nombre total d'éléments dans la population,
+- $x_i$ représente chaque valeur individuelle,
+- $\mu$ est la moyenne de la population.
+
+#### Pour un échantillon (variance empirique)
+
+##### Les données sont à l'**état brut**
+
+$$
+s^2 = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n}  
+$$
+$$
+s^2 = \frac{\sum_{i=1}^{n}x_i^2}{n} - \bar{x}^2
+$$
+
+$$
+s^2 = \frac{x_1^2 + x_2^2 + \dots + x_n^2}{n} - \bar{x}^2
+$$
+###### Exemple
+
+```{r}
+knitr::kable(iris$Sepal.Length,
+              align = 'c',
+              caption = "Longueur des sépales des iris")
+```
+
+Quelle est la *variance** de cette série ?
+
+```{r}
+var(iris$Sepal.Length)
+```
+
+
+##### Le cas d'une variable discrète
+
+$$
+s^2 = \frac{\sum_{i=1}^{n} n_i \times (m_i - \bar{x})^2}{n}  
+$$
+
+$$
+s^2 = \frac{\sum_{i=1}^{n} n_i \times m_i^2}{n} - \bar{x}^2
+$$
+
+$$
+s^2 = \frac{n_1 \times m_1^2 + n_2 \times m_2^2 + \dots + n_i \times m_i^2}{n} - \bar{x}^2
+$$
+
+##### Le cas d'une variable continue
+
+$$
+s^2 = \frac{\sum_{i=1}^{n} n_i \times (c_i - \bar{x})^2}{n}  
+$$
+
+$$
+s^2 = \frac{\sum_{i=1}^{n} n_i \times m_i^2}{n} - \bar{x}^2
+$$
+
+$$
+s^2 = \frac{n_1 \times m_1^2 + n_2 \times m_2^2 + \dots + n_i \times m_i^2}{n} - \bar{x}^2
+$$
+
+---
+
+$$
+s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2
+$$
+
+Où :
+
+- $s^2$ est la variance de l’échantillon,
+- $n$ est la taille de l’échantillon,
+- $x_i$ représente chaque valeur de l’échantillon,
+- $\bar{x}$ est la moyenne de l’échantillon.
+
+La différence principale entre les deux formules est que, pour un échantillon, on divise par $n-1^$ (au lieu de $N$) pour corriger le biais d’estimation de la variance de la population.
+
+### Interprétation
+
+- Une variance **faible** signifie que les valeurs sont proches de la moyenne.
+- Une variance **élevée** indique une grande dispersion des valeurs autour de la moyenne.
+- Une variance **nulle** signifie que toutes les valeurs sont identiques.
+
+### Exemple
+
+Considérons les valeurs : \( 2, 4, 6, 8, 10 \).  
+La moyenne est :
+\[
+\bar{x} = \frac{2+4+6+8+10}{5} = 6
+\]
+La variance de l’échantillon est :
+\[
+s^2 = \frac{(2-6)^2 + (4-6)^2 + (6-6)^2 + (8-6)^2 + (10-6)^2}{5-1}
+\]
+\[
+= \frac{16 + 4 + 0 + 4 + 16}{4} = \frac{40}{4} = 10
+\]
+
+## Écart type
+
+L’écart-type, souvent noté 𝑠, est la racine carrée de la variance. Autrement dit, l’écart-type est une distance moyenne d’écart (entre les observations / modalités et la moyenne)
+
+### **Lien avec l'écart-type**
+L’**écart-type** (\( \sigma \) ou \( s \)) est la racine carrée de la variance :
+\[
+\sigma = \sqrt{\sigma^2}, \quad s = \sqrt{s^2}
+\]
+Il est souvent utilisé car il s’exprime dans la même unité que les données.
+
+## Écart interquartile
