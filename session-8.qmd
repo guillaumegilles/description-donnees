@@ -1,4 +1,41 @@
 ---
-title: "8. Distribution"
+title: "8. Indicateurs de Forme"
 ---
+
+Un indicateur numérique est dit de dispersion s’il s’agit d’un nombre clé permettent de caractériser la répartition des observations d’une série statistique autour d’une valeur centrale (en particulier, la moyenne et la médiane). 
+
+Dans ce cours, nous allons nous concentrer sur les coefficients d’asymétrie
+Explicitement, nous allons étudier les indicateurs suivants :
+
+Le coefficient de Pearson
+Le coefficient de Yule et Kendall
+
+## Le coefficient de Pearson est défini par :
+
+$$
+S = \frac{}
+$$
+
+𝑆=  ((𝑀𝑜𝑦𝑒𝑛𝑛𝑒 −𝑀𝑜𝑑𝑒))/(é𝑐𝑎𝑟𝑡−𝑡𝑦𝑝𝑒)=  ((𝑥 ̅  −𝑀𝑜𝑑𝑒))/𝑠
+
+S = 0 implique que les observations se répartissent de manière uniforme /symétrique (autour de la moyenne)
+
+S > 0 implique que la répartition des données est étalée à droite (de la moyenne) 
+        les observations / modalités inférieures (à la moyenne) possèdent plus de poids  
+
+S < 0 implique que la répartition des données est étalée à gauche (de la moyenne)  les observations / modalités supérieures (à la moyenne) possèdent plus de poids
+
+L'asymétrie peut être détecter visuellement grâce à la représentation graphique des données
+
+## Le coefficient de Yule et Kendall est défini par :
+
+𝑌=  ((𝑞_3  −𝑀é𝑑𝑖𝑎𝑛𝑒)−(𝑀é𝑑𝑖𝑎𝑛𝑒 − 𝑞_1))/((𝑞_3  −𝑞_1))
+
+Y = 0 implique que les observations se répartissent de manière uniforme /symétrique (autour de la médiane)
+
+Y > 0 implique que la répartition des données est étalée à droite (de la médiane) 
+        les observations / modalités inférieures (à la médiane) possèdent plus de poids  
+
+Y < 0 implique que la répartition des données est étalée à gauche (de la médiane)  les observations / modalités supérieures (à la médiane) possèdent plus de poids 
+
 
