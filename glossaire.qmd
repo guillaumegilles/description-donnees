@@ -1,0 +1,7 @@
+---
+title: "Glossaire"
+---
+
+- **Échantillon** : 
+
+- **Population** ($N$) : Un ensemble d’éléments partageant une ou plusieurs caractéristiques qui servent à les regrouper
