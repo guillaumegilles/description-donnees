@@ -2,10 +2,11 @@
 title: "6. Indicateurs de Tendance Centrale"
 execute:
   echo: false
-format-links:
-  - text: Slides
-    href: slides/slides-6.qmd
-    icon: projector-fill
+format:
+  html:
+    other-links:
+      - text: Slides
+        href: slides/slides-6.html
 ---
 
 ```{r}
