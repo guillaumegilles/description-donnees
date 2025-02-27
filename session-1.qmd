@@ -1,4 +1,103 @@
 ---
-title: "1. Introduction aux statistiques descriptives"
+title: "Session 1 - Introduction aux statistiques descriptives"
+author: "Guillaume Gilles"
 ---
+
+# Terminologie
+
+### Population
+
+Un ensemble d’éléments partageant une ou plusieurs caractéristiques qui servent à les regrouper. Une population est dite **finie** si nous pouvons déterminer le nombre exact de ses individus, sinon elle est dite **infinie**.
+
+La notation mathématiques de la Population est $N$, par exemple $N = 100$ signifie que la population contient 100 individus.
+
+### Individu, Observation
+
+Un élément de la population
+
+La notation mathématiques pour représenter un individu est $i$, où $i$ est un indice indiquant sa position dans l'ensemblme des observations. Ainsi, $X_4$ désigne le 4e individu de la population
+
+### Echantillon
+
+### Observation
+
+### Variable
+
+# Séries statistiques
+
+
+---
+
+## Terminologie : Exemples
+
+### Trouver la nature des variables :
+
+1. La couleur des cheveux des clients d’un salon de coiffure
+2. Le niveau de satisfaction des clients d’un opérateur téléphonique
+3. Le nombre de personnes dans les foyers Parisiens
+4. Le temps d’attente au téléphone avant d’être pris en charge par un service technique
+
+---
+
+## Réponses - Nature des variables
+
+1. **Couleur des cheveux** : Qualitative nominale
+2. **Niveau de satisfaction** : Qualitative ordinale
+3. **Nombre de personnes dans un foyer** : Quantitative discrète
+4. **Temps d’attente** : Quantitative continue
+
+---
+
+# Représentation des données
+
+## Synthèse par tableau
+
+- Une modalité est une catégorie des réponses obtenues / observées.
+- Il existe \( k \) modalités, où \( k \) est un entier entre 1 et \( n \).
+- Les modalités sont rangées par ordre croissant, sauf pour les variables qualitatives nominales.
+
+---
+
+## Synthèse des données continues
+
+### Observations
+
+- Les observations sont souvent uniques.
+- La synthèse par tableau n’apporte pas de valeur ajoutée directe.
+
+### Solution
+
+- Découpage ou regroupement des données en classes ou intervalles.
+- Méthodes de découpage :
+  - Mathématiques
+  - Classes prédéfinies en fonction du contexte ou des informations préalables.
+
+---
+
+## Exemple - Données continues
+
+- Découpage des données en fonction des modalités prédéfinies.
+- Illustration des données discrétisées.
+
+---
+
+# Applications pratiques
+
+### Retour aux exemples
+
+- Résolution des exemples discutés dans les diapositives précédentes.
+
+---
+
+# Conclusion
+
+- Importance de comprendre la nature des variables.
+- Représentation des données adaptée au type de variable.
+- Application des outils pour synthétiser et interpréter les données.
+
+---
+
+# Remarque finale
+
+- La statistique descriptive est une première étape essentielle pour analyser et interpréter les données.
 
