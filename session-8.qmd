@@ -1,41 +1,150 @@
 ---
 title: "8. Indicateurs de Forme"
+date: 2025-03-07
 ---
 
-Un indicateur numérique est dit de dispersion s’il s’agit d’un nombre clé permettent de caractériser la répartition des observations d’une série statistique autour d’une valeur centrale (en particulier, la moyenne et la médiane). 
+Un indicateur numérique est dit de "forme" s’il s’agit d’un nombre clé permettent de caractériser la répartition des observations d’une série statistique autour d’une valeur centrale (en particulier, la moyenne et la médiane). Ils permettent d'analyser l'**asymétrie** et l'**aplatissement** de la distribution des données. 
 
-Dans ce cours, nous allons nous concentrer sur les coefficients d’asymétrie
-Explicitement, nous allons étudier les indicateurs suivants :
+## Asymétrie (_Skewness_)
 
-Le coefficient de Pearson
-Le coefficient de Yule et Kendall
+Mesure si la distribution est symétrique, autour de la valeur centrale, ou inclinée à gauche/droite.
 
-## Le coefficient de Pearson est défini par :
+### Le coefficient de Pearson
+
+Le coefficient de Pearson est une mesure simplifiée de l'**asymétrie** d'une série statistique. Il en existe deux formules, la première en référence à la moyenne et la seconde en référence à la médiane.
+
+1. **Coefficient de Person par rapport au mode**
 
 $$
-S = \frac{}
+S_1 = \frac{\bar{X} - Mo}{\s}
 $$
 
-𝑆=  ((𝑀𝑜𝑦𝑒𝑛𝑛𝑒 −𝑀𝑜𝑑𝑒))/(é𝑐𝑎𝑟𝑡−𝑡𝑦𝑝𝑒)=  ((𝑥 ̅  −𝑀𝑜𝑑𝑒))/𝑠
+où :
+- $\bar{X}$ : Moyenne arithmétique,
+- $Mo$: Mode (valeur la plus fréquente),
+- $\s$ : Écart-type.
 
-S = 0 implique que les observations se répartissent de manière uniforme /symétrique (autour de la moyenne)
+2. **Coefficient de Pearson par rapport à la médiane**
 
-S > 0 implique que la répartition des données est étalée à droite (de la moyenne) 
-        les observations / modalités inférieures (à la moyenne) possèdent plus de poids  
+$$
+S_2 = \frac{3(\bar{X} - Me)}{\s}
+$$
 
-S < 0 implique que la répartition des données est étalée à gauche (de la moyenne)  les observations / modalités supérieures (à la moyenne) possèdent plus de poids
+où :
+- $Me$ : Médiane.
 
-L'asymétrie peut être détecter visuellement grâce à la représentation graphique des données
+#### Interprétation des coefficients
 
-## Le coefficient de Yule et Kendall est défini par :
+| Valeur de $S$  | Type d'asymétrie                                                                                                                                                                                      |
+|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| $S = 0$        | Les observations se répartissent de manière uniforme/**symétrique** autour de la moyenne                                                                                                              |
+| $S > 0$        | **Asymétrie positive** : La répartition des données est étalée à droite de la moyenne (queue étalée vers la droite). C'est-à-dire que les observations **inférieures** à la moyenne ont plus de poids |
+| $S < 0$        | **Asymétrie négative**: La répartition des données est étalée à gauche de la moyenne (queue étalée vers la gauche). C'est-à-dire que les observations **supérieures** à la moyenne ont plus de poids  |
+
+#### Exemple
+
+Prenons les données :  
+
+$$
+X = \{4, 6, 6, 8, 10\}
+$$
+
+- Moyenne : $\bar{X} = 6,8$
+- Mode : $Mo = 6$
+- Médiane : $Me = 6$
+- Écart-type : $s \approx 2,2$
+
+1. **Premier coefficient :**
+
+$$
+S_1 = \frac{6,8 - 6}{2,2} \approx 0,36
+$$
+
+2. **Deuxième coefficient :**
+
+$$
+S_2 = \frac{3(6,8 - 6)}{2,2} \approx 1,09
+$$
+
+:::{.callout-note}
+## **Conclusion**
+
+- Si le coefficient est proche de $0$, la distribution est **symétrique**.
+- Un coefficient positif signifie que la distribution est inclinée vers la **droite**.
+- Un coefficient négatif indique que la distribution est inclinée vers la **gauche**.
+:::
+
+### Indice de Yule et Kendall
+
+L'indice de Yule et Kendall (aussi appelé coefficient de Bowley) est particulièrement utile pour les distributions asymétriques et contenant des valeurs extrêmes car son calcul repose sur les quartiles.
+
+L'expression que vous mentionnez :
+
+$$
+Y = \frac{(Q_3 - Me) - (Me - Q_1)}{Q_3 - Q_1}
+$$
+
+où :
+- $Q_1$ : **Premier quartile** (25ᵉ percentile)
+- $Me$ : **Médiane** (50ᵉ percentile)
+- $Q_3$ : **Troisième quartile** (75ᵉ percentile)
+- $Q_3 - Q_1$ : **Écart interquartile** (mesure de dispersion)
+
+#### Interprétation
+
+- Si $Y = 0$ : les observations se répartissent de manière uniforme/symétrique autour de la médiane) ;
+- Si $Y > 0$ : Il y a une **asymétrie positive** (la queue droite est plus étalée).
+- **Si \( B < 0 \)** : Il y a une **asymétrie négative** (la queue gauche est plus étalée).
+
+#### Exemples
+
+Prenons un ensemble de valeurs :
+
+$$
+X = \{2, 4, 5, 7, 10, 12, 15, 18, 20\}
+$$
+
+On calcule :
+
+- $Q_1 = 5$
+- $M = 10$
+- $Q_3 = 15$
+
+Appliquons la formule :
+
+$$
+Y = \frac{(15 - 10) - (10 - 5)}{15 - 5} = \frac{5 - 5}{10} = 0
+$$
+
+Ici, \( B = 0 \), donc la distribution est **symétrique**.
+
+---
+
+## **3. Avantages du coefficient de Bowley**
+✅ Moins sensible aux valeurs extrêmes que l’asymétrie de Pearson ou Fisher.  
+✅ Basé sur les quartiles, il est robuste pour les distributions asymétriques.
+
+### **Comparaison avec d'autres mesures d'asymétrie**
+| Mesure | Formule | Sensibilité aux valeurs extrêmes | Utilisation |
+|--------|--------|--------------------------------|------------|
+| **Asymétrie de Pearson** | \( S = \frac{3(\bar{X} - M)}{\sigma} \) | Élevée | Variables quantitatives classiques |
+| **Asymétrie de Fisher (Skewness)** | \( S = \frac{\frac{1}{N} \sum (X_i - \bar{X})^3}{\sigma^3} \) | Élevée | Analyse des distributions théoriques |
+| **Coefficient de Bowley** | \( B = \frac{(Q_3 - M) - (M - Q_1)}{Q_3 - Q_1} \) | Faible | Données asymétriques et robustes |
+
+---
+
+## **4. Conclusion**
+Le **coefficient de Bowley** est une excellente alternative pour mesurer l’asymétrie d’une distribution, surtout lorsque celle-ci contient **des valeurs extrêmes** ou lorsque la **médiane est préférée à la moyenne** comme indicateur central. 🚀
 
 𝑌=  ((𝑞_3  −𝑀é𝑑𝑖𝑎𝑛𝑒)−(𝑀é𝑑𝑖𝑎𝑛𝑒 − 𝑞_1))/((𝑞_3  −𝑞_1))
 
-Y = 0 implique que les observations se répartissent de manière uniforme /symétrique (autour de la médiane)
+Y = 0 
 
 Y > 0 implique que la répartition des données est étalée à droite (de la médiane) 
         les observations / modalités inférieures (à la médiane) possèdent plus de poids  
 
-Y < 0 implique que la répartition des données est étalée à gauche (de la médiane)  les observations / modalités supérieures (à la médiane) possèdent plus de poids 
+Y < 0 implique que la répartition des données est étalée à gauche (de la médiane)  les observations / modalités supérieures (à la médiane) possèdent plus de poids
+
+## Aplatissement (_Kurtosis_)
 
 
