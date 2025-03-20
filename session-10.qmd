@@ -1,4 +1,97 @@
 ---
-title: "10. Corrélation"
+title: "10. Analyse descriptive bivariée"
 ---
+
+## Introduction
+
+L'analyse bivariée est une technique statistique qui permet d'étudier la relation entre deux variables. L'objectif est de déterminer si une association existe entre ces variables et d'en mesurer l'intensité. Parmi les outils d'analyse bivariée, on retrouve la covariance, la corrélation et la régression linéaire.
+
+:::{.callout-danger}
+L'existence d'un lien entre le données de deux variables n'implique pas la causalité. C'est-à-dire qu'une varaible n'est pas la raison de la variation de l'autre varaiable.
+:::
+
+## La Covariance
+
+### Définition
+La covariance est une mesure qui permet d'évaluer dans quelle mesure deux variables varient conjointement. Elle est calculée à partir de la formule suivante :
+
+\[ \text{Cov}(X, Y) = \frac{\sum_{i=1}^{n} (X_i - \bar{X}) (Y_i - \bar{Y})}{n} \]
+
+Où :
+- \(X_i\) et \(Y_i\) sont les valeurs observées des variables \(X\) et \(Y\),
+- \(\bar{X}\) et \(\bar{Y}\) sont les moyennes des variables \(X\) et \(Y\),
+- \(n\) est le nombre d'observations.
+
+### 2.2 Interprétation
+- **Cov(X, Y) > 0** : Les variables ont une relation positive (lorsque l'une augmente, l'autre tend à augmenter aussi).
+- **Cov(X, Y) < 0** : Les variables ont une relation négative (lorsque l'une augmente, l'autre tend à diminuer).
+- **Cov(X, Y) = 0** : Aucune relation linéaire entre les variables.
+
+### 2.3 Limites de la Covariance
+Bien que la covariance indique la direction de la relation entre deux variables, elle ne permet pas d'en mesurer l'intensité de manière standardisée. Pour pallier cette limite, on utilise le coefficient de corrélation.
+
+## 3. Corrélation et Relation avec la Covariance
+
+Le coefficient de corrélation de Pearson est une version normalisée de la covariance et est donné par :
+
+\[ r = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y} \]
+
+Où \(\sigma_X\) et \(\sigma_Y\) sont les écarts-types des variables \(X\) et \(Y\).
+
+- \( r \) varie entre **-1 et 1**.
+- **r proche de 1** : Forte corrélation positive.
+- **r proche de -1** : Forte corrélation négative.
+- **r proche de 0** : Absence de corrélation linéaire.
+
+## 4. Applications de l'Analyse Bivariée
+
+L'analyse bivariée est très utilisée dans plusieurs domaines :
+- **Économie** : Relation entre le revenu et la consommation.
+- **Santé** : Effet d'un traitement sur une variable physiologique.
+- **Marketing** : Impact de la publicité sur les ventes.
+
+## 5. Exemples et Exercices
+
+### 5.1 Exemples
+
+**Exemple 1 : Covariance entre les heures d'étude et les notes d'examen**
+On observe les données de 5 étudiants :
+
+| Étudiant | Heures d'étude (X) | Note (Y) |
+|-----------|----------------|--------|
+| A         | 2              | 60     |
+| B         | 4              | 70     |
+| C         | 6              | 80     |
+| D         | 8              | 90     |
+| E         | 10             | 95     |
+
+En calculant la covariance, on trouve une valeur positive, indiquant une relation positive entre les heures d'étude et les notes.
+
+**Exemple 2 : Corrélation entre température et ventes de glaces**
+Des relevés montrent que lorsque la température augmente, les ventes de glaces augmentent aussi. Une analyse statistique montre une forte corrélation positive.
+
+### 5.2 Exercices
+
+**Exercice 1 : Calcul de covariance**
+On vous donne les données suivantes :
+
+| Personne | X (Nombre d'heures de sport) | Y (Score de bien-être) |
+|----------|------------------------|-----------------|
+| 1        | 1                      | 50              |
+| 2        | 3                      | 55              |
+| 3        | 5                      | 65              |
+| 4        | 7                      | 70              |
+| 5        | 9                      | 80              |
+
+Calculez la covariance entre X et Y.
+
+**Exercice 2 : Interprétation de corrélation**
+Une analyse statistique entre la consommation de café et le niveau de concentration au travail donne un coefficient de corrélation de **r = 0.85**. Comment interprétez-vous ce résultat ?
+
+## 6. Conclusion
+L'analyse bivariée, et en particulier la covariance, est un outil fondamental pour comprendre la relation entre deux variables. Toutefois, pour une interprétation plus robuste, il est souvent recommandé d'utiliser conjointement la covariance et la corrélation.
+
+---
+
+Ce cours donne une introduction solide à l'analyse bivariée et la covariance. Souhaitez-vous ajouter encore plus d'exercices ou des applications pratiques ?
 
